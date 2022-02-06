@@ -75,7 +75,8 @@ export async function get() {
                 id: 5,
                 name: "Tanduay Asian Rum Silver",
                 description: "This silky smooth Silver rum, from our own heritage Asian sugarcane, is only moderately filtered giving it a light straw appearance. With its pure and distinctive taste, Tanduay Asian Rum Silver is for those seeking greater complexity and sophistication. This rum is aged up to 5 years in ex-bourbon barrels, with a taste profile of green ripe fruits with hints of burnt sugar, mandarin and vanilla. Perfect for sipping straight yet well-balanced for mixing.",
-                image: "",
+                image: "/images/products/AsianRumSilver750ML_E_F2.png",
+                thumbnail: "/images/products/AsianRumSilver750ML_E_F2.png",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Clear, transparent, pale straw yellow",
@@ -91,7 +92,9 @@ export async function get() {
                 id: 6,
                 name: "Boracay Rum Coconut",
                 description: "Smooth Philippine white rum gets some attitude with the exotic taste of coconut. Suit the flavor to your mood whether you take it straight, on the rocks or mixed. Boracay Rum captures the island experience. Choose to party with the sweet and tropical taste of coconut mingling with light a blend of nougat and vanilla that finishes with a good hint of macaroon. With 25% alcohol content, you can be sure that the party will never stop! It’s one beach vacation after another with every sip of Boracay rum",
-                image: "",
+                image: "/images/products/BoracayRumCoconut750ml_EL_F3.png",
+                thumbnail: "/images/products/BoracayRumCoconut750ml_EL_F3.png",
+
                 details: {
                     alcohol: "25% alc. / vol.",
                     color: "Clear, Colorless",
@@ -107,7 +110,9 @@ export async function get() {
                 id: 7,
                 name: "Boracay Rum Cappuccino",
                 description: "Smooth Philippine white rum gets some attitude with the unique kick of cappuccino. Suit the flavor to your mood whether you take it straight, on the rocks or mixed. Boracay Rum captures the island experience. Choose to party and let yourself loose on the dance floor with the creamy taste of cappuccino with a rich taste of coffee, grated coconut milk and hint of fudge brownies. With 25% alcohol content, you can be sure that the party will never stop! It’s one beach vacation after another with every sip of Boracay rum.",
-                image: "",
+                image: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
+                thumbnail: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
+
                 details: {
                     alcohol: "25% alc. / vol.",
                     color: "Clear, Colorless",
@@ -123,7 +128,8 @@ export async function get() {
                 id: 8,
                 name: "Especia Spiced Rum",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc metus. Aenean consectetur suscipit neque sed tristique. Integer tristique ex vitae libero aliquet, in interdum nisl fermentum.",
-                image: "",
+                image: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
+                thumbnail: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
                 details: {
                     alcohol: "40% alc. / vol.",
                     color: "Bright golden amber",

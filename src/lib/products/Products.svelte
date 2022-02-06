@@ -1,14 +1,49 @@
 <script>
+  import { element, element_is } from "svelte/internal";
+
+  import ArrowRight from "./icons/ArrowRight.svelte";
   import ProductInfo from "./ProductInfo.svelte";
 
   export let products = [];
+
   let currentProduct = products[0];
+  let productContainer;
+
   const productClicked = (idx) => {
     currentProduct = products[idx];
   };
+
+  const nextItems = () => {
+    console.log(
+      productContainer.clientWidth,
+      productContainer.scrollWidth,
+      productContainer.scrollLeft
+    );
+    let el = productContainer;
+    let left =
+      el.scrollWidth - el.scrollLeft === el.clientWidth
+        ? 0
+        : el.scrollLeft + el.clientWidth;
+    console.log("LEFT", left);
+    productContainer.scroll({
+      top: 0,
+      left,
+      behavior: "smooth",
+    });
+    console.log(
+      productContainer.clientWidth,
+      productContainer.scrollWidth,
+      productContainer.scrollLeft
+    );
+
+    // productContainer.scrollLeft += 20;
+    // console.log(productContainer.scrollLeft);
+    // console.log(this.scroll);
+    // productContainer.scrollLeft += productContainer.scrollWidth;
+  };
 </script>
 
-<section style:--background-image={currentProduct.image}>
+<section class="main" style:--background-image={currentProduct.image}>
   <div class="container">
     <h1 class="garamond">Our Products</h1>
 
@@ -25,7 +60,7 @@
 
 <section class="product-section">
   <div class="product-container">
-    <div class="product-list">
+    <div bind:this={productContainer} class="product-list">
       {#each products as product, idx}
         <div
           class="product inline-snap"
@@ -41,6 +76,11 @@
         </div>
       {/each}
     </div>
+    <div>
+      <span class="arrow" on:click={nextItems}>
+        <ArrowRight />
+      </span>
+    </div>
   </div>
 </section>
 
@@ -50,6 +90,14 @@
     display: grid;
     place-items: center;
     background-color: #fbfbf2;
+    padding-bottom: 50px;
+  }
+
+  section.main {
+    background: url("/images/products/bg.png") no-repeat;
+    background-position-x: right;
+    margin-top: 200px;
+    background-size: cover;
   }
   h1 {
     font-weight: bold;
@@ -66,9 +114,20 @@
     position: relative;
   }
 
+  .product-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .arrow {
+    cursor: pointer;
+  }
+
   .current-image {
     position: absolute;
-    right: 100px;
+    right: 200px;
     top: 200px;
     height: 120%;
   }
@@ -88,8 +147,8 @@
     --product-color: transparent;
     --border-width: 3px;
     --border-color: #d18b3f;
-    background-color: #fbfbf2;
-    margin-top: 50px;
+    background-color: var(--surface-color);
+    padding-bottom: 200px;
   }
 
   .product-list {
