@@ -1,6 +1,4 @@
 <script>
-  import { element, element_is } from "svelte/internal";
-
   import ArrowRight from "./icons/ArrowRight.svelte";
   import ProductInfo from "./ProductInfo.svelte";
 
@@ -14,11 +12,6 @@
   };
 
   const nextItems = () => {
-    console.log(
-      productContainer.clientWidth,
-      productContainer.scrollWidth,
-      productContainer.scrollLeft
-    );
     let el = productContainer;
     let left =
       el.scrollWidth - el.scrollLeft === el.clientWidth
@@ -30,16 +23,6 @@
       left,
       behavior: "smooth",
     });
-    console.log(
-      productContainer.clientWidth,
-      productContainer.scrollWidth,
-      productContainer.scrollLeft
-    );
-
-    // productContainer.scrollLeft += 20;
-    // console.log(productContainer.scrollLeft);
-    // console.log(this.scroll);
-    // productContainer.scrollLeft += productContainer.scrollWidth;
   };
 </script>
 
@@ -68,7 +51,7 @@
           on:click={() => productClicked(idx)}
         >
           <div class="thumbnail">
-            <img src={product.thumbnail} alt={product.name} />
+            <img loading="lazy" src={product.thumbnail} alt={product.name} />
           </div>
           <div class="details">
             <h2 class="garamond">{product.name}</h2>

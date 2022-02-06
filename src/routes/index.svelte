@@ -1,11 +1,13 @@
 <script context="module">
   export async function load({ fetch }) {
     const response = await fetch("/api/products");
+    const cocktails = await fetch("/api/products/cocktails");
 
     return {
       status: response.status,
       props: {
         products: response.ok && (await response.json()),
+        cocktails: cocktails.ok && (await cocktails.json()),
       },
     };
   }
@@ -13,7 +15,6 @@
 
 <script>
   import AboutUs from "$lib/AboutUs.svelte";
-  import Accordion from "$lib/Accordion.svelte";
   import ContactUs from "$lib/ContactUs.svelte";
   import Footer from "$lib/Footer.svelte";
   import Hero from "$lib/Hero.svelte";
@@ -24,10 +25,12 @@
 
   import Stores from "$lib/Stores.svelte";
   import Testimonies from "$lib/Testimonies.svelte";
+  import CocktailCulture from "$lib/cocktail-culture/CocktailCulture.svelte";
 
   export let products = [];
+  export let cocktails = [];
 
-  $: console.log(products);
+  $: console.log(products, cocktails);
 </script>
 
 <Hero />
@@ -39,6 +42,8 @@
 <OurLand />
 
 <Testimonies />
+
+<CocktailCulture {cocktails} />
 
 <Stores />
 

@@ -58,8 +58,8 @@ export async function get() {
                 id: 4,
                 name: "Tanduay Asian Rum Gold",
                 description: "The silky smooth Gold rum from our own heritage sugarcane, reveals how Tanduay became the global leader in dark rum. With its pure anddistinctive taste, Tanduay Asian Rum Gold is for those seeking greater complexity and sophistication. This rum is aged up to 7 years in ex-bourbon barrels, with a taste profile of mature honey with hints of toasted oak, almond and vanilla. Appreciate neat or combined with your preferred mixer.",
-                image: "/images/products/AsianRumGold_750ML_E_F2.png",
-                thumbnail: "/images/products/AsianRumGold_750ML_E_F2.png",
+                image: "/images/products/AsianRumGold_750ML_E_F2-opt.png",
+                thumbnail: "/images/products/AsianRumGold_750ML_E_F2-opt.png",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Bright Golden Amber",
@@ -75,8 +75,8 @@ export async function get() {
                 id: 5,
                 name: "Tanduay Asian Rum Silver",
                 description: "This silky smooth Silver rum, from our own heritage Asian sugarcane, is only moderately filtered giving it a light straw appearance. With its pure and distinctive taste, Tanduay Asian Rum Silver is for those seeking greater complexity and sophistication. This rum is aged up to 5 years in ex-bourbon barrels, with a taste profile of green ripe fruits with hints of burnt sugar, mandarin and vanilla. Perfect for sipping straight yet well-balanced for mixing.",
-                image: "/images/products/AsianRumSilver750ML_E_F2.png",
-                thumbnail: "/images/products/AsianRumSilver750ML_E_F2.png",
+                image: "/images/products/AsianRumSilver750ML_E_F2-opt.png",
+                thumbnail: "/images/products/AsianRumSilver750ML_E_F2-opt.png",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Clear, transparent, pale straw yellow",
