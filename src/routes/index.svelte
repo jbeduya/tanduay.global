@@ -26,11 +26,11 @@
   import Stores from "$lib/Stores.svelte";
   import Testimonies from "$lib/Testimonies.svelte";
   import CocktailCulture from "$lib/cocktail-culture/CocktailCulture.svelte";
+  import Videos from "$lib/Videos.svelte";
+  import ContactForm from "$lib/ContactForm.svelte";
 
   export let products = [];
   export let cocktails = [];
-
-  $: console.log(products, cocktails);
 </script>
 
 <Hero />
@@ -47,8 +47,12 @@
 
 <Stores />
 
+<Videos />
+
 <PressReleases />
 
 <ContactUs />
+
+<ContactForm />
 
 <Footer />

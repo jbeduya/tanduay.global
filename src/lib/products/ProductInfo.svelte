@@ -16,6 +16,8 @@
 <section>
   <h1 class="garamond">{product.name}</h1>
   <p>{product.description}</p>
+
+  <a class="product-details-link" href="/">Product Details</a>
   <div class="details">
     <div>
       <Accordion>
@@ -110,6 +112,9 @@
 </div>
 
 <style>
+  .product-details-link {
+    display: none;
+  }
   .label {
     display: flex;
     justify-content: center;
@@ -128,7 +133,7 @@
   }
   h1 {
     color: var(--secondary-color);
-    font-size: 35px;
+
     margin-bottom: 20px;
   }
   p,
@@ -141,5 +146,18 @@
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
     column-gap: 5rem;
+  }
+
+  @media (max-width: 930px) {
+    h1 {
+      font-size: 2rem !important;
+    }
+    .details {
+      display: none;
+    }
+
+    .product-details-link {
+      display: block;
+    }
   }
 </style>

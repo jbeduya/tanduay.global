@@ -91,7 +91,7 @@
 
   .default-glass {
     position: absolute;
-    right: 150px;
+    right: 120px;
     height: 100px;
     top: 50px;
   }
