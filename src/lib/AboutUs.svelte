@@ -1,6 +1,36 @@
 <script>
   import Button from "./Button.svelte";
+  const videos = [
+    "https://www.youtube.com/embed/WQXvxVfBI-4",
+    "https://www.youtube.com/embed/LTndbHn7zgw",
+  ];
+  let currentVideo = 0;
+  let show = false;
+  let videoSource = "";
+
+  let showVideo = (index) => {
+    currentVideo = index;
+    videoSource = videos[currentVideo] + "?controls=0";
+    show = true;
+  };
+
+  $: if (show === false) {
+    videoSource = "";
+  }
 </script>
+
+<div class="video-dialog" class:show>
+  <div class="container">
+    <i class="fas fa-times close" on:click={() => (show = false)} />
+    <iframe
+      src={videoSource}
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>
 
 <section>
   <div class="container">
@@ -23,7 +53,7 @@
           mysterious East. It remains one of Asia’s best-kept secrets and among
           the world’s most decorated spirits for generations to come.
         </p>
-        <Button>Play Video</Button>
+        <Button on:click={() => showVideo(0)}>Play Video</Button>
       </div>
     </div>
 
@@ -43,13 +73,52 @@
           reliability, and consistency, making I the 7th largest international
           Spirit Brand in the World in 2011.
         </p>
-        <Button>Play Video</Button>
+        <Button on:click={() => showVideo(1)}>Play Video</Button>
       </div>
     </div>
   </div>
 </section>
 
 <style>
+  .video-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(201, 158, 82, 0.9);
+    visibility: hidden;
+    animation: all fadeIn 3s;
+
+    z-index: 999999;
+  }
+
+  .video-dialog.show {
+    visibility: visible;
+  }
+
+  .video-dialog .close {
+    position: absolute;
+    font-size: 3rem;
+    top: 24px;
+    right: 64px;
+    color: #333;
+  }
+
+  .video-dialog .container {
+    position: relative;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    place-items: center;
+    padding: 0 24px;
+  }
+
+  .video-dialog .container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
   section {
     --surface-color: #fff;
     --text-padding: 1rem;
@@ -112,9 +181,6 @@
     position: relative;
   }
 
-  .content1 .img {
-    /* width: 70%; */
-  }
   h1 {
     margin-bottom: 100px;
     font-size: 3rem;
@@ -250,6 +316,15 @@
       padding-top: 32px;
       padding-left: 32px;
       padding-right: 64px;
+    }
+  }
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
     }
   }
 </style>
