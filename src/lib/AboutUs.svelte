@@ -52,6 +52,7 @@
 <style>
   section {
     --surface-color: #fff;
+    --text-padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,6 +72,17 @@
   .text {
     grid-area: text;
   }
+  .content1 .text,
+  .content2 .text {
+    padding: 0 var(--text-padding);
+  }
+  .content2 .text {
+    padding-right: 10rem;
+  }
+
+  .content2 .picture {
+    padding: 0 var(--text-padding);
+  }
 
   .content {
     display: grid;
@@ -78,9 +90,12 @@
     grid-template-columns: 1fr 1fr;
   }
 
+  .content1 {
+  }
   .content1 .picture {
     background: url(/images/sugarcane-illustration.png) no-repeat bottom right;
-    background-position-x: 400px;
+    background-position: bottom 20% right -7%;
+    background-size: 43%;
   }
 
   .content2 {
@@ -89,8 +104,20 @@
   .content {
     padding: 0 32px;
   }
+
+  .picture .img {
+    width: 80%;
+    min-height: 400px;
+    min-width: 300px;
+    position: relative;
+  }
+
+  .content1 .img {
+    /* width: 70%; */
+  }
   h1 {
     margin-bottom: 100px;
+    font-size: 3rem;
   }
 
   h2 {
@@ -99,7 +126,7 @@
     color: var(--text-color);
   }
   h3 {
-    font-size: 45px;
+    font-size: 3rem;
     font-weight: 300;
     font-style: italic;
     color: var(--secondary-color);
@@ -109,6 +136,7 @@
   p {
     color: var(--text-color);
     margin-bottom: 30px;
+    line-height: 1.5rem;
   }
   .text {
     display: flex;
@@ -118,35 +146,30 @@
   }
   .picture {
     position: relative;
-    height: 622px;
-    width: 668px;
-  }
-  .picture .img {
-    width: 80%;
-    min-height: 500px;
-    min-width: 433px;
-    position: relative;
+    /* height: 622px;
+    width: 668px; */
   }
 
   .sugar-big,
   .sugar-small {
     position: absolute;
-    left: -60px;
+    left: -6%;
     height: 15%;
   }
 
   .sugar-big {
-    top: 100px;
+    top: 16%;
   }
 
   .sugar-small {
-    top: 240px;
-    left: -40px;
+    top: 35%;
+    left: -5%;
   }
 
   .content2 .picture {
     background: url(/images/barrel.png) no-repeat top right;
-    background-size: 250px;
+    background-position: top 30% right 15%;
+    background-size: 30%;
     display: flex;
     align-items: flex-end;
     position: relative;
@@ -167,16 +190,66 @@
     height: 400px;
   }
 
+  @media (max-width: 1128px) {
+    h2 {
+      font-size: 1.8rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+
+    .picture .sugarcane {
+      width: 30%;
+      bottom: -30px;
+      left: -30px;
+    }
+  }
+
   @media (max-width: 930px) {
+    h1 {
+      font-size: 2.5rem;
+      margin-bottom: 3rem;
+    }
     .content {
       grid-template-columns: 1fr;
       grid-template-areas: "picture" "text";
+      gap: 3rem;
+      padding: 0;
     }
-    .picture {
-      width: calc(100vw - 64px);
+
+    .sugar-big {
+      left: -2%;
+    }
+    .sugar-small {
+      left: -3%;
+    }
+
+    .content1 .text {
+      padding: 0 32px 64px 32px;
+    }
+
+    .content1 .picture {
+      background-position: bottom 20% right -25%;
+      padding: 0 32px;
+    }
+    .content2 .picture {
+      padding: 0 32px;
+      padding-top: 64px;
+      background-position: top -0% right 1%;
     }
     .content .img {
-      width: 80% !important;
+      width: 96% !important;
+    }
+
+    .picture .sugarcane {
+      bottom: -5%;
+      left: 2%;
+      width: 30%;
+    }
+    .content2 .text {
+      padding-top: 32px;
+      padding-left: 32px;
+      padding-right: 64px;
     }
   }
 </style>
