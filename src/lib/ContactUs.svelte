@@ -5,7 +5,7 @@
   let contacts = [
     {
       category: "Philippines",
-      name: "Tanduay Distillers Inc",
+      name: "Tanduay Distillers Inc. (TBI)",
       address:
         "348 J. Nepomuceno St., San Miguel District, Quiapo, Manila, Philippines 1001",
       phone: "+63 2 8790-0500",
@@ -13,90 +13,95 @@
     },
     {
       category: "Belgium / Netherlands / Luxemburg",
-      name: "Tanduay Distillers Inc",
-      address:
-        "348 J. Nepomuceno St., San Miguel District, Quiapo, Manila, Philippines 1001",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Alcobrands",
+      address: "Edward Pecherstraat 1, 2000 Antwerpen, Belgium",
+      phone: "+32 3 336 30 21",
+      url: "https://www.alcobrands.be/",
     },
     {
       category: "Singapore",
-      name: "Tanduay Distillers Inc",
-      address:
-        "348 J. Nepomuceno St., San Miguel District, Quiapo, Manila, Philippines 1001",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Octopus Group",
+      address: "361 Ubi Rd 3, Singapore 408664",
+      phone: "+65 6533 3312",
+      url: "https://www.octopusgroup.com.sg/",
     },
     {
       category: "UAE",
-      name: "Tanduay Distillers Inc",
+      name: "Truebell Marketing & Trading LLC",
       address:
-        "348 J. Nepomuceno St., San Miguel District, Quiapo, Manila, Philippines 1001",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+        "Industrial AreaIndustrial Area 13, Sharjah - United Arab Emirates",
+      phone: "+971 6 534 2111",
+      url: "https://www.truebell.org/",
     },
     {
       category: "United States",
       name: "Midway Trading Corp.",
       address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      phone: "+1 415-986-2600",
+      url: "https://global.tanduay.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Hensley Beverage Company",
+      address: "4201 N 45th Ave., Phoenix, AZ 85031",
+      phone: "+1 602-264-1635",
+      url: "https://hensley.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Romano Beverage",
+      address: "185 Industrial Dr., Elmhurst IL, 60126",
+      phone: "+1 630-607-0430",
+      url: "https://romanobeverage.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Imperial Beverage",
+      address: "1911 Griggs St. SE., Grand Rapids, MI 49506",
+      phone: "+1 269-382-4200",
+      url: "http://imperialbeverage.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Johnson Brothers",
+      address: "1999 Shepard Rd., St. Paul, MN 55116",
+      phone: "+1 651-649-5800",
+      url: "https://www.johnsonbrothers.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Johnson Brothers",
+      address: "1011 Munu St, Kapolei, HI 96707",
+      phone: "+1 808-487-5355",
+      url: "https://www.johnsonbrothers.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Lipman Brothers LLC",
+      address: "2815 Brick Church Pike, Nashville, TN 37207",
+      phone: "+1 615-244-2230",
+      url: "https://lipmanbrothers.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "General Beverage Sales",
+      address: "16255 W Stratton Drive, New Berlin, WI 53151",
+      phone: "+1 414-543-3300",
+      url: "https://www.genbev.com/",
     },
     {
       category: "United States",
-      name: "Midway Trading Corp.",
-      address: "130 Battery St. STE #560, San Francisco, CA 94111",
-      phone: "+63 2 8790-0500",
-      url: "https://ph.tanduay.com/",
+      name: "Empire Distributing",
+      address: "16 Bridgewater St, Brooklyn, NY 11222",
+      phone: "+1 718-383-5500",
+      url: "https://www.empiremerchants.com/",
+    },
+    {
+      category: "United States",
+      name: "Empire MErchants North",
+      address: "16 Houghtaling Rd, Coxsackie, NY 12051",
+      phone: "+1 800-724-3960",
+      url: "https://empirenorth.com/",
     },
   ];
 
@@ -143,7 +148,8 @@
 
   h1 {
     text-align: left;
-    margin: 50px 0;
+    margin: 100px 0;
+    font-size: 3rem;
   }
 
   .container {
@@ -166,7 +172,7 @@
     display: flex;
     justify-content: flex-start;
     flex-flow: row wrap;
-    column-gap: 25px;
+    column-gap: 1rem;
   }
 
   @media (max-width: 930px) {
@@ -183,7 +189,11 @@
     h1 {
       font-size: 2rem;
       text-align: center;
-      margin: 16px;
+      margin: 1rem;
+    }
+
+    .contact-item {
+      width: 300px;
     }
   }
 </style>
