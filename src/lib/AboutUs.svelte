@@ -97,6 +97,16 @@
     z-index: 999999;
   }
 
+  .video-dialog .container {
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+
   .video-dialog.show {
     visibility: visible;
   }
@@ -113,15 +123,6 @@
 
   .video-dialog .close:hover {
     color: white;
-  }
-
-  .video-dialog .container {
-    position: relative;
-    display: grid;
-    height: 100vh;
-    width: 100vw;
-    place-items: center;
-    padding: 0 24px;
   }
 
   .video-dialog .container iframe {
