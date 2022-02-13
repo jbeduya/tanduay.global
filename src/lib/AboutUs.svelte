@@ -1,8 +1,8 @@
 <script>
   import Button from "./Button.svelte";
   const videos = [
-    "https://www.youtube.com/embed/WQXvxVfBI-4",
-    "https://www.youtube.com/embed/LTndbHn7zgw",
+    "https://player.vimeo.com/video/348960585?h=60705ebcd0",
+    "https://player.vimeo.com/video/336005698?h=b2c04cbaf6",
   ];
   let currentVideo = 0;
   let show = false;
@@ -10,7 +10,7 @@
 
   let showVideo = (index) => {
     currentVideo = index;
-    videoSource = videos[currentVideo] + "?controls=0";
+    videoSource = videos[currentVideo];
     show = true;
   };
 
@@ -21,12 +21,16 @@
 
 <div class="video-dialog" class:show>
   <div class="container">
-    <i class="fas fa-times close" on:click={() => (show = false)} />
+    <i
+      class="fas fa-times close"
+      role="button"
+      on:click={() => (show = false)}
+    />
+    <!-- svelte-ignore a11y-missing-attribute -->
     <iframe
       src={videoSource}
-      title="YouTube video player"
       frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="autoplay; fullscreen; picture-in-picture"
       allowfullscreen
     />
   </div>
@@ -98,11 +102,17 @@
   }
 
   .video-dialog .close {
+    transition-duration: 250ms;
     position: absolute;
     font-size: 3rem;
     top: 24px;
     right: 64px;
     color: #333;
+    cursor: pointer;
+  }
+
+  .video-dialog .close:hover {
+    color: white;
   }
 
   .video-dialog .container {
