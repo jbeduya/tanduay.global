@@ -1,4 +1,8 @@
 <script>
+  import { browser } from "$app/env";
+
+  import { onMount } from "svelte";
+
   import Button from "./Button.svelte";
   const videos = [
     "https://player.vimeo.com/video/348960585?h=60705ebcd0",
@@ -7,6 +11,7 @@
   let currentVideo = 0;
   let show = false;
   let videoSource = "";
+  let dialog;
 
   let showVideo = (index) => {
     currentVideo = index;
@@ -16,10 +21,35 @@
 
   $: if (show === false) {
     videoSource = "";
+    if (browser) {
+      document.body.classList.remove("no-scroll");
+    }
+  } else {
+    if (browser) {
+      document.body.classList.add("no-scroll");
+    }
   }
+
+  onMount(() => {
+    let handler = (e) => {
+      if (e.key === "Escape" && show === true) {
+        show = false;
+      }
+    };
+    document.addEventListener("keyup", handler);
+
+    return () => {
+      document.removeEventListener("keyup", handler);
+    };
+  });
 </script>
 
-<div class="video-dialog" class:show>
+<div
+  bind:this={dialog}
+  class="video-dialog"
+  class:show
+  on:click={() => (show = false)}
+>
   <div class="container">
     <i
       class="fas fa-times close"
@@ -92,7 +122,7 @@
     height: 100vh;
     background-color: rgba(201, 158, 82, 0.9);
     visibility: hidden;
-    animation: all fadeIn 3s;
+    transition: all 0.2s;
 
     z-index: 999999;
   }
@@ -112,7 +142,6 @@
   }
 
   .video-dialog .close {
-    transition-duration: 250ms;
     position: absolute;
     font-size: 3rem;
     top: 24px;
@@ -170,8 +199,6 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .content1 {
-  }
   .content1 .picture {
     background: url(/images/sugarcane-illustration.png) no-repeat bottom right;
     background-position: bottom 20% right -7%;
