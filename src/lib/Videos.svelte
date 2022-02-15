@@ -8,8 +8,6 @@
   import "swiper/css";
   import "swiper/css/navigation";
 
-  let innerHeight;
-
   let videos = [
     "https://www.youtube.com/embed/tBCTG2LTIo4?controls=0",
     "https://www.youtube.com/embed/XbPPCC9RswE?controls=0",
