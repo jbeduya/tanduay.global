@@ -5,6 +5,7 @@
 
   import "swiper/css";
   import "swiper/css/navigation";
+  import LinkButton from "./LinkButton.svelte";
 </script>
 
 <section>
@@ -22,7 +23,7 @@
           <div class="text">
             <h1 class="garamond">Distinctly Filipino</h1>
             <h2 class="acumin">Undeniably world-class!</h2>
-            <Button>View Products</Button>
+            <LinkButton href="/#products">View Products</LinkButton>
           </div>
           <div class="picture">
             <img src="/images/hero/rum.png" alt="Rum" />
@@ -34,7 +35,7 @@
           <div class="text">
             <h1 class="garamond">Distinctly Filipino</h1>
             <h2 class="acumin">Undeniably world-class!</h2>
-            <Button>View Products</Button>
+            <LinkButton href="/#products">View Products</LinkButton>
           </div>
           <div class="picture">
             <img src="/images/hero/rum.png" alt="Rum" />
@@ -46,7 +47,7 @@
           <div class="text">
             <h1 class="garamond">Distinctly Filipino</h1>
             <h2 class="acumin">Undeniably world-class!</h2>
-            <Button>View Products</Button>
+            <LinkButton href="/#products">View Products</LinkButton>
           </div>
           <div class="picture">
             <img src="/images/hero/rum.png" alt="Rum" />

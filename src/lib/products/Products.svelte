@@ -51,7 +51,11 @@
   };
 </script>
 
-<section class="main" style:--background-image={currentProduct.image}>
+<section
+  class="main"
+  id="products"
+  style:--background-image={currentProduct.image}
+>
   <div class="container">
     <h1 class="garamond">Our Products</h1>
 

@@ -18,6 +18,7 @@ body {
   background-color: #fefef8;
   font-family: acumin-pro, sans-serif;
   color: var(--text-color);
+  background-size: 97%;
 }
 
 body.no-scroll {
@@ -50,5 +51,26 @@ h1 {
 @media (max-width: 930px) {
   h1 {
     font-size: 3rem;
+  }
+  body {
+    background-size: 150%;
+  }
+}
+
+@media (max-width: 800px) {
+  body {
+    background-size: 200%;
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    background-size: 250%;
+  }
+}
+
+@media (max-width: 570px) {
+  body {
+    background-size: 300%;
   }
 }
