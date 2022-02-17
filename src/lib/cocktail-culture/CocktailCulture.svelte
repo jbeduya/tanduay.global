@@ -109,8 +109,14 @@
         1300: {
           spaceBetween: 80,
         },
+
+        1800: {
+          spaceBetween: 60,
+          slidesPerView: 3,
+        },
         2000: {
           slidesPerView: 4,
+          centeredSlides: false,
           spaceBetween: 50,
         },
       },
