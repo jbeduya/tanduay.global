@@ -154,7 +154,7 @@
 
   .container {
     max-width: calc(var(--max-width) - 200px);
-    width: 100vw;
+    width: 100%;
   }
   .content {
     display: grid;

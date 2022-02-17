@@ -254,7 +254,7 @@
 
   .dummy-container {
     max-width: var(--max-width);
-    width: 100vw;
+    width: 100%;
   }
 
   section.main {
@@ -389,7 +389,7 @@
     }
 
     section.detail :is(.info) {
-      width: calc(100vw - 10px);
+      width: calc(100% - 10px);
     }
     .cocktails {
       gap: 3rem;

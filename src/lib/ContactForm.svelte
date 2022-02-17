@@ -85,7 +85,7 @@
 
   .container {
     max-width: calc(var(--max-width) - 700px);
-    width: 100vw;
+    width: 100%;
     margin: 0 auto;
     position: relative;
   }

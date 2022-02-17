@@ -61,7 +61,7 @@
 
   .content {
     max-width: var(--max-width);
-    width: 100vw;
+    width: 100%;
   }
   h2 {
     text-align: center;

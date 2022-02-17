@@ -150,6 +150,20 @@
       font-weight: normal;
     }
 
+    .form {
+      width: 100%;
+    }
+    .right {
+      margin: 0 48px;
+    }
+    .navigation {
+      width: 100%;
+    }
+    .right .navigation a {
+      min-width: 90px;
+      width: 90px;
+    }
+
     p {
       font-size: 0.8rem;
     }
@@ -162,6 +176,8 @@
       display: flex;
       flex-direction: column;
       font-size: 0.8rem;
+      padding: 0 24px;
+      text-align: center;
     }
   }
 </style>

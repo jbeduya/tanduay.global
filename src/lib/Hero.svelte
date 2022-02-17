@@ -1,5 +1,4 @@
 <script>
-  import Button from "./Button.svelte";
   import { Swiper, SwiperSlide } from "swiper/svelte";
   import { Navigation } from "swiper";
 

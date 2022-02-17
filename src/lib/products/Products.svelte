@@ -1,235 +1,192 @@
 <script>
+  import ProductInfo from "./ProductInfo.svelte";
+  import { Swiper, SwiperSlide } from "swiper/svelte";
+  import { Navigation } from "swiper";
+
+  import "swiper/css";
+  import "swiper/css/navigation";
   import ArrowLeft from "./icons/ArrowLeft.svelte";
   import ArrowRight from "./icons/ArrowRight.svelte";
-  import ProductInfo from "./ProductInfo.svelte";
+  import { browser } from "$app/env";
+  import { onMount } from "svelte";
 
   export let products = [];
-
   let currentProduct = products[0];
-  let productContainer, scroller;
+  let slides = 4,
+    group = 4,
+    innerWidth = 1300,
+    centered = false;
+
+  $: console.log(innerWidth);
+
+  $: if (innerWidth > 1200) {
+    slides = 4;
+    group = 4;
+    centered = false;
+  } else if (innerWidth > 931) {
+    slides = 3;
+    group = 3;
+    centered = false;
+  } else if (innerWidth > 800) {
+    slides = 5;
+    group = 5;
+    centered = false;
+  } else if (innerWidth > 570) {
+    slides = 4;
+    group = 4;
+    centered = false;
+  } else if (innerWidth >= 530) {
+    slides = 3;
+    group = 3;
+    centered = false;
+  } else {
+    slides = 2;
+    group = 1;
+    centered = true;
+  }
 
   const productClicked = (idx) => {
     currentProduct = products[idx];
   };
 
-  const nextItems = () => {
-    let el = productContainer;
-    let left =
-      el.scrollWidth - el.scrollLeft === el.clientWidth
-        ? 0
-        : el.scrollLeft + el.clientWidth;
-    console.log("LEFT", left);
-    productContainer.scroll({
-      top: 0,
-      left,
-      behavior: "smooth",
-    });
-  };
-
-  const scrollTo = (idx) => {
-    let elWidth = window.innerWidth / 2;
-    let left = elWidth * idx;
-    console.log(left);
-    scroller.scrollTo({
-      // top: 0,
-      left: left,
-      behavior: "smooth",
-    });
-  };
-
-  const prevProduct = () => {
-    let idx = products.findIndex((p) => p.id === currentProduct.id);
-    idx = idx === 0 ? products.length - 1 : idx - 1;
-    currentProduct = products[idx];
-    scrollTo(idx);
-  };
-  const nextProduct = () => {
-    let idx = products.findIndex((p) => p.id === currentProduct.id);
-    idx = idx === products.length - 1 ? 0 : idx + 1;
-    currentProduct = products[idx];
-    scrollTo(idx);
-  };
+  onMount(() => {
+    innerWidth = window.innerWidth;
+  });
 </script>
 
-<section
-  class="main"
-  id="products"
-  style:--background-image={currentProduct.image}
->
+<svelte:window bind:innerWidth />
+
+<section id="products">
   <div class="container">
-    <h1 class="garamond">Our Products</h1>
-
-    <div class="content">
-      <div class="details">
-        <ProductInfo product={currentProduct} />
-      </div>
-      <div class="right-section" />
+    <div class="detail">
+      <ProductInfo product={currentProduct} />
     </div>
-
-    <img class="current-image" src={currentProduct.image} alt="" />
+    <div class="preview">
+      <div class="scroll-navigations">
+        <span id="products-swiper-button-prev">
+          <ArrowLeft />
+        </span>
+        <span id="products-swiper-button-next"><ArrowRight /></span>
+      </div>
+      <img
+        loading="lazy"
+        src={currentProduct.thumbnail}
+        alt={currentProduct.name}
+      />
+    </div>
   </div>
-</section>
-
-<div class="mobile-current-image">
-  <div class="arrow-left" on:click={prevProduct}><ArrowLeft /></div>
-  <div class="image">
-    <img src={currentProduct.image} alt="" />
-  </div>
-  <div class="arrow-right" on:click={nextProduct}><ArrowRight /></div>
-</div>
-
-<div class="mobile-product-scroller">
-  <div bind:this={scroller} class="product-list">
-    {#each products as product, idx}
-      <div
-        class="product"
-        class:active={product.id === currentProduct.id}
-        on:click={() => productClicked(idx)}
+  <div class="items-wrapper">
+    <div class="products">
+      <Swiper
+        modules={[Navigation]}
+        navigation={{
+          nextEl: "#products-swiper-button-next",
+          prevEl: "#products-swiper-button-prev",
+        }}
+        slidesPerView={slides}
+        slidesPerGroup={group}
+        centeredSlides={centered}
       >
-        <div class="thumbnail">
-          <img loading="lazy" src={product.thumbnail} alt={product.name} />
-        </div>
-        <div class="details">
-          <h2 class="garamond">{product.name}</h2>
-        </div>
-      </div>
-    {/each}
-  </div>
-</div>
-
-<section class="product-section">
-  <div class="product-container">
-    <div bind:this={productContainer} class="product-list">
-      {#each products as product, idx}
-        <div
-          class="product inline-snap"
-          class:active={product.id === currentProduct.id}
-          on:click={() => productClicked(idx)}
-        >
-          <div class="thumbnail">
-            <img loading="lazy" src={product.thumbnail} alt={product.name} />
-          </div>
-          <div class="details">
-            <h2 class="garamond">{product.name}</h2>
-          </div>
-        </div>
-      {/each}
-    </div>
-    <div>
-      <span class="arrow" on:click={nextItems}>
-        <ArrowRight />
-      </span>
+        {#each products as product, idx}
+          <SwiperSlide>
+            <div
+              class="product"
+              class:active={product.id === currentProduct.id}
+              data-id={product.id}
+              on:click={() => productClicked(idx)}
+            >
+              <div class="thumbnail">
+                <img
+                  loading="lazy"
+                  src={product.thumbnail}
+                  alt={product.name}
+                />
+              </div>
+              <div class="details">
+                <h3 class="garamond">{product.name}</h3>
+              </div>
+            </div>
+          </SwiperSlide>
+        {/each}
+      </Swiper>
     </div>
   </div>
 </section>
 
 <style>
-  .mobile-current-image {
-    display: none;
-  }
-
-  .arrow-left,
-  .arrow-right {
-    cursor: pointer;
-  }
-  .arrow-left {
-    display: grid;
-    place-items: flex-end;
-  }
-  .arrow-right {
-    display: grid;
-    place-items: flex-start;
-  }
-
-  .mobile-current-image img {
-    height: calc(100vh / 2);
-  }
   section {
-    --surface-color: #fff;
-    display: grid;
-    place-items: center;
-    background-color: #fbfbf2;
-    padding-bottom: 50px;
+    --surface-color: #fbfbf2;
+    --padding: 24px;
+    --max-width: calc(var(var(--max-width) - 200px));
+    --border-width: 3px;
+    --border-color: #d18b3f;
+    --opacity: 0.6;
+    background: url(/images/products/bg.png) no-repeat;
+    background-size: 1000px;
+    background-position: top right;
+    background-color: var(--surface-color);
+    padding-top: 48px;
   }
 
-  .main .container {
-    padding: 24px;
-  }
-
-  .mobile-product-scroller {
-    display: none;
-  }
-
-  section.main {
-    background: url("/images/products/bg.png") no-repeat;
-    background-position-x: right;
-    margin-top: 200px;
-    background-size: cover;
-  }
-  .mobile-current-image {
-    background: url("/images/products/bg.png") no-repeat;
-    background-position-x: right;
-    background-size: 80%;
-  }
-  h1 {
-    font-weight: bold;
-    font-style: italic;
-    text-transform: uppercase;
-    margin: 50px 0;
-    font-size: var(--title-size, 55px);
-  }
-
-  .container,
-  .product-container {
-    max-width: calc(var(--max-width) - 200px);
-    width: 100%;
-    position: relative;
-  }
-
-  .product-container {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .arrow {
-    cursor: pointer;
-  }
-
-  .current-image {
-    position: absolute;
-    right: 200px;
-    top: 200px;
-    height: 120%;
+  h3 {
+    font-size: 1.1rem;
+    font-weight: normal;
   }
 
   .container {
-    padding-left: var(--padding-left);
-  }
-
-  .content {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    max-width: var(--max-width);
+    width: 100%;
+    margin: 0 auto;
+    grid-template-columns: 2fr 1fr;
   }
 
-  .product-section,
-  .mobile-product-scroller {
-    --surface-color: #fff;
-    --opacity: 0.5;
-    --product-color: transparent;
-    --border-width: 3px;
-    --border-color: #d18b3f;
-    background-color: var(--surface-color);
-    padding-bottom: 200px;
+  .detail {
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 50px;
   }
 
-  .product-list {
-    width: 700px;
+  .preview {
     display: grid;
-    grid-auto-flow: column;
-    grid-auto-columns: 25%;
-    overflow-x: hidden;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+    padding-right: 150px;
+  }
+
+  .preview img {
+    height: 600px;
+    position: relative;
+    bottom: -150px;
+  }
+
+  .scroll-navigations {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    bottom: -140px;
+    padding: 0 60px;
+  }
+
+  .scroll-navigations span {
+    cursor: pointer;
+  }
+
+  .scroll-navigations > :first-child {
+    display: none;
+  }
+
+  .items-wrapper {
+    background-color: #fff;
+  }
+
+  .items-wrapper .products {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding-left: 150px;
+    padding-right: 500px;
   }
 
   .product {
@@ -245,6 +202,10 @@
     cursor: pointer;
   }
 
+  .product .thumbnail img {
+    height: 135px;
+  }
+
   .product:hover {
     border-top: var(--border-width) solid var(--border-color);
   }
@@ -255,79 +216,64 @@
     border-top: var(--border-width) solid var(--border-color);
   }
 
-  .product h2 {
-    font-size: 18px;
-    font-weight: normal;
+  .product:hover,
+  .product.active {
+    opacity: 1;
   }
 
-  .product .thumbnail img {
-    height: 135px;
+  @media (max-width: 1300px) {
+    .items-wrapper .products {
+      padding-right: 400px;
+    }
   }
+  @media (max-width: 1200px) {
+    .detail {
+      padding-right: 50px;
+    }
 
-  .inline-snap {
-    scroll-snap-type: inline mandatory;
-  }
-
-  .inline-snap > * {
-    scroll-snap-align: start;
+    .items-wrapper .products {
+      padding-right: 330px;
+    }
   }
 
   @media (max-width: 930px) {
-    .content {
+    section {
+      /* background-position-y: 400px;
+      background-position-x: right; */
+      background-position: top 400px right -50px;
+      background-size: 600px;
+    }
+    .container {
       grid-template-columns: 1fr;
     }
 
-    section.main {
-      background-image: none;
-      margin-top: 0;
-      padding-bottom: 0;
+    .detail {
+      padding: 0 var(--padding);
+    }
+    .preview {
+      padding: 48px 24px;
+    }
+    .preview img {
+      position: unset;
+      padding: 0;
+      margin: 0;
+      height: 400px;
     }
 
-    h1 {
-      font-weight: 300;
-      font-size: 3rem;
-      margin-bottom: 24px;
+    .items-wrapper .products {
+      padding: 0;
     }
 
-    .product-section {
-      display: none;
+    .scroll-navigations {
+      bottom: 200px;
+      padding: 0 24px;
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
     }
 
-    .right-section {
-      width: 0;
-      display: none;
-    }
-    .mobile-current-image {
-      padding: 50px 24px;
-      display: grid;
-      grid-template-columns: 1fr 2fr 1fr;
-      justify-content: center;
-      align-items: center;
-    }
-    .mobile-current-image .image {
-      display: grid;
-      place-items: center;
-    }
-    .current-image {
-      display: none;
-    }
-
-    .mobile-product-scroller {
+    .scroll-navigations > :first-child {
       display: block;
-      padding-bottom: 0px;
-    }
-
-    .mobile-product-scroller > .product-list {
-      width: 100vw;
-      overflow-x: auto;
-
-      /* width: 100vw; */
-      grid-auto-columns: 50%;
-    }
-    .product.active {
-      --opacity: 1;
-      --product-color: #fcfcf9;
-      border-top: var(--border-width) solid var(--border-color);
     }
   }
 </style>

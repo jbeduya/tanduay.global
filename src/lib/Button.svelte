@@ -10,7 +10,7 @@
 <style>
   button {
     font-family: acumin-pro, sans-serif;
-    font-size: 14px;
+    font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
     background-color: transparent;

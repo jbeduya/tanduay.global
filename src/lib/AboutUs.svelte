@@ -171,7 +171,7 @@
 
   .container {
     max-width: var(--max-width);
-    width: 100vw;
+    width: 100%;
   }
 
   .picture {
