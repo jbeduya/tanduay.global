@@ -24,7 +24,7 @@
   };
 </script>
 
-<section>
+<section id="stores">
   <div class="content">
     <h2>Select Stores to Shop</h2>
     <div class="stores">

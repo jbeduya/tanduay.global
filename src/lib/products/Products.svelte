@@ -17,8 +17,6 @@
     innerWidth = 1300,
     centered = false;
 
-  $: console.log(innerWidth);
-
   $: if (innerWidth > 1200) {
     slides = 4;
     group = 4;

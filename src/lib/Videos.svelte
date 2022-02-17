@@ -31,8 +31,6 @@
   } else {
     numSlides = 1.2;
   }
-
-  $: console.log(numSlides);
 </script>
 
 <svelte:window bind:innerWidth />

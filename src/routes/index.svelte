@@ -39,7 +39,7 @@
 
 <AboutUs />
 
-<OurLand />
+<!-- <OurLand /> -->
 
 <Testimonies />
 
@@ -47,7 +47,7 @@
 
 <Stores />
 
-<Videos />
+<!-- <Videos /> -->
 
 <PressReleases />
 

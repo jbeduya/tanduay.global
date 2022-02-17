@@ -1,6 +1,7 @@
 <script>
   import Accordion from "$lib/Accordion.svelte";
   import Button from "$lib/Button.svelte";
+  import LinkButton from "$lib/LinkButton.svelte";
   import AgeingIcon from "./icons/AgeingIcon.svelte";
   import AlcoholVolumeIcon from "./icons/AlcoholVolumeIcon.svelte";
   import BodyIcon from "./icons/BodyIcon.svelte";
@@ -118,8 +119,8 @@
 </section>
 
 <div class="buttons">
-  <Button>Check Recipes</Button>
-  <Button active>Buy Now</Button>
+  <LinkButton href="/#cocktails">Check Recipes</LinkButton>
+  <LinkButton href="/#stores">Buy Now</LinkButton>
 </div>
 
 <section class="detail" class:open>

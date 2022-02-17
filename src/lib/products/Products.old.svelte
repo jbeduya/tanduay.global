@@ -18,7 +18,6 @@
       el.scrollWidth - el.scrollLeft === el.clientWidth
         ? 0
         : el.scrollLeft + el.clientWidth;
-    console.log("LEFT", left);
     productContainer.scroll({
       top: 0,
       left,
@@ -29,7 +28,6 @@
   const scrollTo = (idx) => {
     let elWidth = window.innerWidth / 2;
     let left = elWidth * idx;
-    console.log(left);
     scroller.scrollTo({
       // top: 0,
       left: left,

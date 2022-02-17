@@ -2,120 +2,20 @@
   import { browser } from "$app/env";
 
   import BigArrow from "$lib/products/icons/BigArrow.svelte";
+
   import { onMount } from "svelte";
   import { writable } from "svelte/store";
+  import { Swiper, Scrollbar } from "swiper";
+  import "swiper/css";
+  import "swiper/css/scrollbar";
   import CocktailInfo from "./CocktailInfo.svelte";
 
   export let cocktails = [];
 
-  let counter = 0;
-
-  let open = writable(false);
-  let el, paddingLeft, scroll_container, cards;
-
-  // const isVisibleInContainer = (ele, container) => {
-  //   const eleLeft = ele.offsetLeft;
-  //   const eleRight = eleLeft + ele.clientWidth;
-
-  //   const containerLeft = container.scrollLeft;
-  //   const containerRight = containerLeft + container.clientWidth;
-
-  //   // The element is fully visible in the container
-  //   return (
-  //     (eleLeft >= containerLeft && eleRight <= containerRight) ||
-  //     // Some part of the element is visible in the container
-  //     (eleLeft < containerLeft && containerLeft < eleRight) ||
-  //     (eleLeft < containerRight && containerRight < eleRight)
-  //   );
-  // };
-
-  const isVisibleInContainer = (el, container) => {
-    const { x, width } = el.getBoundingClientRect();
-    const rect = container.getBoundingClientRect();
-
-    const elWidth = x + width;
-    const rectWidth = rect.x + rect.width;
-
-    return x >= rect.x && elWidth <= rectWidth;
-  };
-
-  let timeout;
-  let ticking = false;
-
-  const isCardVisible = () => {
-    // if (!ticking) {
-    //   window.requestAnimationFrame(() => {
-    //     // cards.forEach((card) => {
-    //     //   let isVisible = isVisibleInContainer(card, scroll_container);
-    //     //   card.classList.toggle("isVisible", isVisible);
-    //     //   counter++;
-    //     //   console.log("IDX", counter);
-    //     // });
-
-    //     let items = document.querySelectorAll(".cocktail-item.isVisible");
-    //     if (items && items[0]) {
-    //       items[0].classList.add("scaled");
-    //     }
-    //     ticking = false;
-    //     console.log("DONE.", ticking);
-    //   });
-    //   ticking = true;
-    //   console.log("TICKING", ticking);
-    // }
-    clearTimeout(timeout);
-    timeout = setTimeout(() => {
-      cards.forEach((card) => {
-        card.classList.toggle(
-          "isVisible",
-          isVisibleInContainer(card, scroll_container)
-        );
-        card.classList.toggle("scaled", false);
-        counter++;
-      });
-
-      let items = document.querySelectorAll(".cocktail-item.isVisible");
-      if (items && items[0]) {
-        items[0].classList.add("scaled");
-      }
-      clearTimeout(timeout);
-    }, 200);
-  };
-
-  onMount(() => {
-    const resize = (e) => {
-      let box = el.getBoundingClientRect();
-      // @ts-ignore
-      paddingLeft = `${box.x + 20}px`;
-    };
-
-    cards = document.querySelectorAll(".cocktail-item");
-
-    window.addEventListener("resize", resize);
-    window.addEventListener("resize", isCardVisible, { passive: true });
-    scroll_container.addEventListener("scroll", isCardVisible, {
-      passive: true,
-    });
-
-    open.subscribe((isOpen) => {
-      document.body.classList.toggle("no-scroll", isOpen);
-    });
-
-    // initial call
-    resize();
-    isCardVisible();
-
-    return () => {
-      scroll_container.removeEventListener("scroll", isCardVisible);
-      window.removeEventListener("resize", isCardVisible);
-      window.removeEventListener("resize", resize);
-    };
-  });
+  let selectedItem,
+    currentCategory = "all";
 
   const onlyUnique = (value, index, self) => self.indexOf(value) === index;
-
-  let currentCategory = "all";
-  let selectedItem;
-
   $: categories = cocktails.map((c) => c.category).filter(onlyUnique);
   $: if (categories.length > 1) {
     currentCategory = categories[0];
@@ -132,71 +32,138 @@
       selectedItem.suggestions.includes(c.id)
   );
 
-  let timeout2;
+  let innerWidth,
+    containerPadding = 0;
+
+  $: if (innerWidth) {
+    containerPadding = document.querySelector(
+      "#products .container .detail"
+    ).offsetLeft;
+  }
 
   const changeCategory = (category) => {
     currentCategory = category;
-    timeout2 = setTimeout(() => {
-      clearTimeout(timeout2);
-      cards = document.querySelectorAll(".cocktails > .cocktail-item");
-    }, 10);
   };
 
-  const scrollIntoView = (el) => {};
+  let open = writable(false);
+  open.subscribe((isOpen) => {
+    if (browser) {
+      document.body.classList.toggle("no-scroll", isOpen);
+    }
+  });
 
   const show = (id) => {
     selectedItem = cocktails.filter((c) => c.id === id)[0];
     $open = true;
   };
+
+  let swiper;
+
+  $: if (currentItems.length && swiper) {
+    setTimeout(() => {
+      swiper.update();
+    }, 200);
+  }
+
+  onMount(() => {
+    innerWidth = window.innerWidth;
+    containerPadding = document.querySelector(
+      "#products .container .detail"
+    ).offsetLeft;
+
+    swiper = new Swiper("#cocktail-items", {
+      slidesPerView: 3,
+      spaceBetween: 80,
+      slidesPerGroup: 1,
+      modules: [Scrollbar],
+      scrollbar: {
+        el: ".cocktails-scrollbar",
+        draggable: true,
+        snapOnRelease: true,
+      },
+      breakpoints: {
+        300: {
+          slidesPerView: 1.5,
+          spaceBetween: 50,
+          centeredSlides: true,
+        },
+        520: {
+          slidesPerView: 2,
+          centeredSlides: true,
+          spaceBetween: 50,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 50,
+          centeredSlides: true,
+        },
+        930: {
+          slidesPerView: 2,
+          spaceBetween: 50,
+          centeredSlides: true,
+        },
+        1200: {
+          slidesPerView: 2.5,
+          spaceBetween: 80,
+        },
+        1300: {
+          spaceBetween: 80,
+        },
+        2000: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  });
 </script>
 
-<section class="main" style:--padding-left={paddingLeft}>
-  <div bind:this={el} class="dummy-container">&nbsp;</div>
+<svelte:window bind:innerWidth />
+
+<section id="cocktails" style:padding-left={containerPadding + "px"}>
   <div class="container">
-    <div class="content">
-      <div class="left">
-        <div>
-          <h1 class="garamond">Cocktail Culture</h1>
-          <ul>
-            <li
-              on:click={() => changeCategory("all")}
-              class:active={currentCategory == "all"}
-            >
-              All
-            </li>
-            {#each categories as category}
-              <li
-                class:active={currentCategory === category}
-                on:click={() => changeCategory(category)}
-              >
-                {category}
-              </li>
-            {/each}
-          </ul>
-        </div>
-      </div>
-      <div class="cocktails" bind:this={scroll_container}>
-        {#each currentItems as cocktail}
-          <div
-            class="cocktail-item"
-            on:click={scrollIntoView}
-            style:--image="url('/images/dummy.png')"
+    <div class="navigation">
+      <h1 class="garamond">Cocktail Culture</h1>
+
+      <ul>
+        <li
+          on:click={() => changeCategory("all")}
+          class:active={currentCategory == "all"}
+        >
+          All
+        </li>
+        {#each categories as category}
+          <li
+            class:active={currentCategory === category}
+            on:click={() => changeCategory(category)}
           >
-            <div class="cocktail-content">
-              <span />
-              <div class="clickable" on:click={() => show(cocktail.id)}>
-                <div class="label">{cocktail.product}</div>
-                <h2 class="garamond">{cocktail.name} &nbsp; <BigArrow /></h2>
+            {category}
+          </li>
+        {/each}
+      </ul>
+    </div>
+    <div id="cocktail-items" class="items swiper">
+      <div class="swiper-wrapper">
+        {#each currentItems as cocktail}
+          <div class="swiper-slide">
+            <div class="cocktail-item" style:--image="url('/images/dummy.png')">
+              <div class="cocktail-content">
+                <span />
+                <div class="clickable" on:click={() => show(cocktail.id)}>
+                  <div class="label">{cocktail.product}</div>
+                  <h2 class="garamond">{cocktail.name} &nbsp; <BigArrow /></h2>
+                </div>
               </div>
             </div>
           </div>
         {/each}
       </div>
+      <div class="cocktails-scrollbar swiper-scrollbar" />
     </div>
   </div>
 </section>
 
-<section class="detail" class:open={$open}>
+<section class="cocktail-detail" class:open={$open}>
   <div class="cancel" on:click={() => ($open = false)}>
     <div class="inside">&nbsp;</div>
   </div>
@@ -211,56 +178,23 @@
 </section>
 
 <style>
-  section.detail {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: calc(100vw - 10px);
-    visibility: hidden;
-    z-index: 1;
-
-    background-color: transparent;
-    backdrop-filter: blur(4px);
-
-    display: grid;
-    grid-template-columns: 1fr auto;
-    justify-content: start;
-    align-items: flex-start;
-    transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  section {
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
-
-  section.detail.open {
-    visibility: visible;
-    left: 0;
+  h1 {
+    font-size: 3rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-style: italic;
+    width: 350px;
+    margin-bottom: 1rem;
   }
-
-  section.detail :is(.info, .cancel) {
-    height: 100vh;
-  }
-
-  section.detail :is(.info) {
-    background-color: #fff;
-    border-top-left-radius: 30px;
-    border-bottom-left-radius: 30px;
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
-    width: 700px;
-  }
-
-  .inside {
-    height: 100%;
-    width: 100%;
-  }
-
-  .dummy-container {
-    max-width: var(--max-width);
-    width: 100%;
-  }
-
-  section.main {
-    display: grid;
-    place-items: center;
-    padding: 100px 0 200px 0;
+  h2 {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: normal;
+    display: inline-block;
   }
 
   ul,
@@ -278,9 +212,11 @@
     cursor: pointer;
     text-transform: uppercase;
     color: #93936c;
-    font-size: 24px;
+    font-size: 1.5rem;
     padding: 5px 0;
+    margin: 1rem 0;
   }
+
   li:hover {
     color: #d18b3f;
   }
@@ -297,70 +233,42 @@
     margin-right: 10px;
   }
 
-  h1 {
-    font-size: 55px;
-    font-weight: normal;
-    text-transform: uppercase;
-    font-style: italic;
-    margin-bottom: 50px;
-    width: 40px;
-  }
-
-  h2 {
-    color: white;
-    font-size: 30px;
-    font-weight: normal;
-    display: inline-block;
-  }
-
-  .left {
-    padding-right: 200px;
+  .navigation {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    margin-left: 24px;
   }
 
-  .label {
-    display: block;
-    color: #b5af87;
-    font-size: 20px;
+  .items {
+    height: 600px;
+    width: 100%;
+    padding: 100px 0;
+    padding-left: 50px;
   }
-  .content {
+
+  .container {
     display: grid;
     grid-template-columns: auto 1fr;
-    padding-left: var(--padding-left);
-  }
-  .cocktails {
-    display: grid;
-    gap: 4rem;
-    padding: 50px 0;
-    grid-auto-flow: column;
-
-    overflow-x: auto;
-    overscroll-behavior-inline: contain;
-
-    scroll-snap-type: inline mandatory;
-    scroll-padding-inline: 1.5rem;
-    padding-right: 40px;
-    padding-bottom: 6rem;
-    padding-left: 3em;
-  }
-
-  .cocktails > * {
-    scroll-snap-align: start;
-  }
-
-  :global(.cocktails > .isVisible.scaled) {
-    transform: scale(1.2);
   }
 
   .cocktail-item {
-    height: 500px;
     border-radius: 20px;
     background: var(--image) no-repeat;
     background-size: cover;
-    min-width: 400px;
-    transition-duration: 100ms;
+    height: 400px;
+    transition-duration: 250ms;
+  }
+
+  :global(.swiper-slide-active .cocktail-item) {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+  }
+
+  .cocktail-item .label {
+    display: block;
+    color: #b5af87;
+    font-size: 1rem;
   }
 
   .cocktail-content {
@@ -374,56 +282,89 @@
       rgba(255, 255, 255, 0) 100%
     );
 
-    display: grid;
-    grid-template-rows: 1fr auto;
-    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem 1rem;
   }
 
   .clickable {
     cursor: pointer;
   }
 
+  section.cocktail-detail {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: calc(100vw - 10px);
+    visibility: hidden;
+    z-index: 1;
+
+    background-color: transparent;
+    backdrop-filter: blur(4px);
+
+    display: grid;
+    grid-template-columns: 100px auto;
+    justify-content: start;
+    align-items: flex-start;
+    transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    padding: 0;
+  }
+
+  section.cocktail-detail.open {
+    visibility: visible;
+    left: 0;
+  }
+
+  section.cocktail-detail :is(.info, .cancel) {
+    height: 100vh;
+  }
+
+  section.cocktail-detail :is(.info) {
+    background-color: #fff;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+  }
+
+  :global(.cocktails-scrollbar .swiper-scrollbar-drag) {
+    background-color: #d18b40;
+    height: 6px;
+  }
+
   @media (max-width: 930px) {
-    .content {
+    .items {
+      padding-left: 20px;
+    }
+    .container {
       grid-template-columns: 1fr;
-    }
-
-    section.detail :is(.info) {
-      width: calc(100% - 10px);
-    }
-    .cocktails {
-      gap: 3rem;
-    }
-
-    .cocktails > * {
-      scroll-snap-align: center;
-    }
-
-    .cocktail-item {
-      min-width: calc(100vw / 1.6) !important;
-      height: calc(100vw / 1.2) !important;
-    }
-
-    .left {
-      padding: 20px;
-      margin: 0;
+      padding: 0;
     }
     h1 {
+      width: 100%;
       text-align: center;
       font-size: 2rem;
-      padding: 0;
-      padding-bottom: 20px;
-      margin: 0;
-      width: 100%;
-    }
-    li {
-      font-size: 1rem;
+      margin-bottom: 3rem;
     }
 
     ul {
+      margin: 0;
+      padding: 0 16px;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      padding-bottom: 20px;
+      row-gap: 0.7rem;
+    }
+    li {
+      padding: 0;
+      margin: 0;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 500px) {
+    .items {
+      padding-left: 0;
     }
   }
 </style>
