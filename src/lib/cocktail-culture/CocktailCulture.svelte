@@ -72,9 +72,10 @@
     ).offsetLeft;
 
     swiper = new Swiper("#cocktail-items", {
-      slidesPerView: 3,
-      spaceBetween: 80,
-      slidesPerGroup: 1,
+      slidesPerView: "auto",
+      spaceBetween: 60,
+      freeMode: true,
+      centeredSlides: true,
       modules: [Scrollbar],
       scrollbar: {
         el: ".cocktails-scrollbar",
@@ -82,51 +83,21 @@
         snapOnRelease: true,
       },
       breakpoints: {
-        300: {
-          slidesPerView: 1.5,
-          spaceBetween: 50,
-          centeredSlides: true,
-        },
-        520: {
-          slidesPerView: 2,
-          centeredSlides: true,
-          spaceBetween: 50,
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 50,
-          centeredSlides: true,
+        320: {
+          spaceBetween: 40,
         },
         930: {
-          slidesPerView: 2,
-          spaceBetween: 50,
-          centeredSlides: true,
-        },
-        1200: {
-          slidesPerView: 2.5,
-          spaceBetween: 80,
-        },
-        1300: {
-          spaceBetween: 80,
-        },
-
-        1800: {
           spaceBetween: 60,
-          slidesPerView: 3,
-        },
-        2000: {
-          slidesPerView: 4,
-          centeredSlides: false,
-          spaceBetween: 50,
         },
       },
     });
+    swiper.slideNext();
   });
 </script>
 
 <svelte:window bind:innerWidth />
 
-<section id="cocktails" style:padding-left={containerPadding + "px"}>
+<section id="cocktail-culture" style:padding-left={containerPadding + "px"}>
   <div class="container">
     <div class="navigation">
       <h1 class="garamond">Cocktail Culture</h1>
@@ -151,14 +122,15 @@
     <div id="cocktail-items" class="items swiper">
       <div class="swiper-wrapper">
         {#each currentItems as cocktail}
-          <div class="swiper-slide">
-            <div class="cocktail-item" style:--image="url('/images/dummy.png')">
-              <div class="cocktail-content">
-                <span />
-                <div class="clickable" on:click={() => show(cocktail.id)}>
-                  <div class="label">{cocktail.product}</div>
-                  <h2 class="garamond">{cocktail.name} &nbsp; <BigArrow /></h2>
-                </div>
+          <div
+            class="cocktail-item swiper-slide"
+            style:--image="url('/images/dummy.png')"
+          >
+            <div class="cocktail-content">
+              <span />
+              <div class="clickable" on:click={() => show(cocktail.id)}>
+                <div class="label">{cocktail.product}</div>
+                <h2 class="garamond">{cocktail.name} &nbsp; <BigArrow /></h2>
               </div>
             </div>
           </div>
@@ -262,11 +234,12 @@
     border-radius: 20px;
     background: var(--image) no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 350px;
+    width: 300px;
     transition-duration: 250ms;
   }
 
-  :global(.swiper-slide-active .cocktail-item) {
+  :global(.cocktail-item.swiper-slide-active) {
     transform: scale(1.2);
     box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
   }
@@ -342,6 +315,11 @@
   @media (max-width: 930px) {
     .items {
       padding-left: 20px;
+      height: 500px;
+    }
+    .cocktail-item {
+      height: 300px;
+      width: 250px;
     }
     .container {
       grid-template-columns: 1fr;

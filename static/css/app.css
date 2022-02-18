@@ -73,3 +73,24 @@ h1 {
     background-size: 300%;
   }
 }
+
+/** Press Release **/
+.section-press-release .credit {
+  display: flex;
+  flex-direction: row;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  gap: 0.5rem;
+  align-items: center;
+  color: var(--credit-color);
+}
+
+.section-press-release .credit .author .name {
+  font-weight: bold;
+}
+
+.section-press-release .divider {
+  background-color: var(--divider-color);
+  width: 1px;
+  height: 0.6rem;
+}

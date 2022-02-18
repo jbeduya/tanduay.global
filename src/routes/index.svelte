@@ -54,5 +54,3 @@
 <ContactUs />
 
 <ContactForm />
-
-<Footer />

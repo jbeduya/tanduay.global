@@ -2,11 +2,11 @@
   import ArrowRight from "./products/icons/ArrowRight.svelte";
   import ArrowLeft from "./products/icons/ArrowLeft.svelte";
 
-  import { Swiper, SwiperSlide } from "swiper/svelte";
-  import { Navigation, Scrollbar } from "swiper";
+  import { Swiper, Navigation } from "swiper";
 
   import "swiper/css";
   import "swiper/css/navigation";
+  import { onMount } from "svelte";
 
   let videos = [
     "https://www.youtube.com/embed/tBCTG2LTIo4?controls=0",
@@ -17,23 +17,21 @@
     "https://www.youtube.com/embed/XbPPCC9RswE?controls=0",
   ];
 
-  let innerWidth = 1500,
-    numSlides = 2.6;
-
-  $: if (innerWidth > 1400) {
-    numSlides = 2.6;
-  } else if (innerWidth > 1200) {
-    numSlides = 2.1;
-  } else if (innerWidth > 930) {
-    numSlides = 1.8;
-  } else if (innerWidth > 730) {
-    numSlides = 1.4;
-  } else {
-    numSlides = 1.2;
-  }
+  onMount(() => {
+    let swiper = new Swiper(".video-scroller", {
+      slidesPerView: "auto",
+      modules: [Navigation],
+      spaceBetween: 30,
+      centeredSlides: true,
+      freeMode: true,
+      navigation: {
+        nextEl: "#videos-swiper-button-next",
+        prevEl: "#videos-swiper-button-prev",
+      },
+    });
+    swiper.slideNext();
+  });
 </script>
-
-<svelte:window bind:innerWidth />
 
 <section>
   <div class="container">
@@ -56,142 +54,22 @@
       </div>
     </div>
   </div>
-  <div class="video-scroller">
-    {#if numSlides == 2.6}
-      <Swiper
-        modules={[Navigation, Scrollbar]}
-        navigation={{
-          nextEl: "#videos-swiper-button-next",
-          prevEl: "#videos-swiper-button-prev",
-        }}
-        spaceBetween={10}
-        slidesPerView={2.6}
-      >
-        {#each videos as video}
-          <SwiperSlide>
-            <div class="video">
-              <iframe
-                height="100%"
-                width="100%"
-                src={video}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
-    {/if}
-    {#if numSlides == 2.1}
-      <Swiper
-        modules={[Navigation, Scrollbar]}
-        navigation={{
-          nextEl: "#videos-swiper-button-next",
-          prevEl: "#videos-swiper-button-prev",
-        }}
-        spaceBetween={10}
-        slidesPerView={2.1}
-      >
-        {#each videos as video}
-          <SwiperSlide>
-            <div class="video">
-              <iframe
-                height="100%"
-                width="100%"
-                src={video}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
-    {/if}
-    {#if numSlides == 1.8}
-      <Swiper
-        modules={[Navigation, Scrollbar]}
-        navigation={{
-          nextEl: "#videos-swiper-button-next",
-          prevEl: "#videos-swiper-button-prev",
-        }}
-        spaceBetween={10}
-        slidesPerView={1.8}
-      >
-        {#each videos as video}
-          <SwiperSlide>
-            <div class="video">
-              <iframe
-                height="100%"
-                width="100%"
-                src={video}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
-    {/if}
-    {#if numSlides == 1.4}
-      <Swiper
-        modules={[Navigation, Scrollbar]}
-        navigation={{
-          nextEl: "#videos-swiper-button-next",
-          prevEl: "#videos-swiper-button-prev",
-        }}
-        spaceBetween={10}
-        slidesPerView={1.4}
-      >
-        {#each videos as video}
-          <SwiperSlide>
-            <div class="video">
-              <iframe
-                height="100%"
-                width="100%"
-                src={video}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
-    {/if}
-    {#if numSlides == 1.2}
-      <Swiper
-        modules={[Navigation, Scrollbar]}
-        navigation={{
-          nextEl: "#videos-swiper-button-next",
-          prevEl: "#videos-swiper-button-prev",
-        }}
-        spaceBetween={10}
-        slidesPerView={1.2}
-      >
-        {#each videos as video}
-          <SwiperSlide>
-            <div class="video">
-              <iframe
-                height="100%"
-                width="100%"
-                src={video}
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-            </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
-    {/if}
+  <div class="video-scroller swiper">
+    <div class="swiper-wrapper">
+      {#each videos as video}
+        <div class="video swiper-slide">
+          <iframe
+            height="100%"
+            width="100%"
+            src={video}
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          />
+        </div>
+      {/each}
+    </div>
   </div>
 </section>
 
@@ -247,7 +125,8 @@
     padding: 10px;
     border: 2px solid var(--secondary-color);
     border-radius: var(--border-radius);
-    height: 500px;
+    height: 400px;
+    width: 600px;
   }
 
   .video-scroller {
@@ -283,17 +162,17 @@
       font-size: 0.9rem;
       margin: 1rem 0 1rem 0;
     }
+
     .video {
       height: 250px;
-    }
-    .video:first-child {
-      margin-left: 12px;
+      width: 300px;
     }
     .header {
       grid-template-columns: 1fr;
     }
+
     .right {
-      justify-content: start;
+      justify-content: flex-start;
     }
   }
 </style>

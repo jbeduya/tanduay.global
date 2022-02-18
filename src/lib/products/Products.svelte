@@ -1,7 +1,6 @@
 <script>
   import ProductInfo from "./ProductInfo.svelte";
-  import { Swiper, SwiperSlide } from "swiper/svelte";
-  import { Navigation } from "swiper";
+  import { Swiper, Navigation } from "swiper";
 
   import "swiper/css";
   import "swiper/css/navigation";
@@ -12,47 +11,24 @@
 
   export let products = [];
   let currentProduct = products[0];
-  let slides = 4,
-    group = 4,
-    innerWidth = 1300,
-    centered = false;
-
-  $: if (innerWidth > 1200) {
-    slides = 4;
-    group = 4;
-    centered = false;
-  } else if (innerWidth > 931) {
-    slides = 3;
-    group = 3;
-    centered = false;
-  } else if (innerWidth > 800) {
-    slides = 5;
-    group = 5;
-    centered = false;
-  } else if (innerWidth > 570) {
-    slides = 4;
-    group = 4;
-    centered = false;
-  } else if (innerWidth >= 530) {
-    slides = 3;
-    group = 3;
-    centered = false;
-  } else {
-    slides = 2;
-    group = 1;
-    centered = true;
-  }
 
   const productClicked = (idx) => {
     currentProduct = products[idx];
   };
 
   onMount(() => {
-    innerWidth = window.innerWidth;
+    let swiper = new Swiper(".products-swiper", {
+      modules: [Navigation],
+      slidesPerView: "auto",
+      spaceBetween: 0,
+      centeredSlides: false,
+      navigation: {
+        nextEl: "#products-swiper-button-next",
+        prevEl: "#products-swiper-button-prev",
+      },
+    });
   });
 </script>
-
-<svelte:window bind:innerWidth />
 
 <section id="products">
   <div class="container">
@@ -75,20 +51,11 @@
   </div>
   <div class="items-wrapper">
     <div class="products">
-      <Swiper
-        modules={[Navigation]}
-        navigation={{
-          nextEl: "#products-swiper-button-next",
-          prevEl: "#products-swiper-button-prev",
-        }}
-        slidesPerView={slides}
-        slidesPerGroup={group}
-        centeredSlides={centered}
-      >
-        {#each products as product, idx}
-          <SwiperSlide>
+      <div class="products-swiper swiper">
+        <div class="swiper-wrapper">
+          {#each products as product, idx}
             <div
-              class="product"
+              class="product swiper-slide"
               class:active={product.id === currentProduct.id}
               data-id={product.id}
               on:click={() => productClicked(idx)}
@@ -104,9 +71,9 @@
                 <h3 class="garamond">{product.name}</h3>
               </div>
             </div>
-          </SwiperSlide>
-        {/each}
-      </Swiper>
+          {/each}
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -198,6 +165,7 @@
     border-top: var(--border-width) solid transparent;
     background-color: var(--product-color);
     cursor: pointer;
+    width: 12rem;
   }
 
   .product .thumbnail img {

@@ -1,12 +1,12 @@
 <script>
   let items = [
     { name: "Home", url: "/", active: true },
-    { name: "Our Products", url: "/" },
-    { name: "About Us", url: "/" },
-    { name: "Cocktail Culture", url: "/" },
+    { name: "Our Products", url: "/#products" },
+    { name: "About Us", url: "/#about-us" },
+    { name: "Cocktail Culture", url: "/#cocktail-culture" },
     { name: "Where to Find Us", url: "/" },
     { name: "Press", url: "/#press-release" },
-    { name: "Contact", url: "/" },
+    { name: "Contact", url: "/#contact-us" },
   ];
 </script>
 

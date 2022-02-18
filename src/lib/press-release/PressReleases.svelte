@@ -1,5 +1,5 @@
 <script>
-  import Button from "$lib/Button.svelte";
+  import LinkButton from "$lib/LinkButton.svelte";
   import PressRelease from "./PressRelease.svelte";
 
   const articles = [
@@ -50,14 +50,15 @@
     </div>
 
     <div class="more">
-      <Button>View All</Button>
+      <LinkButton href="/press-release">View All</LinkButton>
     </div>
   </div>
 </section>
 
 <style>
   h1 {
-    margin: 4rem 0;
+    margin: 3rem 0;
+    font-size: 3rem;
   }
   section {
     background-color: white;

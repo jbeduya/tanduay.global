@@ -1,4 +1,5 @@
 <script>
+  import Footer from "$lib/Footer.svelte";
   import Header from "$lib/Header.svelte";
   import MobileNavigation from "$lib/MobileNavigation.svelte";
 </script>
@@ -13,3 +14,5 @@
 <Header />
 
 <slot />
+
+<Footer />

@@ -148,7 +148,7 @@
 
   h1 {
     text-align: left;
-    margin: 100px 0;
+    margin: 100px 0 50px;
     font-size: 3rem;
   }
 

@@ -68,7 +68,7 @@
     font-family: adobe-garamond-pro, sans-serif;
     font-style: italic;
     text-transform: uppercase;
-    font-size: 55px;
+    font-size: 3rem;
     font-weight: 200;
     margin-bottom: 80px;
   }
