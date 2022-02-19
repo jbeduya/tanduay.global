@@ -66,7 +66,7 @@
   </div>
 </div>
 
-<section>
+<section id="about-us">
   <div class="container">
     <h1 class="h1">About Us</h1>
 

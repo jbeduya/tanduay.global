@@ -119,7 +119,7 @@
 </section>
 
 <div class="buttons">
-  <LinkButton href="/#cocktails">Check Recipes</LinkButton>
+  <LinkButton href="/#cocktail-culture">Check Recipes</LinkButton>
   <LinkButton href="/#stores">Buy Now</LinkButton>
 </div>
 

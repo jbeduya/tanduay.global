@@ -109,7 +109,7 @@
   $: sideCategories = categories.slice(0, 4);
 </script>
 
-<section>
+<section id="contact-us">
   <div class="container">
     <h1 class="h1">Contact Us</h1>
     <div class="content">

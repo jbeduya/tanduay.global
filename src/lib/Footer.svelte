@@ -14,11 +14,11 @@
       </div>
       <div class="right">
         <div class="navigation">
-          <a href="#">Home</a>
-          <a href="#">Recipes</a>
-          <a href="#">Location</a>
-          <a href="#">Press</a>
-          <a href="#">Videos</a>
+          <a href="/">Home</a>
+          <a href="/#cocktail-culture">Recipes</a>
+          <a href="/#where-to-find-us">Location</a>
+          <a href="/#press-release">Press</a>
+          <a href="/#videos">Videos</a>
           <a href="#">Terms</a>
         </div>
         <div class="top">

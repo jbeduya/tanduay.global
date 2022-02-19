@@ -3,8 +3,6 @@
   import SubscribeToNewsletter from "./SubscribeToNewsletter.svelte";
 
   export let articles = [];
-
-  $: console.log(articles);
 </script>
 
 <section>
@@ -41,7 +39,7 @@
     </div>
     <div class="explore-section">
       <h3>Explore Worldwide</h3>
-      <div class="articles">
+      <div class="worldwide-articles">
         {#each articles as article}
           <div class="explore-article">
             <div class="category">{article.category}</div>
@@ -98,7 +96,7 @@
     margin: 0 auto;
     padding: 4rem 1rem;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr auto;
     gap: 3rem;
   }
 
