@@ -7,39 +7,41 @@
 
 <section>
   <div class="content">
-    <span class="button close" on:click={() => dispatch("close")}>
-      <i class="fas fa-times" />
-    </span>
+    <div class="header">
+      <span class="button close" on:click={() => dispatch("close")}>
+        <i class="fas fa-times" />
+      </span>
 
-    <img class="default-glass" src="/images/products/glass.png" alt="" />
-
-    <h2>{cocktail && cocktail.product}</h2>
-    <h1 class="garamond">{cocktail && cocktail.name}</h1>
-
-    <div class="details">
-      <div class="garnish">
-        <div class="label">Garnish:</div>
-        <div class="value">{cocktail && cocktail.garnish}</div>
-      </div>
-      <div class="glass">
-        <div class="label">Glass:</div>
-        <div class="value">{cocktail && cocktail.glass}</div>
-      </div>
+      <img class="default-glass" src="/images/products/glass.png" alt="" />
+      <h2>{cocktail && cocktail.product}</h2>
+      <h1 class="garamond">{cocktail && cocktail.name}</h1>
     </div>
-
-    <div class="ingredients">
-      <div class="label">Ingredients</div>
-      <div class="value">
-        {#if cocktail && cocktail.ingredients}
-          {#each cocktail.ingredients as ingredient}
-            <p>{ingredient}</p>
-          {/each}
-        {/if}
+    <div class="body">
+      <div class="details">
+        <div class="garnish">
+          <div class="label">Garnish:</div>
+          <div class="value">{cocktail && cocktail.garnish}</div>
+        </div>
+        <div class="glass">
+          <div class="label">Glass:</div>
+          <div class="value">{cocktail && cocktail.glass}</div>
+        </div>
       </div>
-    </div>
 
-    <div class="description">
-      {cocktail && cocktail.description}
+      <div class="ingredients">
+        <div class="label">Ingredients</div>
+        <div class="value">
+          {#if cocktail && cocktail.ingredients}
+            {#each cocktail.ingredients as ingredient}
+              <p>{ingredient}</p>
+            {/each}
+          {/if}
+        </div>
+      </div>
+
+      <div class="description">
+        {cocktail && cocktail.description}
+      </div>
     </div>
   </div>
   <div class="suggestions">
@@ -75,7 +77,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
-    height: 100%;
+    height: 100vh;
     color: var(--color);
     position: relative;
   }
@@ -91,25 +93,37 @@
 
   .default-glass {
     position: absolute;
-    right: 120px;
-    height: 100px;
+    right: 6rem;
+    height: 6rem;
     top: 50px;
   }
 
   .content {
     padding: var(--padding);
     padding-right: var(--double-padding);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+  }
+
+  .content .body {
+    overflow: hidden;
+    /* height: 100%;
+    max-width: 100%; */
   }
 
   h1 {
-    font-size: 55px;
+    font-size: 2.5rem;
     font-weight: normal;
     color: var(--secondary-color);
     padding: 10px 0;
+    margin-bottom: 2rem;
+    margin-right: 4rem;
   }
   h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: normal;
+    margin-top: 2rem;
   }
 
   .details {
@@ -127,7 +141,7 @@
   }
 
   p {
-    line-height: 150%;
+    line-height: 180%;
     color: var(--detail-color);
   }
 
@@ -142,7 +156,8 @@
     padding: 20px 10px;
     border-bottom: 1px dashed var(--border-color);
     color: var(--secondary-color);
-    font-size: 16px;
+    font-size: 0.9rem;
+    line-height: 1.7rem;
   }
 
   .value {
@@ -155,7 +170,7 @@
     color: var(--secondary-color);
     padding: var(--padding);
     padding-right: var(--double-padding);
-    font-size: 24px;
+    font-size: 1.3rem;
   }
 
   .suggested-items {
@@ -178,7 +193,7 @@
     color: var(--secondary-color);
     text-decoration: underline;
     /* padding: var(--padding); */
-    font-size: 22px;
+    font-size: 1.3rem;
     cursor: pointer;
   }
 
@@ -199,5 +214,42 @@
   }
   .suggestion img {
     height: 60px;
+  }
+
+  @media (max-width: 930px) {
+    section {
+      --padding: 3rem;
+      --double-padding: 6rem;
+    }
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 570px) {
+    section {
+      --padding: 2rem;
+      --double-padding: 4rem;
+    }
+    .suggestion :is(div) {
+      font-size: 1rem;
+    }
+    .suggestions p {
+      padding-top: 0;
+    }
+    .default-glass {
+      right: 2rem;
+      height: 7rem;
+      top: 4rem;
+    }
+    h1 {
+      margin-right: 2rem;
+    }
+    h2 {
+      font-size: 1rem;
+    }
   }
 </style>

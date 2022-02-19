@@ -284,11 +284,12 @@
     backdrop-filter: blur(4px);
 
     display: grid;
-    grid-template-columns: 100px auto;
+    grid-template-columns: 1fr minmax(250px, 600px);
     justify-content: start;
     align-items: flex-start;
-    transition: all 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: all 250ms cubic-bezier(0.68, 0, 0.265, 0.55);
     padding: 0;
+    z-index: 999999;
   }
 
   section.cocktail-detail.open {
@@ -297,7 +298,7 @@
   }
 
   section.cocktail-detail :is(.info, .cancel) {
-    height: 100vh;
+    height: 100%;
   }
 
   section.cocktail-detail :is(.info) {
