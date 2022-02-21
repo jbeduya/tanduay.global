@@ -124,7 +124,7 @@
         {#each currentItems as cocktail}
           <div
             class="cocktail-item swiper-slide"
-            style:--image="url('/images/dummy.png')"
+            style:--image="url('/images/cocktails/{cocktail.photo === "" ? "dummy.png" : cocktail.photo}')"
           >
             <div class="cocktail-content">
               <span />

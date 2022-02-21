@@ -6,7 +6,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Guava Rum",
-                photo: "",
+                photo: "guava-rum.png",
                 glass_icon: "tumbler-glass",
                 description:
                     "Shake all ingredients in a cocktail shaker with ice until well-chilled. Single Strain into a tumbler glass. Garnish with sprig of mint and serve over crushed ice.",
@@ -25,7 +25,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asia Rum",
                 name: "Victoria's Negroni",
-                photo: "",
+                photo: "negrense-negroni.png",
                 glass_icon: "old-fashioned-glass",
                 description:
                     "Stir in all ingredients and ice in a mixing glass until completely chilled. Rub the inside of an orange twist onto the rim of a rock glass. Strain mixture into the glass with fresh ice. Garnish with orange twist.",
@@ -43,7 +43,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Manila Tan",
-                photo: "",
+                photo: "manila-tan.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Stir in all ingredients in a mixing glass with ice until completely chilled. Strain into coupe glass. Garnish with cherry and serve.",
@@ -61,7 +61,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Beergarita",
-                photo: "",
+                photo: "beergarita.png",
                 glass_icon: "collins-glass",
                 description:
                     "Shake all ingredients except dark beer in a cocktail shaker with ice. Strain into a collins glass. Top with dark beer. Garnish with lemon and lime wedge.",
@@ -83,7 +83,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Key West Hopper",
-                photo: "",
+                photo: "key-west-hopper.png",
                 glass_icon: "highball-glass",
                 description:
                     "Tip in all ingredients in a cocktail shaker with ice and shake until completely chilled. Pour in highball glass over ice. Garnish with pineapple slice and leaf, cherry, and orange peel.",
@@ -105,7 +105,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Classic Daiquiri",
-                photo: "",
+                photo: "classic-daiquiri.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Combine all ingredients in a cocktail shaker with ice, shake until completely chilled. Double strain into coupe glass. Garnish with lime peel.",
@@ -124,7 +124,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Aian Rum",
                 name: "Asian Persuasion",
-                photo: "",
+                photo: "asian-persuasion.png",
                 glass_icon: "rock-glass",
                 description:
                     "Shake all ingredients together in a cocktail shaker with ice. Pour into rock glass. Garnish with lime peel and cherry.",
@@ -142,7 +142,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asia Rum",
                 name: "Cherry Blossom Mule",
-                photo: "",
+                photo: "cherry-blossom-mule.png",
                 glass_icon: "rock-glass",
                 description:
                     "Shake all ingredients together in a cocktail shaker with ice. Strain into a copper glass or large rock glass and top with ginger ale. Garnish with calamansi, slice of ginger, and flower petals.",
@@ -162,7 +162,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Tanduay Brooklyn",
-                photo: "",
+                photo: "tanduay-brooklyn.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Add all ingredients in a mixing glass with ice and stir until well-chilled. Strain into coupe glass. Garnish with lemon twist.",
@@ -180,7 +180,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Mango Tango",
-                photo: "",
+                photo: "tango.png",
                 glass_icon: "highball-glass",
                 description:
                     "Combine all ingredients in a blender mixture into a tall glass. Garnish with lime twist and mango slice.",
@@ -218,7 +218,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "New Fashion",
-                photo: "",
+                photo: "new-fashion.png",
                 glass_icon: "old-fashioned-glass",
                 description:
                     "Muddle orange wheel and cherries in an old fashioned glass. Add 4 drops of bitters. Fill with ice and pour in Tanduay Asian Rum Gold. Garnish and serve.",
@@ -237,7 +237,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Blue Mai Tai",
-                photo: "",
+                photo: "blue-mai-tai.png",
                 glass_icon: "mason-jar",
                 description:
                     "Shake all ingredients in a cocktail shaker with ice untill well-chilled. Serve in a tiki mug or Mason jar over fresh ice. Garnish with lime wheel and sprigs of fresh mint.",
@@ -257,7 +257,7 @@ export async function get() {
                 category: "Asian Rum",
                 product: "Tanduay Asian Rum",
                 name: "Cucumber Rum",
-                photo: "",
+                photo: "cucumber-rum.png",
                 glass_icon: "balloon-glass",
                 description:
                     "Add all ingredients except soda water in a cocktail shaker with a handful of ice and shake until completely chilled. Pour into a balloon glass, top with soda water and drops of bitters. Garnish with cucumber peel.",
@@ -277,7 +277,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Boracay Sunset",
-                photo: "",
+                photo: "boracay-sunset.png",
                 glass_icon: "hurricane-glass",
                 description:
                     "Shake all ingredients together with ice in a cocktail shaker. Strain into a tall glass with fresh ice, top with grenadine. Garnish with pineapple slice and cherry.",
@@ -297,7 +297,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "S'mores",
-                photo: "",
+                photo: "smores.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Shake all ingredients in a cocktail shaker with ice. Strain in a coupe glass. Prepare garnish by roasting a marshmallow over fire, place on top of glass.",
@@ -333,7 +333,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Tropical Breeze",
-                photo: "",
+                photo: "tropical-breeze.png",
                 glass_icon: "hurricane-glass",
                 description:
                     "Shake all ingredients in a cocktail shaker with ice untill well-chilled. Pour mixture into a hurricane glass over ice. Finishing with a garnish of lime wedge.",
@@ -353,7 +353,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Love on Cup",
-                photo: "",
+                photo: "love-on-cup.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Combine all ingredients and handful of ice in a cocktail shaker, shake until well-chilled. Double strain into coupe glass. Garnish with coffee beans.",
@@ -372,7 +372,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Good Day",
-                photo: "",
+                photo: "good-day.png",
                 glass_icon: "tumbler-glass",
                 description:
                     "Rim a rock glass with orange juice and dip into the brown sugar. In a cocktail shaker, combine all ingredients and shake untill fully chilled. Pour into the tumbler glass with fresh ice. Garnish with coffee beans and serve.",
@@ -390,7 +390,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Cafe Colada",
-                photo: "",
+                photo: "cafe-colada.png",
                 glass_icon: "collins-glass",
                 description:
                     "Add all ingredients in a cocktail shaker, shake until fully chilled. Strain into a collins glass with fresh ice. Garnish with pinapple slice and cherry.",
@@ -409,7 +409,7 @@ export async function get() {
                 category: "Boracay Rum",
                 product: "Boracay Rum",
                 name: "Strawberry Delight",
-                photo: "",
+                photo: "strawberry-delight.png",
                 glass_icon: "tall-glass",
                 description:
                     "In a blender, combine all ingredients and a handful of ice. Blend untill smooth and creamy. Pour into a tall glass. Garnish with sliced strawberry. Serve immediately.",
@@ -428,7 +428,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Passion Fruit Rum Punch",
-                photo: "",
+                photo: "passion-fruit-rum-punch.png",
                 glass_icon: "tumbler-glass",
                 description:
                     "Combine all ingredients except Tanduay Rum Dark together in a cocktail shaker, shake until well-chilled. Strain into a tumbler glass with fresh ice. Float Tanduay Rum Dark on top. Garnish with lemon wheel and orange peel.",
@@ -448,7 +448,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Strawberry Daiquiri",
-                photo: "",
+                photo: "strawberry-daiquiri.png",
                 glass_icon: "flute-glass",
                 description:
                     "Combine all ingredients except Tanduay Rum Dark together in a cocktail shaker, shake until well-chilled. Strain into a tumbler glass with fresh ice. Float Tanduay Rum Dark on top. Garnish with lemon wheel and orange peel.",
@@ -467,7 +467,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Guava Basil Mint",
-                photo: "",
+                photo: "guava-basil-mint.png",
                 glass_icon: "flute-glassl",
                 description:
                     "Shake all ingredients in cocktail shaker, until well-chilled. Double strain in a flute glass. Garnish with a basil leaf.",
@@ -486,7 +486,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Masasa Beach",
-                photo: "",
+                photo: "masasa-beach.png",
                 glass_icon: "tumbler-glass",
                 description:
                     "Combine all ingredients in a cocktail shaker, shake until fully chilled. Pour in a tumbler glass over fresh ice. Garnish with mango slice and sprig of mint.",
@@ -505,7 +505,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Tai Ko",
-                photo: "",
+                photo: "tai-ko.png",
                 glass_icon: "tumbler-glass",
                 description:
                     "Shake all ingredients in a cocktail shaker with ice until fully chilled. Transfer in to a tumbler glass. Garnish with pineapple leaf, orange wedge, and cherry.",
@@ -526,7 +526,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Heartbreaker",
-                photo: "",
+                photo: "heart-breaker.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Stir in all ingredients in a mixing glass with ice. Double strain in a coupe glass. Garnish with orange peel and serve.",
@@ -545,7 +545,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Lychee Mojito",
-                photo: "",
+                photo: "lychee-mojito.png",
                 glass_icon: "rock-glass",
                 description:
                     "Combine all liquid ingredients in a cocktail shaker, shake until well-chilled. Muddle lychees and mint in a rocks glass. Add fresh ice and pour in mixture. Garnish with sprig of mint.",
@@ -565,7 +565,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Piña Colada",
-                photo: "",
+                photo: "pinacolada.png",
                 glass_icon: "collins-glass",
                 description:
                     "In a cocktail shaker with ice, combine all ingredients and shake until fully-chilled. Pour mixture into collins glass over fresh ice. Garnish with pineapple slice and cherry.",
@@ -585,7 +585,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Rum Float",
-                photo: "",
+                photo: "rum-float.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Combine Tanduay Rum Dark and root beer in a mixing glass with ice. Mix until well-chilled. Place vanilla ice cream in a coupe glass. Strain rum and rootbeer mixuture into the coupe glass. Drizzle chocolate syrup and place cherry on top.",
@@ -603,7 +603,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Bring it on",
-                photo: "",
+                photo: "bring-it-on.png",
                 glass_icon: "highball-glass",
                 description:
                     "Place all ingredients and handful of ice in a cocktail shaker. Shake until well-chilled. Pour mixture in a highball glass with fresh ice. Garnish with orange peel and cherry.",
@@ -622,7 +622,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Glass Garden",
-                photo: "",
+                photo: "glass-garden.png",
                 glass_icon: "coupe-glass",
                 description:
                     "Combine all ingredients in a cocktail shaker, shake until fully- chilled. Double strain into a coupe glass. Garnish with tarragon and serve immediately.",
@@ -641,7 +641,7 @@ export async function get() {
                 category: "Dark and White",
                 product: "Tanduay Rum",
                 name: "Zombie #8",
-                photo: "",
+                photo: "zombie.png",
                 glass_icon: "hurricane-glass",
                 description:
                     "Combine all ingredients in a cocktail shaker with ice. Shake and pour into a hurricane glass. Garnish with orange wheel, orange peel, and cherry.",
