@@ -14,16 +14,22 @@
     font-weight: 700;
     text-transform: uppercase;
     background-color: transparent;
-    padding: 15px 30px;
+    padding: 0.6rem 2rem;
     border-radius: 30px;
     border: 2px solid #d18b3f;
     color: #d18b3f;
     letter-spacing: 1px;
     cursor: pointer;
+    transition-duration: 0.25s;
   }
-  button:hover,
+
   .active {
     background-color: #d18b3f;
     color: #fff;
+  }
+
+  button:hover {
+    background-color: #f2a049;
+    border-color: #f2a049;
   }
 </style>

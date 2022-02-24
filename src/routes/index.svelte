@@ -28,6 +28,7 @@
   import CocktailCulture from "$lib/cocktail-culture/CocktailCulture.svelte";
   import Videos from "$lib/Videos.svelte";
   import ContactForm from "$lib/ContactForm.svelte";
+  import WhereToFindUs from "$lib/WhereToFindUs.svelte";
 
   export let products = [];
   export let cocktails = [];
@@ -44,6 +45,8 @@
 <Testimonies />
 
 <CocktailCulture {cocktails} />
+
+<WhereToFindUs />
 
 <Stores />
 

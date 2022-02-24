@@ -22,10 +22,16 @@
     letter-spacing: 1px;
     cursor: pointer;
     text-decoration: none;
+    transition-duration: 0.25s;
   }
-  a:hover,
+
   .active {
     background-color: #d18b3f;
     color: #fff;
+  }
+
+  a:hover {
+    background-color: #f2a049;
+    border-color: #f2a049;
   }
 </style>

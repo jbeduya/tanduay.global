@@ -85,8 +85,6 @@
   ];
 
   let articles = featured;
-
-  $: console.log("Articles", articles);
 </script>
 
 <Featured articles={featured} />
