@@ -8,7 +8,10 @@
   const dispatch = createEventDispatcher();
 
   let mobile = false;
+  let yOffset = 0;
 </script>
+
+<svelte:window bind:scrollY={yOffset} />
 
 <MobileNavigation show={mobile} on:toggle={() => (mobile = !mobile)} />
 
@@ -16,7 +19,7 @@
   <SocialMedia />
 </div>
 
-<section id="top">
+<section id="top" class:stick={yOffset > 100}>
   <div class="container">
     <div class="logo">
       <svg
@@ -326,6 +329,13 @@
 </section>
 
 <style>
+  .stick {
+    position: sticky;
+    top: 0;
+    background-color: #fefef8;
+    z-index: 700;
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+  }
   section {
     display: flex;
     justify-content: center;
@@ -350,6 +360,9 @@
     font-size: 1.3rem;
   }
   @media (max-width: 930px) {
+    section {
+      padding: 8px 16px;
+    }
     .container {
       grid-template-columns: 1fr;
     }
@@ -361,7 +374,6 @@
       display: inline-block;
     }
     .logo {
-      margin-top: 16px;
       display: flex;
       justify-content: space-between;
       align-items: center;
