@@ -7,6 +7,8 @@
   import Distance from "./maps/Distance.svelte";
   import Location from "./maps/Location.svelte";
   import SearchOptions from "./maps/SearchOptions.svelte";
+  import logo from "$lib/assets/t-icon.png";
+
   mapboxgl.accessToken =
     "pk.eyJ1IjoiamJlZHV5YSIsImEiOiJja3p0a3RuY2kweTZrMm9tb2lrY2V1eTUyIn0.xK2YMpqJNe_htL8K2ulpcQ";
 
@@ -124,11 +126,15 @@
     margin-bottom: 2rem;
   }
   :global(.marker) {
-    width: 24px;
-    height: 24px;
-    background-color: brown;
-    border: 1px solid green;
+    width: 32px;
+    height: 32px;
+    background: url("images/t-icon.png") no-repeat;
+    background-position: 50% 50%;
+    background-size: 18px;
+    background-color: #fefef8;
+    border: 1px solid #d4203c;
     border-radius: 50%;
+    cursor: default;
   }
   #map {
     height: 600px;
