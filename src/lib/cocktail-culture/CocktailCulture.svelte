@@ -75,7 +75,8 @@
       slidesPerView: "auto",
       spaceBetween: 60,
       freeMode: true,
-      centeredSlides: true,
+      // centeredSlides: true,
+      // loop: true,
       modules: [Scrollbar],
       scrollbar: {
         el: ".cocktails-scrollbar",
@@ -83,15 +84,20 @@
         snapOnRelease: true,
       },
       breakpoints: {
-        320: {
+        300: {
+          centeredSlides: true,
+        },
+        570: {
           spaceBetween: 40,
+          centeredSlides: true,
         },
         930: {
           spaceBetween: 60,
+          centeredSlides: false,
         },
       },
     });
-    swiper.slideNext();
+    // swiper.slideNext();
   });
 </script>
 
@@ -124,7 +130,9 @@
         {#each currentItems as cocktail}
           <div
             class="cocktail-item swiper-slide"
-            style:--image="url('/images/cocktails/{cocktail.photo === "" ? "dummy.png" : cocktail.photo}')"
+            style:--image="url('/images/cocktails/{cocktail.photo === ""
+              ? "dummy.png"
+              : cocktail.photo}')"
           >
             <div class="cocktail-content">
               <span />
@@ -219,7 +227,7 @@
   }
 
   .items {
-    height: 600px;
+    height: 700px;
     width: 100%;
     padding: 100px 0;
     padding-left: 50px;
@@ -234,16 +242,15 @@
     border-radius: 20px;
     background: var(--image) no-repeat;
     background-size: cover;
-    height: 350px;
-    width: 300px;
+    height: 450px;
+    width: 380px;
     transition-duration: 250ms;
   }
 
   :global(.cocktail-item.swiper-slide-active) {
     transform: scale(1.2);
-    box-shadow: 0px 0px 50px rgba(0, 0, 0, 0.3);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.3);
   }
-
   .cocktail-item .label {
     display: block;
     color: #b5af87;

@@ -1,9 +1,8 @@
 <script>
   import { browser } from "$app/env";
+  import { createEventDispatcher, onMount } from "svelte";
 
-  import { onMount } from "svelte";
-  const isPressReleaseActive =
-    browser && document.location.pathname.startsWith("/press-release");
+  const dispatch = createEventDispatcher();
 
   let items = [
     {
@@ -78,7 +77,11 @@
 
 <div>
   {#each items as item}
-    <a href={item.url} class:active={item.active}>{item.name}</a>
+    <a
+      href={item.url}
+      on:click={() => dispatch("click", item)}
+      class:active={item.active}>{item.name}</a
+    >
   {/each}
 </div>
 

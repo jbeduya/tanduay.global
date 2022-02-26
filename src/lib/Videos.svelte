@@ -22,14 +22,14 @@
       slidesPerView: "auto",
       modules: [Navigation],
       spaceBetween: 30,
-      centeredSlides: true,
-      freeMode: true,
+      centeredSlides: false,
+      // freeMode: true,
+      loop: false,
       navigation: {
         nextEl: "#videos-swiper-button-next",
         prevEl: "#videos-swiper-button-prev",
       },
     });
-    swiper.slideNext();
   });
 </script>
 

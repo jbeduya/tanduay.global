@@ -17,7 +17,7 @@
         <input type="text" placeholder="Search" />
         <i class="fas fa-search" />
       </div>
-      <Navigation />
+      <Navigation on:click={() => dispatch("toggle")} />
     </div>
     <div>
       <i class="fas fa-times" on:click={() => dispatch("toggle")} />
