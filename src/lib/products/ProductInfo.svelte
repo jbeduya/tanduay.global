@@ -2,6 +2,7 @@
   import Accordion from "$lib/Accordion.svelte";
   import Button from "$lib/Button.svelte";
   import LinkButton from "$lib/LinkButton.svelte";
+  import { stop_propagation } from "svelte/internal";
   import AgeingIcon from "./icons/AgeingIcon.svelte";
   import AlcoholVolumeIcon from "./icons/AlcoholVolumeIcon.svelte";
   import BodyIcon from "./icons/BodyIcon.svelte";
@@ -26,7 +27,14 @@
   <h2 class="garamond">{product.name}</h2>
   <p>{product.description}</p>
 
-  <div class="product-details-link" on:click={() => toggleDetail(true)}>
+  <div
+    class="product-details-link"
+    on:click={(e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      toggleDetail(true);
+    }}
+  >
     <a class="acumin" href="/"> Product Details</a>
     <i class="fa-solid fa-angle-right" />
   </div>

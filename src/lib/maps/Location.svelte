@@ -99,11 +99,14 @@
     border: none;
     outline: none;
     background-color: transparent;
+    font-size: 0.9rem;
+    font-family: acumin-pro, sans-serif;
   }
 
   button {
     color: #999;
     cursor: pointer;
+    font-size: 1.5rem;
   }
   button:hover i {
     color: blue;

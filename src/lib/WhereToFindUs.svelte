@@ -7,7 +7,6 @@
   import Distance from "./maps/Distance.svelte";
   import Location from "./maps/Location.svelte";
   import SearchOptions from "./maps/SearchOptions.svelte";
-  import logo from "$lib/assets/t-icon.png";
 
   mapboxgl.accessToken =
     "pk.eyJ1IjoiamJlZHV5YSIsImEiOiJja3p0a3RuY2kweTZrMm9tb2lrY2V1eTUyIn0.xK2YMpqJNe_htL8K2ulpcQ";
@@ -205,6 +204,10 @@
 
     .search-button {
       padding: 0;
+    }
+
+    h1 {
+      font-size: 2rem;
     }
   }
 </style>

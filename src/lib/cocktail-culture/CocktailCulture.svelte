@@ -130,7 +130,8 @@
         {#each currentItems as cocktail}
           <div
             class="cocktail-item swiper-slide"
-            style:--image="url('/images/cocktails/{cocktail.photo === ""
+            style:background-image="url('/images/cocktails/{cocktail.photo ===
+            ""
               ? "dummy.png"
               : cocktail.photo}')"
           >
@@ -240,7 +241,8 @@
 
   .cocktail-item {
     border-radius: 20px;
-    background: var(--image) no-repeat;
+    /* background: var(--image) no-repeat; */
+    background-repeat: no-repeat;
     background-size: cover;
     height: 450px;
     width: 380px;
@@ -352,11 +354,19 @@
       margin: 0;
       font-size: 1rem;
     }
+    .navigation {
+      padding-left: 0;
+      margin-left: 0;
+    }
   }
 
   @media (max-width: 500px) {
     .items {
       padding-left: 0;
+    }
+
+    #cocktail-culture {
+      padding-top: 6rem;
     }
   }
 </style>
