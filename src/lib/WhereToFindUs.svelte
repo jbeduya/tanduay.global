@@ -120,7 +120,7 @@
     --surface-color: #fff;
     --form-surface: #eeeeee;
     position: relative;
-    margin: 4rem 0 0;
+    padding: 4rem 0 0;
   }
   h1 {
     margin-bottom: 2rem;
@@ -157,7 +157,7 @@
     align-items: center;
     position: relative;
     /* top: 100px; */
-    z-index: 77777;
+    z-index: 667;
   }
 
   :global(.marker-popup-item) {

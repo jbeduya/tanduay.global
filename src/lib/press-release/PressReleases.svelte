@@ -39,9 +39,9 @@
   ];
 </script>
 
-<section>
+<section id="press-release">
   <div class="content">
-    <h1 id="press-release" class="h1">Press Release</h1>
+    <h1 class="h1">Press Release</h1>
 
     <div class="articles">
       {#each articles as article}

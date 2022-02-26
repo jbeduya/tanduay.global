@@ -1,6 +1,5 @@
 <script>
   import { createEventDispatcher, onMount } from "svelte";
-  import { writable } from "svelte/store";
 
   import Navigation from "./Navigation.svelte";
   import SocialMedia from "./SocialMedia.svelte";
@@ -8,12 +7,6 @@
   const dispatch = createEventDispatcher();
 
   export let show = false;
-
-  //   $: if (open) {
-  //     document.body.classList.toggle("no-scroll", true);
-  //   } else {
-  //     document.body.classList.toggle("no-scroll", false);
-  //   }
 </script>
 
 <section class:show>

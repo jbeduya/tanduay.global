@@ -7,7 +7,7 @@
   import LinkButton from "./LinkButton.svelte";
 </script>
 
-<section>
+<section id="home">
   <div class="scroller">
     <Swiper
       modules={[Navigation]}

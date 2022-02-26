@@ -5,6 +5,10 @@
   --max-width: 1400px;
   --title-size: 55px;
 }
+* {
+  scroll-behavior: smooth;
+}
+
 *,
 body {
   margin: 0;
