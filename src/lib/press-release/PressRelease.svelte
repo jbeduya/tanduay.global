@@ -8,7 +8,9 @@
     <!-- <img src={article.photo} alt="Article" /> -->
     <div class="content">
       <div class="category">{article.category}</div>
-      <p class="title">{article.title}</p>
+      <p class="title">
+        <a href={`/press-release/${article.id}`}>{article.title}</a>
+      </p>
       <div class="details">
         <div class="date">{article.date}</div>
         <span class="separator">|</span>
@@ -18,9 +20,11 @@
     </div>
 
     <div class="links">
-      <a class="more" href={article.link}>Read more</a>
+      <a class="more" href={`/press-release/${article.id}`}>Read more</a>
       <span class="external"
-        ><a href="#"><i class="fas fa-external-link-alt" /></a>
+        ><a href="https://www.google.com?q=tanduay" target="_blank"
+          ><i class="fas fa-external-link-alt" /></a
+        >
       </span>
     </div>
   </div>
@@ -83,6 +87,11 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  .title a,
+  .title a:visited {
+    text-decoration: none;
+    color: var(--title-color);
   }
   p {
     display: -webkit-box;

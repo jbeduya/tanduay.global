@@ -22,7 +22,7 @@
           <a href="#">Terms</a>
         </div>
         <div class="top">
-          <a href="/#top">
+          <a href="#top">
             <img src="/images/back-to-top.png" alt="Back to Top" />
           </a>
         </div>
@@ -32,7 +32,7 @@
     <div class="footer">
       <div>Copyright © 2021 Tanduay USA. All Rights Reserved.</div>
       <div>
-        <a href="#">Terms & Policies</a> <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Policies</a> | <a href="#">Privacy Policy</a>
       </div>
     </div>
   </div>
@@ -67,6 +67,12 @@
     justify-content: space-between;
     align-items: center;
     margin: 30px 0 40px;
+    font-family: Roboto, --apple-system, sans-serif;
+    color: #909090;
+    font-size: 0.9rem;
+  }
+  .footer a {
+    color: #909090;
   }
 
   .left {

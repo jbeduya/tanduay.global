@@ -15,11 +15,11 @@
 
 <MobileNavigation show={mobile} on:toggle={() => (mobile = !mobile)} />
 
-<div class="social">
+<div id="top" class="social">
   <SocialMedia />
 </div>
 
-<section id="top" class:stick={yOffset > 100}>
+<section class:stick={yOffset > 100}>
   <div class="container">
     <div class="logo">
       <a href="/#">
