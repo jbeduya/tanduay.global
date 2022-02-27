@@ -368,5 +368,13 @@
     #cocktail-culture {
       padding-top: 6rem;
     }
+
+    section.cocktail-detail :is(.info) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    section.cocktail-detail :is(.cancel) {
+      width: 0;
+    }
   }
 </style>

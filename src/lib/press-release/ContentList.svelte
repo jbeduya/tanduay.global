@@ -3,6 +3,20 @@
   import SubscribeToNewsletter from "./SubscribeToNewsletter.svelte";
 
   export let articles = [];
+
+  const randomIntFromInterval = (min, max) =>
+    Math.floor(Math.random() * (max - min + 1) + min);
+
+  const loadMore = () => {
+    const len = articles.length;
+    articles = [
+      ...articles,
+      articles[randomIntFromInterval(0, len - 1)],
+      articles[randomIntFromInterval(0, len - 1)],
+      articles[randomIntFromInterval(0, len - 1)],
+      articles[randomIntFromInterval(0, len - 1)],
+    ];
+  };
 </script>
 
 <section>
@@ -34,7 +48,7 @@
         {/each}
       </div>
       <div class="more">
-        <Button>Load More</Button>
+        <Button on:click={loadMore}>Load More</Button>
       </div>
     </div>
     <div class="explore-section">

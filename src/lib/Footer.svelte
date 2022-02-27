@@ -14,7 +14,7 @@
       </div>
       <div class="right">
         <div class="navigation">
-          <a href="/">Home</a>
+          <a href="/#">Home</a>
           <a href="/#cocktail-culture">Recipes</a>
           <a href="/#where-to-find-us">Location</a>
           <a href="/#press-release">Press</a>

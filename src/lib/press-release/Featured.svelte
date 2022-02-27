@@ -55,7 +55,9 @@
                 <div class="image" />
                 <div class="details">
                   <div class="category">{article.category}</div>
-                  <h4>{article.title}</h4>
+                  <h4>
+                    <a href="/press-release/{article.id}">{article.title}</a>
+                  </h4>
                   <div class="credit">
                     <div class="date">{article.date}</div>
                     <div class="divider" />
@@ -104,6 +106,11 @@
   h4 {
     color: #fff;
     padding: 0.5rem 0;
+  }
+
+  h4 a {
+    text-decoration: none;
+    color: #fff;
   }
 
   .content {

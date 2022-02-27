@@ -33,7 +33,7 @@
   });
 </script>
 
-<section>
+<section id="videos">
   <div class="container">
     <div class="header">
       <div class="left">
@@ -77,10 +77,10 @@
   section {
     --border-radius: 10px;
     --default-padding: 16px;
-    margin-top: 100px;
+    padding-top: 100px;
     background: url(/images/videos-bg.png) no-repeat;
     background-position-x: -10%;
-    background-position-y: 20%;
+    background-position-y: 40%;
     background-size: 18%;
   }
 

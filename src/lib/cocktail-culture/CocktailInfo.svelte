@@ -74,6 +74,7 @@
     --secondary-color: #50330d;
     --detail-color: #9a8d45;
     --border-color: #daa265;
+    --suggestion-height: 250px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
@@ -104,10 +105,11 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
+    overflow-y: auto;
   }
 
   .content .body {
-    overflow: hidden;
+    overflow-y: auto;
     /* height: 100%;
     max-width: 100%; */
   }
@@ -164,6 +166,10 @@
     font-family: adobe-garamond-pro, sans-serif;
     color: var(--detail-color);
     font-size: 18px;
+  }
+
+  .suggestions {
+    height: var(--suggestion-height);
   }
 
   .suggestions p {
@@ -230,9 +236,13 @@
   }
 
   @media (max-width: 570px) {
+    .suggested-items > div:first-child {
+      border-bottom-left-radius: 0;
+    }
     section {
       --padding: 2rem;
       --double-padding: 4rem;
+      --suggestion-height: 145px;
     }
     .suggestion :is(div) {
       font-size: 1rem;
@@ -250,6 +260,9 @@
     }
     h2 {
       font-size: 1rem;
+    }
+    .close {
+      right: 30px;
     }
   }
 </style>
