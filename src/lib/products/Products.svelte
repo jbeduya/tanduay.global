@@ -6,7 +6,6 @@
   import "swiper/css/navigation";
   import ArrowLeft from "./icons/ArrowLeft.svelte";
   import ArrowRight from "./icons/ArrowRight.svelte";
-  import { browser } from "$app/env";
   import { onMount } from "svelte";
 
   export let products = [];
@@ -22,6 +21,9 @@
       slidesPerView: "auto",
       spaceBetween: 0,
       centeredSlides: false,
+      freeMode: true,
+      rewind: true,
+      lazy: true,
       navigation: {
         nextEl: "#products-swiper-button-next",
         prevEl: "#products-swiper-button-prev",
