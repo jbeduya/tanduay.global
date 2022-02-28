@@ -77,6 +77,7 @@
       freeMode: true,
       // centeredSlides: true,
       // loop: true,
+      lazy: true,
       modules: [Scrollbar],
       scrollbar: {
         el: ".cocktails-scrollbar",
