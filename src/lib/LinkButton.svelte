@@ -33,5 +33,6 @@
   a:hover {
     background-color: #f2a049;
     border-color: #f2a049;
+    color: #fff;
   }
 </style>
