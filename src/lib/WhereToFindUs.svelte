@@ -127,7 +127,7 @@
   :global(.marker) {
     width: 32px;
     height: 32px;
-    background: url("images/t-icon.png") no-repeat;
+    background: url("/images/t-icon.png") no-repeat;
     background-position: 50% 50%;
     background-size: 18px;
     background-color: #fefef8;
