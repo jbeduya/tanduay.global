@@ -15,7 +15,7 @@ export async function get({ request }) {
 
 export async function post({ request }) {
     return {
-        status: 201,
+        status: 200,
         headers: {
             'Set-Cookie': serialize('warning_session', uuidv4(), {
                 path: '/',
@@ -23,7 +23,7 @@ export async function post({ request }) {
                 sameSite: 'strict',
                 maxAge: 60 * 60 * 24, // 1 day
             }),
-            Location: '/',
         },
+        body: {}
     }
 }

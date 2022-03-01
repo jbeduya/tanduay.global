@@ -1,3 +1,19 @@
+<script context="module">
+  export async function load({ fetch, session }) {
+    if (!session.accepted) {
+      return {
+        redirect: "/warning",
+        status: 302,
+      };
+    }
+
+    return {
+      status: 200,
+      body: {},
+    };
+  }
+</script>
+
 <script>
   import ContentList from "$lib/press-release/ContentList.svelte";
   import Featured from "$lib/press-release/Featured.svelte";

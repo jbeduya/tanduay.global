@@ -1,3 +1,19 @@
+<script context="module">
+  export async function load({ fetch, session }) {
+    if (!session.accepted) {
+      return {
+        redirect: "/warning",
+        status: 302,
+      };
+    }
+
+    return {
+      status: 200,
+      body: {},
+    };
+  }
+</script>
+
 <script>
   import FeaturedList from "$lib/press-release/FeaturedList.svelte";
 

@@ -1,5 +1,12 @@
 <script context="module">
-  export async function load({ fetch }) {
+  export async function load({ fetch, session }) {
+    if (session && !session.accepted) {
+      console.log(session.accepted);
+      return {
+        redirect: "/warning",
+        status: 302,
+      };
+    }
     const response = await fetch("/api/products");
     const cocktails = await fetch("/api/products/cocktails");
 

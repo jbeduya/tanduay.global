@@ -1,3 +1,18 @@
+<script context="module">
+  export async function load({ fetch, session }) {
+    if (session.accepted) {
+      return {
+        redirect: "/",
+        status: 302,
+      };
+    }
+    return {
+      status: 200,
+      body: {},
+    };
+  }
+</script>
+
 <script>
   import Button from "$lib/Button.svelte";
   import Logo from "$lib/Logo.svelte";
@@ -9,9 +24,7 @@
         "Content-Type": "application/json",
       },
     }).then(async (res) => {
-      if (res.ok) {
-        window.location.href = "/";
-      }
+      window.location.href = "/";
     });
   };
 
