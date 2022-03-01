@@ -63,9 +63,10 @@
     });
     let data = await result.json();
     markers.forEach((marker) => marker.remove());
-    data.forEach((location) => {
-      const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
-        `
+    if (data && data.length) {
+      data.forEach((location) => {
+        const popup = new mapboxgl.Popup({ offset: 25 }).setHTML(
+          `
         <div class="marker-popup">
           <h3>${location.dba}</h3>
           <div class="marker-popup-item">
@@ -78,16 +79,17 @@
           </div>
         </div>
         `
-      );
-      const el = document.createElement("div");
-      el.classList.add("marker");
+        );
+        const el = document.createElement("div");
+        el.classList.add("marker");
 
-      let m = new mapboxgl.Marker(el)
-        .setLngLat([location.long, location.lat])
-        .setPopup(popup)
-        .addTo(map);
-      markers.push(m);
-    });
+        let m = new mapboxgl.Marker(el)
+          .setLngLat([location.long, location.lat])
+          .setPopup(popup)
+          .addTo(map);
+        markers.push(m);
+      });
+    }
   };
 </script>
 

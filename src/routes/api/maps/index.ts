@@ -20,9 +20,9 @@ export async function post({ request }) {
         lng: params.lng,
         miles: Math.floor(kilometersToMiles(params.distance ?? 20))
     };
-    console.log(p)
 
     const result = await search(p);
+    console.log(result);
 
     return {
         body: result.location,
