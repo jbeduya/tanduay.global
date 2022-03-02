@@ -1,6 +1,7 @@
 <script>
   import Button from "$lib/Button.svelte";
   import SubscribeToNewsletter from "./SubscribeToNewsletter.svelte";
+  import { fade } from "svelte/transition";
 
   export let articles = [];
 
@@ -19,7 +20,7 @@
   };
 </script>
 
-<section>
+<section transition:fade>
   <div class="container">
     <div class="article-section">
       <h3>Latest Articles</h3>

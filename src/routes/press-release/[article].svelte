@@ -16,6 +16,7 @@
 
 <script>
   import FeaturedList from "$lib/press-release/FeaturedList.svelte";
+  import { fade } from "svelte/transition";
 
   let article = {
     id: 3,
@@ -116,7 +117,7 @@
 
 <section>
   <div class="container">
-    <div class="article">
+    <div class="article" transition:fade>
       <img src={article.image} alt={article.title} />
 
       <div class="content">
