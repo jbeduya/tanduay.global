@@ -4,7 +4,7 @@
       <div class="video-container">
         <iframe
           height="400"
-          src="https://www.youtube.com/embed/rL56-79mhxA?controls=0"
+          src="https://player.vimeo.com/video/348960585?h=60705ebcd0"
           title="YouTube video player"
           frameborder="0"
           style="border-radius: 10px;"

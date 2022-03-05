@@ -9,12 +9,16 @@
   import { onMount } from "svelte";
 
   let videos = [
-    "https://www.youtube.com/embed/tBCTG2LTIo4?controls=0",
-    "https://www.youtube.com/embed/XbPPCC9RswE?controls=0",
-    "https://www.youtube.com/embed/tBCTG2LTIo4?controls=0",
-    "https://www.youtube.com/embed/XbPPCC9RswE?controls=0",
-    "https://www.youtube.com/embed/tBCTG2LTIo4?controls=0",
-    "https://www.youtube.com/embed/XbPPCC9RswE?controls=0",
+    "https://www.youtube.com/embed/110Lvv5RDZ0?controls=0",
+    "https://www.youtube.com/embed/abwCbd9ZfWA?controls=0",
+    "https://www.youtube.com/embed/XI_dVj0dq6Q?controls=0",
+    "https://www.youtube.com/embed/ZkUHmjgI18U?controls=0",
+    "https://www.youtube.com/embed/6mf7ThM5HgI?controls=0",
+    "https://www.youtube.com/embed/XhK1s1qMfuM?controls=0",
+    "https://www.youtube.com/embed/O0rKhF4l_Rk?controls=0",
+    "https://www.youtube.com/embed/2E5aYdbLNWw?controls=0",
+    "https://www.youtube.com/embed/fjLuJ5A8Q-o?controls=0",
+    "https://www.youtube.com/embed/raKRl3BCjSg?controls=0",
   ];
 
   onMount(() => {

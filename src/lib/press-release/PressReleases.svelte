@@ -10,36 +10,36 @@
       photo: "/images/press/press.png",
       category: "Corporate Partnerships",
       title:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, minus!",
-      date: "Sept 2021",
-      author: "tastings.com",
-      link: "/#press-release",
+        "Tanduay Seen to Drive Rum Growth in Arizona as it Partners with Hensley Beverage Company",
+      date: "Mar 2021",
+      author: "markets.businessinsider.com",
+      link: "https://markets.businessinsider.com/news/stocks/tanduay-seen-to-drive-rum-growth-in-arizona-as-it-partners-with-hensley-beverage-company-1030242050",
       description:
-        "Lorem ipsum dolor, sit amet consectetur Lorem ipsum dolor,  adipisicing elit. Facere inventore fuga ut, distinctio officiis recusandae libero labore necessitatibus magnam quo?",
+        "Tanduay furthers its expansion in the U.S. by signing a partnership with Hensley Beverage Company, a top Arizona beverage wholesaler known for distributing a diverse range of alcoholic and non-alcoholic beverages.",
     },
     {
       id: 2,
-      photo: "/images/press/press.png",
+      photo: "/images/press/press2.jpg",
       category: "Corporate Partnerships",
       title:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, minus!",
-      date: "Sept 2021",
-      author: "tastings.com",
-      link: "/#press-release",
+        "Tanduay inks deal with Phoenix Suns, first PH company to sponsor five NBA teams",
+      date: "Apr 2021",
+      author: "espn.com",
+      link: "https://www.espn.com/basketball/story/_/id/31293568/tanduay-now-sponsor-five-nba-teams-deal-phoenix-suns",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere inventore fuga ut, distinctio officiis recusandae libero labore necessitatibus magnam quo?",
+        "Just weeks after it sealed agreements with two other teams from the National Basketball Association (NBA), Tanduay has entered into a partnership with the Phoenix Suns. This makes it the first Philippine company to simultaneously sponsor five NBA teams, making an even more aggressive international marketing push.",
     },
     {
       id: 3,
-      photo: "/images/press/press.png",
-      category: "Corporate Partnerships",
+      photo: "/images/press/press3.jpg",
+      category: "Awards from Spirits Competition",
       title:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora, minus!",
-      date: "Sept 2021",
-      author: "tastings.com",
-      link: "/#press-release",
+        "The Top Rums According To New York International Spirits Competition",
+      date: "May 2021",
+      author: "forbes.com",
+      link: "https://www.forbes.com/sites/joemicallef/2021/05/16/the-top-rums-according-to-new-york-international-spirits-competition/?sh=3e9446957f47",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Facere inventore fuga ut, distinctio officiis recusandae libero labore necessitatibus magnam quo?",
+        "The New York International Spirits Competition (NYISC) is an annual judging of spirits that takes place in New York City each spring. It’s unusual in that it is one of the few that rely entirely on judges drawn exclusively from the beverage trade.",
     },
   ];
 
@@ -113,6 +113,9 @@
     text-align: center;
   }
 
+  .articles.swiper {
+    overflow: visible;
+  }
   @media (max-width: 1200px) {
     /* .article {
       width: 400px;
