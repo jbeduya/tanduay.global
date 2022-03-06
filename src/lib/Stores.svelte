@@ -86,7 +86,7 @@
   .store {
     background-color: white;
     min-width: 300px;
-    height: 400px;
+    /* height: 400px; */
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -103,6 +103,9 @@
     max-width: 90%;
     max-height: 90%;
     /* border: 1px solid red; */
+  }
+  .image img {
+    max-width: 90%;
   }
   .store div p {
     padding-bottom: 20px;

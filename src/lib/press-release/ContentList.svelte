@@ -31,7 +31,7 @@
             <div class="image" />
             <div class="details">
               <div class="category">{article.category}</div>
-              <a href="/press-release/{article.id}"><h4>{article.title}</h4></a>
+              <a href="{article.url}"><h4>{article.title}</h4></a>
               <div class="credit">
                 <div class="date">{article.date}</div>
                 <div class="divider" />
@@ -41,7 +41,7 @@
               </div>
               <p>{article.excerpt}</p>
               <div class="actions">
-                <a href="/press-release/{article.id}">Read More</a>
+                <a href="{article.url}">Read More</a>
                 <span class="external" />
               </div>
             </div>
@@ -58,7 +58,7 @@
         {#each articles as article}
           <div class="explore-article">
             <div class="category">{article.category}</div>
-            <a href="/press-release/{article.id}"><h4>{article.title}</h4></a>
+            <a href="{article.url}"><h4>{article.title}</h4></a>
             <div class="credit">
               <div class="date">{article.date}</div>
               <div class="divider" />

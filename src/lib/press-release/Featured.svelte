@@ -42,7 +42,7 @@
           </div>
           <p class="excerpt">{featuredArticle.excerpt}</p>
           <div class="more">
-            <a href="/press-release/{featuredArticle.id}">Read More</a>
+            <a href="{featuredArticle.url}">Read More</a>
           </div>
         </div>
         <div class="other-featured swiper">
@@ -56,7 +56,7 @@
                 <div class="details">
                   <div class="category">{article.category}</div>
                   <h4>
-                    <a href="/press-release/{article.id}">{article.title}</a>
+                    <a href="{article.url}">{article.title}</a>
                   </h4>
                   <div class="credit">
                     <div class="date">{article.date}</div>
