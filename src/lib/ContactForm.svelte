@@ -1,5 +1,30 @@
 <script>
   import Button from "./Button.svelte";
+
+  let firstname = "";
+  let lastname = "";
+  let email = "";
+  let mobile = "";
+  let message = "";
+
+  const feedback = async () => {
+    const response = await fetch("/api/feedback", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // @ts-ignore
+      body: JSON.stringify({ firstname, lastname, email, mobile, message }),
+    });
+    if (response.ok) {
+      email = "";
+      firstname = "";
+      lastname = "";
+      mobile = "";
+      message = "";
+      alert("We heard you.");
+    }
+  };
 </script>
 
 <section>
@@ -15,31 +40,30 @@
     <div class="fields">
       <div class="group">
         <div>
-          <input type="text" placeholder="First Name" />
+          <input type="text" bind:value={firstname} placeholder="First Name" />
         </div>
         <div>
-          <input type="text" placeholder="Last Name" />
+          <input type="text" bind:value={lastname} placeholder="Last Name" />
         </div>
       </div>
       <div class="group">
         <div>
-          <input type="text" placeholder="Email" />
+          <input type="text" bind:value={email} placeholder="Email" />
         </div>
         <div>
-          <input type="text" placeholder="Mobile" />
+          <input type="text" bind:value={mobile} placeholder="Mobile" />
         </div>
       </div>
 
       <div class="full">
         <textarea
-          name=""
-          id=""
+          bind:value={message}
           rows="10"
           placeholder="Type something here..."
         />
       </div>
       <div class="button">
-        <Button active>Submit</Button>
+        <Button on:click={feedback} active>Submit</Button>
       </div>
     </div>
 

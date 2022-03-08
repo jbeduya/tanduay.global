@@ -1,3 +1,21 @@
+<script>
+  let email = "";
+  const subscribe = async () => {
+    const response = await fetch("/api/subscribe", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      // @ts-ignore
+      body: JSON.stringify({ email }),
+    });
+    if (response.ok) {
+      email = "";
+      alert("Thank you for subscribing.");
+    }
+  };
+</script>
+
 <section>
   <div class="container">
     <div class="content">
@@ -7,8 +25,17 @@
           <h3 class="garamond">Subscribe to our Newsletter</h3>
           <p>Sign up with your email address to receive news and updates.</p>
           <div class="form">
-            <input type="text" placeholder="Enter email address" />
-            <input type="submit" value="Submit" />
+            <input
+              type="text"
+              placeholder="Enter email address"
+              on:keypress={(e) => {
+                if (e.key === "Enter") {
+                  subscribe();
+                }
+              }}
+              bind:value={email}
+            />
+            <input type="submit" on:click={subscribe} value="Submit" />
           </div>
         </div>
       </div>

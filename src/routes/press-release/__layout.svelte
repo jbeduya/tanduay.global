@@ -1,3 +1,6 @@
+<svelte:head>
+  <title>Tanduay Global - Press Release</title>
+</svelte:head>
 <div class="section-press-release">
   <header>
     <h1>Press Release</h1>
