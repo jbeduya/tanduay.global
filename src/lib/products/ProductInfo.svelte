@@ -315,6 +315,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
   }
 
   .label > :first-child {

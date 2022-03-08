@@ -4,7 +4,7 @@
 
 <section>
   <div class="article">
-    <div class="photo" style="background: url({article.photo}) no-repeat; " />
+    <div class="photo" style="background: url({article.photo}) no-repeat; background-size: cover; background-position: center;" />
     <!-- <img src={article.photo} alt="Article" /> -->
     <div class="content">
       <div class="category">{article.category}</div>
@@ -20,7 +20,7 @@
     </div>
 
     <div class="links">
-      <a class="more" href={`/press-release/${article.id}`}>Read more</a>
+      <a class="more" href={`${article.link}`} target="_blank">Read more</a>
       <span class="external"
         ><a href="https://www.google.com?q=tanduay" target="_blank"
           ><i class="fas fa-external-link-alt" /></a
@@ -41,7 +41,8 @@
     transition-duration: 400ms;
   }
   .photo {
-    background-size: cover;
+    /* background-size: cover;
+    background-position: center; */
     min-width: 250px;
     width: 100%;
     height: 300px;

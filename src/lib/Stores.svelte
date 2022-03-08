@@ -17,6 +17,11 @@
       description: "On-demand delivery",
       logo: "/images/stores/libdib.png",
     },
+    {
+      url: "https://tanduay.thirstie.com",
+      description: "On-demand delivery",
+      logo: "/images/stores/thirstie.png",
+    },
   ];
 
   const visitShop = (store) => {
@@ -81,7 +86,7 @@
   .store {
     background-color: white;
     min-width: 300px;
-    height: 400px;
+    /* height: 400px; */
     width: 400px;
     display: flex;
     flex-direction: column;
@@ -95,7 +100,12 @@
     justify-content: center;
     align-items: center;
     min-height: 230px;
+    max-width: 90%;
+    max-height: 90%;
     /* border: 1px solid red; */
+  }
+  .image img {
+    max-width: 90%;
   }
   .store div p {
     padding-bottom: 20px;

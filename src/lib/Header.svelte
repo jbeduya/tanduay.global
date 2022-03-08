@@ -350,6 +350,9 @@
     grid-template-columns: 2fr 5fr;
     padding: 0 16px;
   }
+  .stick .container {
+    padding: 8px;
+  }
   .navigation {
     display: flex;
     width: 100%;
@@ -367,6 +370,9 @@
     }
     .container {
       grid-template-columns: 1fr;
+    }
+    .stick .container {
+      padding: 0 16px;
     }
     .navigation,
     .social {
