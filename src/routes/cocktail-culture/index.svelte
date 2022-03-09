@@ -37,7 +37,6 @@
   $navigation[5].url = "/press-release";
 
   let open = writable(false),
-    showLoadMore = true,
     selectedItem;
   let itemCount = 9; // show the first 12 items
 
@@ -47,15 +46,27 @@
     }
   });
 
-  $: items = cocktails.slice(0, itemCount);
+  /** handle category and filtering */
+  const onlyUnique = (value, index, self) => self.indexOf(value) === index;
+  $: categories = [
+    "all",
+    ...cocktails.map((c) => c.category).filter(onlyUnique),
+  ];
+  let currentFilter = "all";
 
+  $: categoryItems =
+    currentFilter === "all"
+      ? cocktails
+      : cocktails.filter((c) => c.category === currentFilter);
+  $: items = categoryItems.slice(0, itemCount);
+
+  $: showLoadMore = itemCount <= categoryItems.length;
   $: suggestedItems = cocktails.filter(
     (c) =>
       selectedItem &&
       selectedItem.suggestions &&
       selectedItem.suggestions.includes(c.id)
   );
-
   const show = (id) => {
     selectedItem = cocktails.filter((c) => c.id === id)[0];
     $open = true;
@@ -63,15 +74,23 @@
 
   const loadMore = () => {
     itemCount += 6;
-    if (itemCount >= cocktails.length) {
-      showLoadMore = false;
-    }
   };
 </script>
 
 <section>
   <div class="container">
     <h1>Cocktail Culture</h1>
+
+    <ul class="filters">
+      {#each categories as category}
+        <li
+          class:active={currentFilter === category}
+          on:click={() => (currentFilter = category)}
+        >
+          {category}
+        </li>
+      {/each}
+    </ul>
 
     <div class="cocktails">
       {#each items as cocktail}
@@ -231,8 +250,43 @@
     padding-top: 2rem;
   }
 
+  .filters {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    margin: 3rem 0;
+    margin-top: 1rem;
+  }
+
+  .filters li {
+    cursor: pointer;
+    text-transform: uppercase;
+    color: #93936c;
+    font-size: 1.5rem;
+    padding: 5px 0;
+  }
+  .filters li.active {
+    color: #d18b3f;
+    font-weight: bold;
+  }
+
   @media (max-width: 930px) {
     .cocktails {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .filters {
+      padding: 0 2rem;
+      display: grid;
+      row-gap: 0.1rem;
+      column-gap: 1rem;
       grid-template-columns: 1fr 1fr;
     }
   }

@@ -22,7 +22,6 @@ export async function post({ request }) {
     };
 
     const result = await search(p);
-    console.log(result);
 
     return {
         body: result.location,
