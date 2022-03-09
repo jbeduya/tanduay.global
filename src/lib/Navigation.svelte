@@ -5,42 +5,14 @@
 
   const dispatch = createEventDispatcher();
 
-  const items = [
-    {
-      name: "Home",
-      url: "/#",
-      active: true,
-    },
-    { name: "Our Products", url: "#products" },
-    { name: "About Us", url: "#about-us" },
-    { name: "Cocktail Culture", url: "#cocktail-culture" },
-    { name: "Where to Find Us", url: "#where-to-find-us" },
-    {
-      name: "Press",
-      url: "#press-release",
-    },
-    { name: "Contact", url: "#contact-us" },
-  ];
-
-  // $: if (browser && document.location.pathname.startsWith("/press-release")) {
-  //   for (let i = 0; i < items.length; i++) {
-  //     items[i].active = false;
-  //   }
-  //   items[5].active = true;
-  // } else if (
-  //   browser &&
-  //   document.location.pathname === "/" &&
-  //   document.location.hash.length === 0
-  // ) {
-  //   for (let i = 0; i < items.length; i++) {
-  //     items[i].active = false;
-  //   }
-  //   items[0].active = true;
-  // }
-
   let scrollTimeout = null;
   const onScroll = () => {
-    if (document.location.pathname.startsWith("/press-release")) return;
+    if (
+      document.location.pathname.startsWith("/press-release") ||
+      document.location.pathname.startsWith("/cocktail-culture")
+    ) {
+      return;
+    }
 
     const home = document.getElementById("home");
     const product = document.getElementById("products");

@@ -37,6 +37,10 @@
   import ContactForm from "$lib/ContactForm.svelte";
   import WhereToFindUs from "$lib/WhereToFindUs.svelte";
 
+  import { navigation } from "$lib/stores/navigation";
+  $navigation[3].url = "/#cocktail-culture";
+  $navigation[5].url = "/#press-release";
+
   export let products = [];
   export let cocktails = [];
 </script>

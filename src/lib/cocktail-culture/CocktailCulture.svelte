@@ -9,6 +9,7 @@
   import "swiper/css";
   import "swiper/css/scrollbar";
   import CocktailInfo from "./CocktailInfo.svelte";
+  import LinkButton from "$lib/LinkButton.svelte";
 
   export let cocktails = [];
 
@@ -148,6 +149,10 @@
       </div>
       <div class="cocktails-scrollbar swiper-scrollbar" />
     </div>
+  </div>
+
+  <div class="more">
+    <LinkButton href="/cocktail-culture">View Al</LinkButton>
   </div>
 </section>
 
@@ -321,6 +326,12 @@
   :global(.cocktails-scrollbar .swiper-scrollbar-drag) {
     background-color: #d18b40;
     height: 6px;
+  }
+
+  .more {
+    display: grid;
+    place-items: center;
+    margin-top: 4rem;
   }
 
   @media (max-width: 930px) {

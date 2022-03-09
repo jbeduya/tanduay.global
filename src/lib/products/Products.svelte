@@ -8,28 +8,43 @@
   import ArrowRight from "./icons/ArrowRight.svelte";
   import { onMount } from "svelte";
 
+  let idx = 0,
+    swiper;
   export let products = [];
-  let currentProduct = products[0];
+  $: currentProduct = products[idx];
 
-  const productClicked = (idx) => {
-    currentProduct = products[idx];
+  const productClicked = (index) => {
+    idx = index;
   };
 
   onMount(() => {
-    let swiper = new Swiper(".products-swiper", {
-      modules: [Navigation],
+    swiper = new Swiper(".products-swiper", {
       slidesPerView: "auto",
       spaceBetween: 0,
       centeredSlides: false,
       freeMode: true,
       rewind: true,
       lazy: true,
-      navigation: {
-        nextEl: "#products-swiper-button-next",
-        prevEl: "#products-swiper-button-prev",
-      },
     });
   });
+
+  const swipeLeft = () => {
+    if (idx == 0) {
+      idx = products.length - 1;
+    } else {
+      idx--;
+    }
+    swiper.slideTo(idx, 200);
+  };
+
+  const swipeRight = () => {
+    if (idx == products.length - 1) {
+      idx = 0;
+    } else {
+      idx++;
+    }
+    swiper.slideTo(idx, 200);
+  };
 </script>
 
 <section id="products">
@@ -39,10 +54,12 @@
     </div>
     <div class="preview">
       <div class="scroll-navigations">
-        <span id="products-swiper-button-prev">
+        <span id="products-swiper-button-prev" on:click={swipeLeft}>
           <ArrowLeft />
         </span>
-        <span id="products-swiper-button-next"><ArrowRight /></span>
+        <span id="products-swiper-button-next" on:click={swipeRight}
+          ><ArrowRight /></span
+        >
       </div>
       <img
         loading="lazy"
@@ -205,6 +222,9 @@
   }
 
   @media (max-width: 930px) {
+    .items-wrapper {
+      display: none;
+    }
     section {
       /* background-position-y: 400px;
       background-position-x: right; */
