@@ -248,6 +248,7 @@
     height: 450px;
     width: 380px;
     transition-duration: 250ms;
+    background-position: center;
   }
 
   :global(.cocktail-item.swiper-slide-active) {

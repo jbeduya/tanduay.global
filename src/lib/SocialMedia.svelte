@@ -5,12 +5,12 @@
     </div>
     <div class="social">
       <div class="main">
-        <a href="https://www.facebook.com/TanduayBrandsInternational" target="_blank"><i class="fab fa-facebook-f" /></a>
-        <a href="https://www.twitter.com/tanduayglobal" target="_blank"><i class="fab fa-twitter" /></a>
-        <a href="https://www.instagram.com/tanduayrum" target="_blank"><i class="fab fa-instagram" /></a>
+        <a href="https://www.facebook.com/TanduayBrandsInternational" target="_blank"><i class="fab fa-facebook-square fa-xl" /></a>
+        <a href="https://www.twitter.com/tanduayglobal" target="_blank"><i class="fab fa-twitter-square fa-xl" /></a>
+        <a href="https://www.instagram.com/tanduayrum" target="_blank"><i class="fab fa-instagram-square fa-xl" /></a>
       </div>
       <div class="lang">
-        <a href="https://www.youtube.com/c/TanduayDistillersInc" target="_blank"><i class="fab fa-youtube" /></a>
+        <a href="https://www.youtube.com/c/TanduayDistillersInc" target="_blank"><i class="fab fa-youtube-square fa-xl" /></a>
       </div>
     </div>
   </section>

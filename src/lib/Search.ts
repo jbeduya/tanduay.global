@@ -33,7 +33,8 @@ function getHash(query: string) {
 function getApiHeaders(params: URLSearchParams): [string, APIHeaders] {
     const d = (new Date(Date.now()));
     d.setSeconds(0);
-    const timestamp = d.toUTCString();
+    const dateNow = d.toUTCString();
+    const timestamp =  dateNow.toString().charAt(5) == '0' ? dateNow.replace(dateNow.toString().charAt(5),'') : dateNow;
     const signature = timestamp + client_secret + params.toString() + client_id;
     const hash = crypto.createHash('sha256').update(signature).digest('hex')
     const url = api_url + '?' + params.toString();

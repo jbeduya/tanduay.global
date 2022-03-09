@@ -56,7 +56,9 @@ h1 {
     font-size: 3rem;
   }
   body {
+    width: 100%;
     background-size: 150%;
+    overflow-x: hidden;
   }
 }
 
