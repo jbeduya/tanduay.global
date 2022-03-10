@@ -79,7 +79,7 @@
     --secondary-color: #50330d;
     --detail-color: #9a8d45;
     --border-color: #daa265;
-    --suggestion-height: 250px;
+    --suggestion-height: 190px;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
@@ -106,7 +106,8 @@
 
   .content {
     padding: var(--padding);
-    padding-right: var(--double-padding);
+    padding-top: 0;
+    padding-bottom: 1rem;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
@@ -182,8 +183,7 @@
 
   .suggestions p {
     color: var(--secondary-color);
-    padding: var(--padding);
-    padding-right: var(--double-padding);
+    padding: 0 var(--padding) var(--padding) var(--padding);
     font-size: 1.3rem;
   }
 
