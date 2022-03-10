@@ -5,18 +5,15 @@
 
   export let articles = [];
 
+  let itemCount = 6;
+  $: items = articles.slice(0, itemCount);
+  $: showMore = articles.length > itemCount;
+
   const randomIntFromInterval = (min, max) =>
     Math.floor(Math.random() * (max - min + 1) + min);
 
   const loadMore = () => {
-    const len = articles.length;
-    articles = [
-      ...articles,
-      articles[randomIntFromInterval(0, len - 1)],
-      articles[randomIntFromInterval(0, len - 1)],
-      articles[randomIntFromInterval(0, len - 1)],
-      articles[randomIntFromInterval(0, len - 1)],
-    ];
+    itemCount += 6;
   };
 </script>
 
@@ -26,12 +23,12 @@
       <h3>Latest Articles</h3>
 
       <div class="articles">
-        {#each articles as article}
+        {#each items as article}
           <div class="article hover" style="--image: url({article.image});">
             <div class="image" />
             <div class="details">
               <div class="category">{article.category}</div>
-              <a href="{article.url}"><h4>{article.title}</h4></a>
+              <a href={article.url}><h4>{article.title}</h4></a>
               <div class="credit">
                 <div class="date">{article.date}</div>
                 <div class="divider" />
@@ -41,16 +38,16 @@
               </div>
               <p>{article.excerpt}</p>
               <div class="actions">
-                <a href="{article.url}">Read More</a>
+                <a href={article.url}>Read More</a>
                 <span class="external" />
               </div>
             </div>
           </div>
         {/each}
       </div>
-      <div class="more">
+      {#if showMore}
         <Button on:click={loadMore}>Load More</Button>
-      </div>
+      {/if}
     </div>
     <div class="explore-section">
       <h3>Explore Worldwide</h3>
@@ -58,7 +55,7 @@
         {#each articles as article}
           <div class="explore-article">
             <div class="category">{article.category}</div>
-            <a href="{article.url}"><h4>{article.title}</h4></a>
+            <a href={article.url}><h4>{article.title}</h4></a>
             <div class="credit">
               <div class="date">{article.date}</div>
               <div class="divider" />

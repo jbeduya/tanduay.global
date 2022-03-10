@@ -1,7 +1,7 @@
 <script>
   import { onMount } from "svelte";
 
-  import { Swiper } from "swiper";
+  import { Autoplay, Swiper } from "swiper";
   import "swiper/css";
 
   export let articles = [];
@@ -11,9 +11,15 @@
   onMount(() => {
     let swiper = new Swiper(".other-featured", {
       slidesPerView: "auto",
+      modules: [Autoplay],
       spaceBetween: 30,
       centeredSlides: true,
-      freeMode: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      // loop: true,
+      // freeMode: true,
       breakpoints: {
         320: {
           spaceBetween: 10,
@@ -42,7 +48,7 @@
           </div>
           <p class="excerpt">{featuredArticle.excerpt}</p>
           <div class="more">
-            <a href="{featuredArticle.url}">Read More</a>
+            <a href={featuredArticle.url}>Read More</a>
           </div>
         </div>
         <div class="other-featured swiper">
@@ -56,7 +62,7 @@
                 <div class="details">
                   <div class="category">{article.category}</div>
                   <h4>
-                    <a href="{article.url}">{article.title}</a>
+                    <a href={article.url}>{article.title}</a>
                   </h4>
                   <div class="credit">
                     <div class="date">{article.date}</div>
