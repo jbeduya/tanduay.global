@@ -10,8 +10,8 @@
       body: JSON.stringify({ email }),
     });
     if (response.ok) {
-      email = "";
-      alert("Thank you for subscribing.");
+      // email = "";
+      alert("Thank you for subscribing. " + email);
     }
   };
 </script>

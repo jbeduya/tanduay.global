@@ -1,8 +1,11 @@
 <script>
   import { createEventDispatcher } from "svelte";
-
+  import { onMount, onDestroy, beforeUpdate, afterUpdate } from 'svelte'
   const dispatch = createEventDispatcher();
   export let cocktail, suggestions;
+
+  beforeUpdate(() => {
+  });
 </script>
 
 <section>
@@ -12,7 +15,9 @@
         <i class="fas fa-times" />
       </span>
 
-      <img class="default-glass" src="/images/products/glass.png" alt="" />
+      {#if cocktail}
+        <img class="default-glass" src="/images/cocktails/icons/{cocktail.glass_icon === "" ? "icon-happy-kid.png" : cocktail.glass_icon}" alt="" />
+      {/if}
       <h2>{cocktail && cocktail.product}</h2>
       <h1 class="garamond">{cocktail && cocktail.name}</h1>
     </div>
@@ -57,7 +62,7 @@
               {cocktail.name}
             </div>
             <div class="glass">
-              <img src="/images/products/glass.png" alt="" />
+              <img src="/images/cocktails/icons/{cocktail.glass_icon === "" ? "icon-happy-kid.png" : cocktail.glass_icon}" alt="" />
             </div>
           </div>
         {/each}
@@ -106,13 +111,16 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    overflow-y: auto;
+    /* overflow-y: auto; */
   }
-
   .content .body {
-    overflow-y: auto;
+    /* overflow-y: auto; */
     /* height: 100%;
     max-width: 100%; */
+  }
+
+  #cocktail-info {
+    overflow-y: auto;
   }
 
   h1 {
@@ -126,7 +134,7 @@
   h2 {
     font-size: 1.5rem;
     font-weight: normal;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
   }
 
   .details {
@@ -232,6 +240,10 @@
     }
     h2 {
       font-size: 1.2rem;
+      margin-top: 2rem;
+    }
+    .content .body {
+      margin-top: 2rem;
     }
   }
 

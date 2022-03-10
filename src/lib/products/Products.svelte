@@ -159,7 +159,7 @@
   }
 
   .scroll-navigations > :first-child {
-    display: none;
+    /* display: none; */
   }
 
   .items-wrapper {
