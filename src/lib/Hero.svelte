@@ -32,9 +32,9 @@
       <SwiperSlide>
         <div class="slide">
           <div class="text">
-            <h1 class="garamond">Distinctly Filipino</h1>
-            <h2 class="acumin">Undeniably world-class!</h2>
-            <LinkButton href="/#products">View Products</LinkButton>
+            <h1 class="garamond">With 165 Years of Distilling Experience</h1>
+            <!-- <h3 class="acumin">OF DISTILLING EXPERIENCE</h3> -->
+            <!-- <LinkButton href="/#about-us">About Us</LinkButton> -->
           </div>
           <div class="picture">
             <img src="/images/hero/rum.png" alt="Rum" />
@@ -44,9 +44,9 @@
       <SwiperSlide>
         <div class="slide">
           <div class="text">
-            <h1 class="garamond">Distinctly Filipino</h1>
-            <h2 class="acumin">Undeniably world-class!</h2>
-            <LinkButton href="/#products">View Products</LinkButton>
+            <h1 class="garamond">HERITAGE SUGARCANE</h1>
+            <h2 class="acumin">MADE FROM WORLD'S FAMOUS BACOLOD</h2>
+            <!-- <LinkButton href="/#products">View Products</LinkButton> -->
           </div>
           <div class="picture">
             <img src="/images/hero/rum.png" alt="Rum" />

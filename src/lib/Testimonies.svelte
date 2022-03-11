@@ -20,7 +20,7 @@
       designation: `(Trainer for Center for Bartending and Tourism Academy, Head Bartender for Cobbler Marikina, Toma Sessions Content Creator)`,
     },
     {
-      photo: "/images/testimonies/richie-cruz.png",
+      photo: "/images/testimonies/jonathan-scinto.png",
       testimony: `One of the many reasons I like Tanduay Rum is the essence of that oak
                smell and bourbon taste. It's Silky smooth going down and has flavors of 
                vanilla, almonds and island spices. I'm known for infusing alcohol into my 
@@ -45,7 +45,7 @@
                 Slaw and El Jardin de Manila)`,
     },
     {
-      photo: "/images/testimonies/richie-cruz.png",
+      photo: "/images/testimonies/jake-alano.png",
       testimony: `As a rum drinker, Tanduay is a brand that I often use because it gives a 
               heavenly feeling when taken neat or straight. Although it is affordable compared 
               to other premium brands, its quality speaks for itself and it can compete with any 
@@ -427,6 +427,7 @@
     }
     .controls {
       padding-bottom: 30px;
+      display: none;
     }
     h1 {
       margin-bottom: 40px;

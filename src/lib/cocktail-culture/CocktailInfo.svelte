@@ -119,9 +119,7 @@
     max-width: 100%; */
   }
 
-  #cocktail-info {
-    overflow-y: auto;
-  }
+
 
   h1 {
     font-size: 2.5rem;
@@ -134,7 +132,7 @@
   h2 {
     font-size: 1.5rem;
     font-weight: normal;
-    /* margin-top: 2rem; */
+    margin-top: 2rem;
   }
 
   .details {

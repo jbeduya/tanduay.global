@@ -1,7 +1,7 @@
 <nav>
   <section>
     <div class="link">
-      <div>Visit <a href="#">Tanduay Philippines</a></div>
+      <div>Visit <a href="https://ph.tanduay.com">Tanduay Philippines</a></div>
     </div>
     <div class="social">
       <div class="main">

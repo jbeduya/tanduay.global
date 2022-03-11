@@ -152,7 +152,7 @@
   </div>
 
   <div class="more">
-    <LinkButton href="/cocktail-culture">View Al</LinkButton>
+    <LinkButton href="/cocktail-culture">View All Cocktails</LinkButton>
   </div>
 </section>
 
@@ -326,7 +326,11 @@
 
   :global(.cocktails-scrollbar .swiper-scrollbar-drag) {
     background-color: #d18b40;
-    height: 6px;
+    height: 10px;
+  }
+
+  :global(.swiper-horizontal > .swiper-scrollbar) {
+    height: 10px;
   }
 
   .more {

@@ -42,10 +42,7 @@
     <div class="header">
       <div class="left">
         <h1 class="h1">Videos</h1>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
-          maiores quasi quas necessitatibus natus eligendi reiciendis enim rem,
-          libero fugiat.
+        <p> 
         </p>
       </div>
       <div class="right">
