@@ -427,6 +427,7 @@
     }
     .controls {
       padding-bottom: 30px;
+      display: none;
     }
     h1 {
       margin-bottom: 40px;
