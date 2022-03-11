@@ -4,7 +4,9 @@
   import { fade } from "svelte/transition";
 
   export let articles = [];
-
+  export let worldwide = articles.filter(function(item) {
+    return item.id > 6 && item.id < 10;
+  });
   let itemCount = 6;
   $: items = articles.slice(0, itemCount);
   $: showMore = articles.length > itemCount;
@@ -52,7 +54,7 @@
     <div class="explore-section">
       <h3>Explore Worldwide</h3>
       <div class="worldwide-articles">
-        {#each articles as article}
+        {#each worldwide as article}
           <div class="explore-article">
             <div class="category">{article.category}</div>
             <a href={article.url}><h4>{article.title}</h4></a>
@@ -74,7 +76,7 @@
           </div>
         {/each}
       </div>
-      <SubscribeToNewsletter />
+      <!-- <SubscribeToNewsletter /> -->
     </div>
   </div>
 </section>

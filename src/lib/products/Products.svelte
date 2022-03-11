@@ -105,7 +105,7 @@
     --border-width: 3px;
     --border-color: #d18b3f;
     --opacity: 0.6;
-    background: url(/images/products/bg.png) no-repeat;
+    /* background: url(/images/products/bg.png) no-repeat; */
     background-size: 1000px;
     background-position: top right;
     background-color: var(--surface-color);
@@ -151,7 +151,7 @@
     width: 100%;
     position: absolute;
     bottom: -140px;
-    padding: 0 60px;
+    padding: 0 30px;
   }
 
   .scroll-navigations span {
@@ -160,6 +160,8 @@
 
   .scroll-navigations > :first-child {
     /* display: none; */
+    padding-right: 00.5rem;
+    padding-left: .5rem;
   }
 
   .items-wrapper {

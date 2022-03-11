@@ -114,7 +114,7 @@
   }
 
   .articles.swiper {
-    overflow: hidden;
+    overflow: visible;
   }
   @media (max-width: 1200px) {
     /* .article {

@@ -49,6 +49,7 @@
       date: "Apr 2021",
       author: "espn.com",
       url: "https://www.espn.com/basketball/story/_/id/31293568/tanduay-now-sponsor-five-nba-teams-deal-phoenix-suns",
+      tags: ["USA"],
       excerpt:
         "Just weeks after it sealed agreements with two other teams from the National Basketball Association (NBA), Tanduay has entered into a partnership with the Phoenix Suns. This makes it the first Philippine company to simultaneously sponsor five NBA teams, making an even more aggressive international marketing push.",
     },
@@ -60,6 +61,7 @@
       date: "May 2021",
       author: "forbes.com",
       url: "https://www.forbes.com/sites/joemicallef/2021/05/16/the-top-rums-according-to-new-york-international-spirits-competition/?sh=3e9446957f47",
+      tag: ["USA"],
       excerpt:
         "The New York International Spirits Competition (NYISC) is an annual judging of spirits that takes place in New York City each spring. It’s unusual in that it is one of the few that rely entirely on judges drawn exclusively from the beverage trade.",
     },
@@ -175,8 +177,13 @@
   ];
 
   let articles = featured;
+
+  var featured_articles = featured.filter(function(item) {
+    return item.id < 6;
+  });
+
 </script>
 
-<Featured articles={featured} />
+<Featured articles={featured_articles} />
 
 <ContentList {articles} />

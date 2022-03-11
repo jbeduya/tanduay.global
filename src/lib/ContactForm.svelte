@@ -24,6 +24,7 @@
       message = "";
       alert("We heard you.");
     }
+    else alert("Sorry, this contact form is not available for now.");
   };
 </script>
 
@@ -40,18 +41,18 @@
     <div class="fields">
       <div class="group">
         <div>
-          <input type="text" bind:value={firstname} placeholder="First Name" />
+          <input type="text" bind:value={firstname} placeholder="First Name"/>
         </div>
         <div>
-          <input type="text" bind:value={lastname} placeholder="Last Name" />
+          <input type="text" bind:value={lastname} placeholder="Last Name"/>
         </div>
       </div>
       <div class="group">
         <div>
-          <input type="text" bind:value={email} placeholder="Email" />
+          <input type="text" bind:value={email} placeholder="Email"/>
         </div>
         <div>
-          <input type="text" bind:value={mobile} placeholder="Mobile" />
+          <input type="text" bind:value={mobile} placeholder="Mobile"/>
         </div>
       </div>
 
@@ -69,7 +70,7 @@
 
     <div class="visit garamond">
       <div>
-        <a href="#">Visit Tanduay Philippines &#8594;</a>
+        <a href="https://ph.tanduay.com">Visit Tanduay Philippines &#8594;</a>
       </div>
     </div>
   </div>
