@@ -146,7 +146,7 @@
     padding: 15px 20px;
     border: 2px solid #c7b49f;
     border-radius: 20px;
-    margin: 20px 0 0 0;
+    margin: 20px 0;
     width: 400px;
   }
   ::placeholder {
