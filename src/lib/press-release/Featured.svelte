@@ -57,11 +57,11 @@
         <div class="other-featured swiper">
           <div class="swiper-wrapper">
             {#each additionalFeatured as article}
-              <div
-                class="article swiper-slide"
-                style="--image: url({article.image});"
-              >
-                <div class="image" />
+              <div class="article swiper-slide">
+                <div
+                  class="image"
+                  style="background-image: url({article.image});"
+                />
                 <div class="details">
                   <div class="category">{article.category}</div>
                   <h4>
