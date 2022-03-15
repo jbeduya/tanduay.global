@@ -1,6 +1,13 @@
 <script>
+  import { subscribeSchema } from "../routes/api/validation_schema";
+
   let email = "";
+  let withError = false;
+
   const subscribe = async () => {
+    const { value, error } = subscribeSchema.validate({ email });
+    if (error) return;
+
     const response = await fetch("/api/subscribe", {
       method: "POST",
       headers: {
@@ -14,6 +21,14 @@
       alert("Thank you for subscribing.");
     }
   };
+
+  $: if (email.trim() === "") {
+    withError = false;
+  } else if (subscribeSchema.validate({ email }).error) {
+    withError = true;
+  } else {
+    withError = false;
+  }
 </script>
 
 <section>
@@ -26,6 +41,7 @@
           <p>Sign up with your email address to receive news and updates.</p>
           <div class="form">
             <input
+              class:has-error={withError}
               type="text"
               placeholder="Enter email address"
               on:keypress={(e) => {
@@ -35,8 +51,16 @@
               }}
               bind:value={email}
             />
-            <input type="submit" on:click={subscribe} value="Submit" />
+            <input
+              type="submit"
+              disabled={withError}
+              on:click={subscribe}
+              value="Submit"
+            />
           </div>
+          {#if withError}
+            <span class="error">Please enter a valid email address.</span>
+          {/if}
         </div>
       </div>
       <div class="right">
@@ -122,7 +146,7 @@
     padding: 15px 20px;
     border: 2px solid #c7b49f;
     border-radius: 20px;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     width: 400px;
   }
   ::placeholder {
@@ -159,6 +183,14 @@
   }
   .footer a {
     font-family: acumin-pro, sans-serif;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    display: block;
   }
 
   @media (max-width: 930px) {

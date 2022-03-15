@@ -1,5 +1,6 @@
 <script>
   import Button from "./Button.svelte";
+  import { feedbackSchema } from "../routes/api/validation_schema";
 
   let firstname = "";
   let lastname = "";
@@ -7,7 +8,35 @@
   let mobile = "";
   let message = "";
 
+  let form = {
+    firstname: null,
+    lastname: null,
+    email: null,
+    mobile: null,
+    message: null,
+  };
+  let errors = {};
+
   const feedback = async () => {
+    const { value, error } = feedbackSchema.validate(
+      {
+        firstname,
+        lastname,
+        email,
+        mobile,
+        message,
+      },
+      { abortEarly: false }
+    );
+
+    errors = {};
+    if (error) {
+      error.details.forEach((detail) => {
+        errors[detail.path[0]] = detail.message;
+      });
+      console.log(error.details);
+      return;
+    }
     const response = await fetch("/api/feedback", {
       method: "POST",
       headers: {
@@ -23,8 +52,7 @@
       mobile = "";
       message = "";
       alert("We heard you.");
-    }
-    else alert("Sorry, this contact form is not available for now.");
+    } else alert("Sorry, this contact form is not available for now.");
   };
 </script>
 
@@ -41,27 +69,68 @@
     <div class="fields">
       <div class="group">
         <div>
-          <input type="text" bind:value={firstname} placeholder="First Name"/>
+          <input
+            type="text"
+            bind:this={form.firstname}
+            bind:value={firstname}
+            placeholder="First Name"
+            class:hasError={errors.firstname}
+          />
+          {#if errors.firstname}
+            <span class="error">{errors.firstname}</span>
+          {/if}
         </div>
         <div>
-          <input type="text" bind:value={lastname} placeholder="Last Name"/>
+          <input
+            type="text"
+            bind:this={form.lastname}
+            bind:value={lastname}
+            placeholder="Last Name"
+            class:hasError={errors.lastname}
+          />
+          {#if errors.lastname}
+            <span class="error">{errors.lastname}</span>
+          {/if}
         </div>
       </div>
       <div class="group">
         <div>
-          <input type="text" bind:value={email} placeholder="Email"/>
+          <input
+            type="text"
+            bind:this={form.email}
+            bind:value={email}
+            placeholder="Email"
+            class:hasError={errors.email}
+          />
+          {#if errors.email}
+            <span class="error">{errors.email}</span>
+          {/if}
         </div>
         <div>
-          <input type="text" bind:value={mobile} placeholder="Mobile"/>
+          <input
+            type="text"
+            bind:this={form.mobile}
+            bind:value={mobile}
+            placeholder="Mobile"
+            class:hasError={errors.mobile}
+          />
+          {#if errors.mobile}
+            <span class="error">{errors.mobile}</span>
+          {/if}
         </div>
       </div>
 
       <div class="full">
         <textarea
+          bind:this={form.message}
           bind:value={message}
           rows="10"
           placeholder="Type something here..."
+          class:hasError={errors.message}
         />
+        {#if errors.message}
+          <span class="error">{errors.message}</span>
+        {/if}
       </div>
       <div class="button">
         <Button on:click={feedback} active>Submit</Button>
@@ -150,6 +219,17 @@
     background-color: #90a25e;
     display: grid;
     place-items: center;
+  }
+
+  .error {
+    color: red;
+    font-size: 0.8rem;
+  }
+  .hasError {
+    border-bottom: 1px solid red;
+  }
+  textarea.hasError {
+    border: 1px solid red;
   }
   .visit > div {
     width: 100%;
