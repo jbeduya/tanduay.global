@@ -4,7 +4,7 @@
   import { fade } from "svelte/transition";
 
   export let articles = [];
-  export let worldwide = articles.filter(function(item) {
+  export let worldwide = articles.filter(function (item) {
     return item.id > 6 && item.id < 10;
   });
   let itemCount = 6;
@@ -26,8 +26,8 @@
 
       <div class="articles">
         {#each items as article}
-          <div class="article hover" style="--image: url({article.image});">
-            <div class="image" />
+          <div class="article hover">
+            <div class="image" style="background-image: url({article.image})" />
             <div class="details">
               <div class="category">{article.category}</div>
               <a href={article.url}><h4>{article.title}</h4></a>
@@ -130,7 +130,6 @@
   }
 
   .article .image {
-    background-image: var(--image);
     background-size: cover;
     border-radius: 0.5rem;
     height: 250px;
