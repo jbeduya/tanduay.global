@@ -4,8 +4,8 @@
 
 <section>
   {#each articles as article}
-    <div class="article" style="--image: url({article.image});">
-      <div class="image" />
+    <div class="article">
+      <div class="image" style="background-image: url({article.image});" />
       <div class="details">
         <div class="category">{article.category}</div>
         <a href="/press-release/{article.id}"><h4>{article.title}</h4></a>
@@ -35,7 +35,6 @@
   }
 
   .image {
-    background-image: var(--image);
     background-size: cover;
     border-radius: 0.5rem;
     height: 70%;

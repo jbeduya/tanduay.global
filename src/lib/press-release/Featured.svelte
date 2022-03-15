@@ -33,8 +33,11 @@
 </script>
 
 <section>
-  <div class="container" style="--image: url({featuredArticle.image});">
-    <div class="content-wrapper">
+  <div class="container">
+    <div
+      class="content-wrapper"
+      style="background-image: url({featuredArticle.image});"
+    >
       <div class="content">
         <div class="featured">
           <div class="category">{featuredArticle.category}</div>
@@ -98,7 +101,6 @@
   }
 
   .content-wrapper {
-    background-image: var(--image);
     background-size: cover;
     border-radius: 1rem;
     height: 35rem;
