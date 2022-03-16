@@ -16,7 +16,7 @@
         on:click={() => dispatch("check", "location")}
         name="type"
         value="location"
-        label="Location"
+        label="All"
       />
       <InputRadio
         checked={checked == "stores"}

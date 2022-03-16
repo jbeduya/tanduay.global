@@ -86,6 +86,7 @@
     height: 100vh;
     color: var(--color);
     position: relative;
+    overflow-y: auto;
   }
 
   .close {
@@ -128,6 +129,7 @@
     padding: 10px 0;
     margin-bottom: 2rem;
     margin-right: 4rem;
+    max-width: 70%;
   }
   h2 {
     font-size: 1.5rem;
@@ -234,7 +236,7 @@
       --double-padding: 6rem;
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     h2 {
       font-size: 1.2rem;
@@ -242,6 +244,10 @@
     }
     .content .body {
       margin-top: 2rem;
+    }
+
+    .content .header {
+      padding-bottom: 1rem;
     }
   }
 

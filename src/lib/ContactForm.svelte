@@ -60,10 +60,7 @@
   <div class="container">
     <h1 class="garamond">We'd love to hear from you!</h1>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequatur
-      sequi iusto soluta similique repellendus! Quisquam voluptatem, quia quasi
-      exercitationem impedit voluptate aliquid ut iste vero est vel nesciunt! Id
-      sunt soluta sequi quod adipisci accusantium voluptatum quidem consequuntur
+      Get in touch, and we will be happy to help you out.
     </p>
 
     <div class="fields">

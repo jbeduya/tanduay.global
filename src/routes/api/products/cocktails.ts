@@ -11,14 +11,14 @@ export async function get() {
                 description:
                     "Shake all ingredients in a cocktail shaker with ice until well-chilled. Single Strain into a tumbler glass. Garnish with sprig of mint and serve over crushed ice.",
                 garnish: "Sprig of Mint",
-                glass: "Couple Glass",
+                glass: "Coupe Glass",
                 ingredients: [
                     "2 oz Tanduay Asian Rum Gold",
                     "0.5 oz Lemon Juice",
                     "0.75 oz Guava Syrup",
                     "20 pcs Mint Leaves",
                 ],
-                suggestions: [2, 3],
+                suggestions: [14, 2],
             },
             {
                 id: 2,
@@ -36,7 +36,7 @@ export async function get() {
                     "1 oz Sweet Vermouth",
                     "1 oz Campari"
                 ],
-                suggestions: [10, 17],
+                suggestions: [1, 3],
             },
             {
                 id: 3,
@@ -54,7 +54,7 @@ export async function get() {
                     "1.5 oz Sweer Vermouth",
                     "Dash of Bitters"
                 ],
-                suggestions: [2, 3],
+                suggestions: [2, 4],
             },
             {
                 id: 4,
@@ -76,7 +76,7 @@ export async function get() {
                     "1 oz hazelnut Syrup",
                     "2 oz Dark Beer"
                 ],
-                suggestions: [2, 3],
+                suggestions: [3, 5],
             },
             {
                 id: 5,
@@ -98,7 +98,7 @@ export async function get() {
                     "1 oz Banana Liquer",
                     "Splash of Grenadine"
                 ],
-                suggestions: [2, 3],
+                suggestions: [4, 6],
             },
             {
                 id: 6,
@@ -117,7 +117,7 @@ export async function get() {
                     "1oz Lime Juice",
                     ".07oz Brown Sugar Syrup",
                 ],
-                suggestions: [2, 3],
+                suggestions: [5, 7],
             },
             {
                 id: 7,
@@ -135,7 +135,7 @@ export async function get() {
                     "3 oz Pineapple Juice",
                     "2 oz Cranberry Juice"
                 ],
-                suggestions: [2, 3],
+                suggestions: [6, 8],
             },
             {
                 id: 8,
@@ -155,7 +155,7 @@ export async function get() {
                     "0.20 oz Calamansi or Local Lime Juice",
                     "1.5 oz Ginger Ale",
                 ],
-                suggestions: [2, 3],
+                suggestions: [7, 9],
             },
             {
                 id: 9,
@@ -173,7 +173,7 @@ export async function get() {
                     "0.75 oz Dry Vermouth",
                     "0.5 Amaretto"
                 ],
-                suggestions: [2, 3],
+                suggestions: [8, 10],
             },
             {
                 id: 10,
@@ -192,7 +192,7 @@ export async function get() {
                     "1 oz Pineapple Juice",
                     "0.5 oz Fresh Lime Juice"
                 ],
-                suggestions: [2, 3],
+                suggestions: [9, 11],
             },
             {
                 id: 11,
@@ -211,7 +211,7 @@ export async function get() {
                     "1.5 oz Pink Guava Juice",
                     "2 oz Sweetened Coconut Cream"
                 ],
-                suggestions: [2, 3],
+                suggestions: [10, 12],
             },
             {
                 id: 12,
@@ -230,7 +230,7 @@ export async function get() {
                     "2 pc Cocktail Cherries",
                     "Orange Bitters"
                 ],
-                suggestions: [2, 3],
+                suggestions: [11, 13],
             },
             {
                 id: 13,
@@ -250,7 +250,7 @@ export async function get() {
                     "0.75oz Fresh Lime Juice",
                     "0.5 oz Orgeat"
                 ],
-                suggestions: [2, 3],
+                suggestions: [12, 14],
             },
             {
                 id: 14,
@@ -270,7 +270,7 @@ export async function get() {
                     "2 drops Agnustura Bitters",
                     "1 oz Soda Water"
                 ],
-                suggestions: [2, 3],
+                suggestions: [13, 1],
             },
             {
                 id: 15,
@@ -290,7 +290,7 @@ export async function get() {
                     "0.25 oz Lime Juice",
                     "0.25 oz Grenadine"
                 ],
-                suggestions: [2, 3],
+                suggestions: [22, 16],
             },
             {
                 id: 16,
@@ -308,7 +308,7 @@ export async function get() {
                     "0.5 oz Chocolate Liqueur",
                     "2 oz All Purpose Cream"
                 ],
-                suggestions: [2, 3],
+                suggestions: [15, 17],
             },
             {
                 id: 17,
@@ -326,7 +326,7 @@ export async function get() {
                     "0.5 oz Cherry Brandy",
                     "3.5 oz Chocolate Milk Drink"
                 ],
-                suggestions: [2, 3],
+                suggestions: [16, 18],
             },
             {
                 id: 18,
@@ -346,7 +346,7 @@ export async function get() {
                     "0.75 oz Tanduay Rum White",
                     "0.15 oz Grenadine"
                 ],
-                suggestions: [2, 3],
+                suggestions: [17, 19],
             },
             {
                 id: 19,
@@ -365,7 +365,7 @@ export async function get() {
                     "1 oz Brewed Coffee",
                     "0.5 oz Simple Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [18, 20],
             },
             {
                 id: 20,
@@ -383,7 +383,7 @@ export async function get() {
                     "2 oz Coffee Liqueur",
                     "1 oz All Purpose Cream"
                 ],
-                suggestions: [2, 3],
+                suggestions: [19, 21],
             },
             {
                 id: 21,
@@ -402,7 +402,7 @@ export async function get() {
                     "2 oz Cold Coffee",
                     "0.75 oz Simple Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [20, 22],
             },
             {
                 id: 22,
@@ -421,7 +421,7 @@ export async function get() {
                     "2 oz Fresh Milk",
                     "0.75 oz Roasted Chestnut Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [21, 15],
             },
             {
                 id: 23,
@@ -429,7 +429,7 @@ export async function get() {
                 product: "Tanduay Rum",
                 name: "Passion Fruit Rum Punch",
                 photo: "passion-fruit-rum-punch.png",
-                glass_icon: "icon-passion-fruit-rum-punch.png",
+                glass_icon: "icon-passion-fruit-rum.png",
                 description:
                     "Combine all ingredients except Tanduay Rum Dark together in a cocktail shaker, shake until well-chilled. Strain into a tumbler glass with fresh ice. Float Tanduay Rum Dark on top. Garnish with lemon wheel and orange peel.",
                 garnish: "Lemon and Orange Peel",
@@ -441,7 +441,7 @@ export async function get() {
                     "0.75 oz Passion Fruit Syrup",
                     "1 oz Orange Juice"
                 ],
-                suggestions: [2, 3],
+                suggestions: [34, 24],
             },
             {
                 id: 24,
@@ -460,7 +460,7 @@ export async function get() {
                     "0.5 oz Lime Juice",
                     "1.5 oz Strawberry Puree"
                 ],
-                suggestions: [2, 3],
+                suggestions: [23, 25],
             },
             {
                 id: 25,
@@ -479,7 +479,7 @@ export async function get() {
                     "0.75 oz Lemon Juice",
                     "1 oz Guava Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [24, 26],
             },
             {
                 id: 26,
@@ -498,7 +498,7 @@ export async function get() {
                     "1 oz Peach Puree",
                     "1 oz Mango Puree"
                 ],
-                suggestions: [2, 3],
+                suggestions: [25, 27],
             },
             {
                 id: 27,
@@ -519,7 +519,7 @@ export async function get() {
                     "0.5 oz Grenadine",
                     "0.5 oz Lime Juice"
                 ],
-                suggestions: [2, 3],
+                suggestions: [26, 28],
             },
             {
                 id: 28,
@@ -538,7 +538,7 @@ export async function get() {
                     "0.5 oz Triple Sec",
                     "Dash Grenadine"
                 ],
-                suggestions: [2, 3],
+                suggestions: [27, 29],
             },
             {
                 id: 29,
@@ -558,7 +558,7 @@ export async function get() {
                     "3 pcs Lychee",
                     "10 pcs Mint Leaves"
                 ],
-                suggestions: [2, 3],
+                suggestions: [28, 30],
             },
             {
                 id: 30,
@@ -578,7 +578,7 @@ export async function get() {
                     "1 oz Coconut Cream",
                     "0.5 oz Simple Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [29, 31],
             },
             {
                 id: 31,
@@ -596,7 +596,7 @@ export async function get() {
                     "4 oz Root Beer",
                     "1 scoop Vanilla Ice Cream"
                 ],
-                suggestions: [2, 3],
+                suggestions: [30, 32],
             },
             {
                 id: 32,
@@ -615,7 +615,7 @@ export async function get() {
                     "0.5 oz Lemon Juice",
                     "1.5 oz Cranberry"
                 ],
-                suggestions: [2, 3],
+                suggestions: [31, 33],
             },
             {
                 id: 33,
@@ -634,7 +634,7 @@ export async function get() {
                     "1 oz Lime Juice",
                     "0.5 oz Simple Syrup"
                 ],
-                suggestions: [2, 3],
+                suggestions: [32, 34],
             },
             {
                 id: 34,
@@ -658,7 +658,7 @@ export async function get() {
                     "0.25 oz Orange Juice",
                     "0.25 oz Grenadine"
                 ],
-                suggestions: [2, 3],
+                suggestions: [33, 23],
             },
         ]
     }

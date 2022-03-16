@@ -36,7 +36,7 @@
     --title-color: var(--text-color);
     --content-color: var(--text-color);
     padding: 20px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); */
     border-radius: 20px;
     transition-duration: 400ms;
   }

@@ -4,6 +4,8 @@
   let email = "";
   let withError = false;
 
+  $: outerWidth = 0;
+
   const subscribe = async () => {
     const { value, error } = subscribeSchema.validate({ email });
     if (error) return;
@@ -30,6 +32,8 @@
     withError = false;
   }
 </script>
+
+<svelte:window bind:outerWidth />
 
 <section>
   <div class="container">
@@ -73,7 +77,7 @@
           <a href="#">Terms</a>
         </div>
         <div class="top">
-          <a href="#top">
+           <a href={outerWidth > 930 ? "#top" : "/#"}>
             <img src="/images/back-to-top.png" alt="Back to Top" />
           </a>
         </div>

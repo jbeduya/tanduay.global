@@ -1,7 +1,9 @@
 import crypto from 'crypto';
+import dotenv from 'dotenv';
+dotenv.config();
 
-const client_id = 'IF8';
-const client_secret = '1777974CB8EBIF8 7980B58D824F';
+const client_id =  process.env['BRAND_FINDER_ID'];
+const client_secret =  process.env['BRAND_FINDER_SECRET'];
 const api_url = 'https://api.vtinfo.com/analytics/v2/finder';
 
 interface APIHeaders {
@@ -35,7 +37,7 @@ function getApiHeaders(params: URLSearchParams): [string, APIHeaders] {
     d.setSeconds(0);
     const timestamp = d.toUTCString().replace(/\, 0/g, ', ');
     const signature = timestamp + client_secret + params.toString() + client_id;
-    const hash = crypto.createHash('sha256').update(signature).digest('hex')
+    const hash = crypto.createHash('sha256').update(signature).digest('hex');
     const url = api_url + '?' + params.toString();
 
     return [url, {
@@ -58,7 +60,7 @@ function generateHeaders(headers: APIHeaders) {
 export default async function (query: SearchQueryParams) {
     let params = new URLSearchParams();
     params.append('action', 'results');
-    params.append('miles', query?.miles?.toString() || '100');
+    params.append('miles', query?.miles?.toString() || '20');
 
     if (query?.zip) {
         params.append('zip', query?.zip);

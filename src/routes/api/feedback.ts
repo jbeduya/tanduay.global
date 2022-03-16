@@ -1,4 +1,6 @@
 import { feedbackSchema } from "./validation_schema";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export async function post({ request }) {
     const body = await request.json();
@@ -16,7 +18,7 @@ export async function post({ request }) {
         // or do something else
     }
 
-    const apiKey = "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"
+    const apiKey = process.env['SENDGRID_EMAIL_API']
     const endpoint = "https://api.sendgrid.com/v3/mail/send"
 
     const datad = {
@@ -24,7 +26,7 @@ export async function post({ request }) {
             {
                 to: [
                     {
-                        email: 'info@tanduayusa.com',
+                        email: 'tbi.webmanagement@gmail.com',
                         name: 'Tanduay USA'
                     },
                 ]
@@ -58,7 +60,7 @@ export async function post({ request }) {
         body: JSON.stringify(datad)
     });
 
-    // console.log(action.json();
+    // console.log(action);
     return {
         body: {
             message: 'We heard you.'

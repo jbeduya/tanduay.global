@@ -19,7 +19,7 @@
   <SocialMedia />
 </div>
 
-<section class:stick={yOffset > 100}>
+<section class:stick={yOffset > 10}>
   <div class="container">
     <div class="logo">
       <a href="/#">
@@ -337,11 +337,17 @@
     background-color: #fefef8;
     z-index: 700;
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+    /* -webkit-transition:  ease-in-out 0.3s;
+    -moz-transition:  ease-in-out 0.3s; */
+    transition: all 500ms ease-out;
   }
   section {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;
+    -webkit-transition:  ease-in-out 0.3s;
+    -moz-transition:  ease-in-out 0.3s;
+    transition: ease-in-out 0.3s; */
   }
   .container {
     max-width: var(--max-width);
@@ -351,7 +357,7 @@
     padding: 0 16px;
   }
   .stick .container {
-    padding: 8px;
+    padding: 10px 16px;
   }
   .navigation {
     display: flex;
@@ -366,7 +372,7 @@
   }
   @media (max-width: 930px) {
     section {
-      padding: 8px 16px;
+      padding: 16px 16px;
     }
     .container {
       grid-template-columns: 1fr;
