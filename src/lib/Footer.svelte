@@ -31,6 +31,10 @@
   } else {
     withError = false;
   }
+
+  const backTop = () => {
+    window.scrollTo(0,0);
+  }
 </script>
 
 <svelte:window bind:outerWidth />
@@ -77,7 +81,7 @@
           <a href="#">Terms</a>
         </div>
         <div class="top">
-           <a href={outerWidth > 930 ? "#top" : "/#"}>
+           <a href= "#" on:click|preventDefault={backTop}>
             <img src="/images/back-to-top.png" alt="Back to Top" />
           </a>
         </div>

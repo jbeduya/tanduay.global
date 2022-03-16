@@ -19,7 +19,7 @@
   <SocialMedia />
 </div>
 
-<section class:stick={yOffset > 10}>
+<section class:stick={yOffset > 0}>
   <div class="container">
     <div class="logo">
       <a href="/#">
@@ -339,7 +339,7 @@
     box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
     /* -webkit-transition:  ease-in-out 0.3s;
     -moz-transition:  ease-in-out 0.3s; */
-    transition: all 500ms ease-out;
+    transition: all 300ms ease-out;
   }
   section {
     display: flex;
