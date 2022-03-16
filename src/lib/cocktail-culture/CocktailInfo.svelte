@@ -218,6 +218,7 @@
     justify-content: center;
     align-items: center;
     padding: calc(var(--padding) - 25px) calc(var(--padding) + 20px);
+    height: 100%;
   }
 
   .suggestion > :last-child,
