@@ -7,7 +7,7 @@
   const articles = [
     {
       id: 1,
-      photo: "/images/press/press.png",
+      photo: "/images/press/press-default.png",
       category: "Corporate Partnerships",
       title:
         "Tanduay Seen to Drive Rum Growth in Arizona as it Partners with Hensley Beverage Company",
