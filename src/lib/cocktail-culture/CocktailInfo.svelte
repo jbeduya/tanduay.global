@@ -87,6 +87,7 @@
     color: var(--color);
     position: relative;
     overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .close {
@@ -114,11 +115,11 @@
     grid-template-rows: auto 1fr;
     /* overflow-y: auto; */
   }
-  .content .body {
-    /* overflow-y: auto; */
-    /* height: 100%;
-    max-width: 100%; */
-  }
+  /* .content .body {
+    overflow-y: auto; 
+    height: 100%;
+    max-width: 100%;
+  } */
 
 
 
