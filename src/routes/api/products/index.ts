@@ -133,8 +133,8 @@ export async function get() {
                 id: 8,
                 name: "Especia Spiced Rum",
                 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc metus. Aenean consectetur suscipit neque sed tristique. Integer tristique ex vitae libero aliquet, in interdum nisl fermentum.",
-                image: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
-                thumbnail: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
+                image: "/images/products/EspeciaRum.png",
+                thumbnail: "/images/products/EspeciaRum.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-especia-spiced-rum",
                 details: {
                     alcohol: "40% alc. / vol.",
