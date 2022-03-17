@@ -20,7 +20,7 @@
 
   let markers = [],
     checked = "location",
-    distance = 20;
+    distance = 50;
 
   onMount(() => {
     navigator.geolocation.getCurrentPosition(onSuccess, onFail, {
@@ -77,6 +77,10 @@
             <span><i class="fa-solid fa-phone"></i></span>
             <span>${location.phoneFormatted}</span>
           </div>
+          <div class="marker-popup-item">
+            <span><i class="fa-solid fa-map-location"></i></span>
+            <span>${location.distance} Miles</span>
+          </div>
         </div>
         `
         );
@@ -97,7 +101,7 @@
   <div class="container">
     <h1 class="h1">Where to find Us</h1>
     <div class="controls">
-      <SearchOptions on:check={optionChanged} checked={"location"} />
+      <!-- <SearchOptions on:check={optionChanged} checked={"location"} /> -->
 
       <Distance bind:distance />
       <Location
@@ -152,7 +156,7 @@
   .controls {
     width: 100%;
     display: grid;
-    grid-template-columns: 2fr 2fr 2fr 1fr;
+    grid-template-columns: /*2fr 2fr 2fr 1fr*/ 2fr 2fr auto;
     gap: 1rem;
     justify-content: center;
     align-items: center;

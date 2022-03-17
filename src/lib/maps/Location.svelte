@@ -50,7 +50,7 @@
       <input
         bind:value={searchText}
         type="text"
-        placeholder="Enter location..."
+        placeholder="Enter City..."
       />
       <button on:click={currentLocation}
         ><i class="fa-solid fa-location-crosshairs" /></button

@@ -60,7 +60,7 @@ function generateHeaders(headers: APIHeaders) {
 export default async function (query: SearchQueryParams) {
     let params = new URLSearchParams();
     params.append('action', 'results');
-    params.append('miles', query?.miles?.toString() || '20');
+    params.append('miles', query?.miles?.toString() || '50');
 
     if (query?.zip) {
         params.append('zip', query?.zip);
@@ -76,7 +76,7 @@ export default async function (query: SearchQueryParams) {
     let result = await fetch(url, {
         headers: generateHeaders(headers)
     })
-
+    
     return await result.json();
 }
 

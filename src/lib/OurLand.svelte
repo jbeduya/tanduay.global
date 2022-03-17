@@ -14,14 +14,13 @@
       </div>
     </div>
     <div class="text">
-      <h2>Our Land</h2>
+      <h2>Distinctly Filipino</h2>
       <h3>
-        Part of what makes Tanduay Asian Rum unique is the culture and character
-        of the Filipino people.
+        Tanduay is unique since it is the only Rum from the Topical Islands of the Philippines.
       </h3>
       <p>
-        The Philippines is an archipelago rich with stories and experiences. We
-        would like to share some of these stories here with you.
+        <!-- The Philippines is an archipelago rich with stories and experiences. We
+        would like to share some of these stories here with you. -->
       </p>
     </div>
   </div>
