@@ -75,8 +75,8 @@
       {/if}
     </div>
     {:else}
-      {#if suggestions}
-      <p class="garamond">You might also like: &nbsp;<span class="garamond mob" on:click={() => dispatch("select", suggestions[1].id)}>{suggestions[1].name}</span></p> 
+      {#if suggestions[1]}
+      <p class="garamond">You might also like: &nbsp;<span class="garamond mob" on:click={() => dispatch("select", suggestions[1].id)}>{suggestions[1].name ?? ''}</span></p> 
       {/if}
     {/if}
   </div>
