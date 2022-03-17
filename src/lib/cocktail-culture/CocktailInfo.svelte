@@ -6,7 +6,12 @@
 
   beforeUpdate(() => {
   });
+
+  $: outerWidth = 0;
+  
 </script>
+
+<svelte:window bind:outerWidth />
 
 <section>
   <div class="content">
@@ -50,7 +55,8 @@
     </div>
   </div>
   <div class="suggestions">
-    <!-- <p class="garamond">You might also like</p>
+    {#if outerWidth > 930}
+    <p class="garamond">You might also like</p>
     <div class="suggested-items">
       {#if suggestions}
         {#each suggestions as cocktail}
@@ -67,7 +73,8 @@
           </div>
         {/each}
       {/if}
-    </div> -->
+    </div>
+    {/if}
   </div>
 </section>
 
