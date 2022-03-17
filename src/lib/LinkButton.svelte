@@ -4,9 +4,10 @@
   const dispatch = createEventDispatcher();
   export let active = false;
   export let href = "#";
+  export let target = null
 </script>
 
-<a {href} class:active on:click={() => dispatch("click")}><slot /></a>
+<a {href} {target} class:active on:click={() => dispatch("click")}><slot /></a>
 
 <style>
   a {

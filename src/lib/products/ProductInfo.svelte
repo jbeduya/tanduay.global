@@ -128,7 +128,7 @@
 
 <div class="buttons">
   <LinkButton href="/#cocktail-culture">Check Recipes</LinkButton>
-  <LinkButton href="/#stores">Buy Now</LinkButton>
+  <LinkButton href="{product.buy_url}" target=_blank>Buy Now</LinkButton>
 </div>
 
 <section class="detail" class:open>
