@@ -50,7 +50,7 @@
     </div>
   </div>
   <div class="suggestions">
-    <p class="garamond">You might also like</p>
+    <!-- <p class="garamond">You might also like</p>
     <div class="suggested-items">
       {#if suggestions}
         {#each suggestions as cocktail}
@@ -67,7 +67,7 @@
           </div>
         {/each}
       {/if}
-    </div>
+    </div> -->
   </div>
 </section>
 
@@ -236,6 +236,7 @@
     section {
       --padding: 3rem;
       --double-padding: 6rem;
+      padding-bottom: env(safe-area-inset-bottom);
     }
     h1 {
       font-size: 1.8rem;
