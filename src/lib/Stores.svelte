@@ -18,9 +18,9 @@
     //   logo: "/images/stores/libdib.png",
     // },
     {
-      url: "https://tanduay.thirstie.com",
+      url: "https://www.reservebar.com/collections/tanduay",
       description: "On-demand delivery",
-      logo: "/images/stores/thirstie.png",
+      logo: "/images/stores/reservebar.png",
     },
   ];
 

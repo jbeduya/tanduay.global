@@ -26,14 +26,14 @@ export async function post({ request }) {
             {
                 to: [
                     {
-                        email: 'tbi.webmanagement@gmail.com',
+                        email: 'info@tanduayusa.com',
                         name: 'Tanduay USA'
                     },
                 ]
             }
         ],
         from: {
-            email: 'gail.pasiona@diffsigma.com',
+            email: 'itadmin@tanduaybrandsintl.com',
             name: 'Tanduay Global Website Inquiry'
         },
         replyTo: {

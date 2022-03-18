@@ -15,4 +15,5 @@ export const navigation = writable([
         url: "#press-release",
     },
     { name: "Contact", url: "/#contact-us" },
+    { name: "Shop Now", url: "https://tanduay.thirstie.com/", target: "_blank" },
 ])
