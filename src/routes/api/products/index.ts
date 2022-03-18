@@ -132,7 +132,7 @@ export async function get() {
             {
                 id: 8,
                 name: "Especia Spiced Rum",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla at nunc metus. Aenean consectetur suscipit neque sed tristique. Integer tristique ex vitae libero aliquet, in interdum nisl fermentum.",
+                description: "Stare long enough at the trees here and you might see the glimmer of a green scale. The flicker of a forked tongue and then, lifted by an ancient magic, a snake slithering through the humid air. The glider snake keeps a dark eye on the exotic ssspices that bloom throughout our jungle, so every ssssip of this spiced rum is imbued with exotic magic.",
                 image: "/images/products/EspeciaRum.png",
                 thumbnail: "/images/products/EspeciaRum.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-especia-spiced-rum",
