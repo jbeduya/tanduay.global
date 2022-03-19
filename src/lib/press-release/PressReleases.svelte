@@ -43,6 +43,10 @@
     },
   ];
 
+  const generateQuery = (queryString) => {
+    return queryString.replaceAll(' ', '+');
+  }
+
   onMount(() => {
     let swiper = new Swiper(".articles", {
       slidesPerView: "auto",
@@ -77,7 +81,7 @@
     <div class="articles swiper">
       <div class="swiper-wrapper">
         {#each articles as article}
-          <div class="article swiper-slide"><PressRelease {article} /></div>
+          <div class="article swiper-slide"><PressRelease {article} query={generateQuery(article.title)}/></div>
         {/each}
       </div>
     </div>
