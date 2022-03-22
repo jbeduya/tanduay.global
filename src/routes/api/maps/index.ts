@@ -18,7 +18,7 @@ export async function post({ request }) {
     const p = {
         lat: params.lat,
         lng: params.lng,
-        miles: Math.floor(kilometersToMiles(params.distance ?? 20))
+        miles: params.distance//Math.floor(kilometersToMiles(params.distance ?? 20))
     };
 
     const result = await search(p);

@@ -1,7 +1,7 @@
 <script>
   import InputRange from "$lib/InputRange.svelte";
 
-  export let distance = 20;
+  export let distance = 50;
 </script>
 
 <div class="map-distance">
@@ -9,9 +9,9 @@
 
   <div class="form-area">
     <div class="map-distance-input">
-      <InputRange step={5} min={10} max={100} bind:value={distance} />
+      <InputRange step={10} min={50} max={100} bind:value={distance} />
     </div>
-    <div class="distance">{distance} KM</div>
+    <div class="distance">{distance} Miles</div>
   </div>
 </div>
 

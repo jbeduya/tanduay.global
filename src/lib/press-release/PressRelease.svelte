@@ -1,5 +1,6 @@
 <script>
   export let article;
+  export let query;
 </script>
 
 <section>
@@ -9,7 +10,7 @@
     <div class="content">
       <div class="category">{article.category}</div>
       <p class="title">
-        <a href={`/press-release/${article.id}`}>{article.title}</a>
+        <a href={`${article.link}`} target="_blank">{article.title}</a>
       </p>
       <div class="details">
         <div class="date">{article.date}</div>
@@ -22,7 +23,7 @@
     <div class="links">
       <a class="more" href={`${article.link}`} target="_blank">Read more</a>
       <span class="external"
-        ><a href="https://www.google.com?q=tanduay" target="_blank"
+        ><a href="https://www.google.com/search?q={query}" target="_blank"
           ><i class="fas fa-external-link-alt" /></a
         >
       </span>
@@ -36,7 +37,7 @@
     --title-color: var(--text-color);
     --content-color: var(--text-color);
     padding: 20px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+    /* box-shadow: 0 0 40px rgba(0, 0, 0, 0.05); */
     border-radius: 20px;
     transition-duration: 400ms;
   }

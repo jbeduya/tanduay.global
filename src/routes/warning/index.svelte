@@ -39,8 +39,8 @@
           <span class="logo"><Logo /></span>
         </div>
         {#if !isDenied}
-          <h2 class="garamond">Are you of Legal</h2>
-          <h1 class="garamond">Drinking Age?</h1>
+          <h2 class="garamond">Are you over</h2>
+          <h1 class="garamond">21 years old?</h1>
           <div class="actions">
             <Button on:click={accept}>Yes</Button>
             <Button on:click={() => (isDenied = true)}>NO</Button>

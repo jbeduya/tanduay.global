@@ -70,6 +70,7 @@
   {#each $navigation as item}
     <a
       href={item.url}
+      target={item.target}
       on:click={() => dispatch("click", item)}
       class:active={item.active}>{item.name}</a
     >

@@ -6,7 +6,12 @@
 
   beforeUpdate(() => {
   });
+
+  $: outerWidth = 0;
+  
 </script>
+
+<svelte:window bind:outerWidth />
 
 <section>
   <div class="content">
@@ -50,6 +55,7 @@
     </div>
   </div>
   <div class="suggestions">
+    {#if outerWidth > 930}
     <p class="garamond">You might also like</p>
     <div class="suggested-items">
       {#if suggestions}
@@ -68,6 +74,11 @@
         {/each}
       {/if}
     </div>
+    {:else}
+      {#if suggestions[1]}
+      <p class="garamond">You might also like: &nbsp;<span class="garamond mob" on:click={() => dispatch("select", suggestions[1].id)}>{suggestions[1].name ?? ''}</span></p> 
+      {/if}
+    {/if}
   </div>
 </section>
 
@@ -86,6 +97,8 @@
     height: 100vh;
     color: var(--color);
     position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
   }
 
   .close {
@@ -113,13 +126,11 @@
     grid-template-rows: auto 1fr;
     /* overflow-y: auto; */
   }
-  .content .body {
-    /* overflow-y: auto; */
-    /* height: 100%;
-    max-width: 100%; */
-  }
-
-
+  /* .content .body {
+    overflow-y: auto; 
+    height: 100%;
+    max-width: 100%;
+  } */
 
   h1 {
     font-size: 2.5rem;
@@ -128,6 +139,7 @@
     padding: 10px 0;
     margin-bottom: 2rem;
     margin-right: 4rem;
+    max-width: 70%;
   }
   h2 {
     font-size: 1.5rem;
@@ -201,7 +213,7 @@
     background-color: #f9f7f4;
   }
 
-  .suggested-items :is(div) {
+  .suggested-items :is(div), .suggestions .mob {
     color: var(--secondary-color);
     text-decoration: underline;
     /* padding: var(--padding); */
@@ -215,6 +227,7 @@
     justify-content: center;
     align-items: center;
     padding: calc(var(--padding) - 25px) calc(var(--padding) + 20px);
+    height: 100%;
   }
 
   .suggestion > :last-child,
@@ -232,9 +245,10 @@
     section {
       --padding: 3rem;
       --double-padding: 6rem;
+      padding-bottom: env(safe-area-inset-bottom);
     }
     h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
     h2 {
       font-size: 1.2rem;
@@ -242,6 +256,10 @@
     }
     .content .body {
       margin-top: 2rem;
+    }
+
+    .content .header {
+      padding-bottom: 1rem;
     }
   }
 

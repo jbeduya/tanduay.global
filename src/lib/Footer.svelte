@@ -4,6 +4,8 @@
   let email = "";
   let withError = false;
 
+  $: outerWidth = 0;
+
   const subscribe = async () => {
     const { value, error } = subscribeSchema.validate({ email });
     if (error) return;
@@ -29,7 +31,13 @@
   } else {
     withError = false;
   }
+
+  const backTop = () => {
+    window.scrollTo(0,0);
+  }
 </script>
+
+<svelte:window bind:outerWidth />
 
 <section>
   <div class="container">
@@ -73,7 +81,7 @@
           <a href="#">Terms</a>
         </div>
         <div class="top">
-          <a href="#top">
+           <a href= "#" on:click|preventDefault={backTop}>
             <img src="/images/back-to-top.png" alt="Back to Top" />
           </a>
         </div>

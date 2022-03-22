@@ -42,7 +42,8 @@
     <div class="header">
       <div class="left">
         <h1 class="h1">Videos</h1>
-        <p> 
+        <p>
+          The world's no.1 selling rum, Tanduay is the most awarded Asian rum in the world. Experience the rich history and elegant taste as we give you a glimpse of our brand events and activities. 
         </p>
       </div>
       <div class="right">

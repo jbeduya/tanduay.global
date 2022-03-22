@@ -1,4 +1,6 @@
 import { subscribeSchema } from "./validation_schema";
+import dotenv from 'dotenv';
+dotenv.config();
 
 export async function post({ request }) {
     const requestBody = await request.json();
@@ -16,7 +18,7 @@ export async function post({ request }) {
     }
 
     // PROCESS THE EMAIL HERE
-    const apiKey = "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"
+    const apiKey = process.env['SENDGRID_CONTACT_API']
     const endpoint = "https://api.sendgrid.com/v3/marketing/contacts"
 
     const data = {
@@ -24,7 +26,7 @@ export async function post({ request }) {
             {
                 "email": email,
                 "custom_fields": {
-                    "e1_T": "Tanduay Global Website Subscribe",
+                    "w1_T": "Tanduay Global Website Subscribe",
                 }
             }
         ]
@@ -39,7 +41,7 @@ export async function post({ request }) {
         body: JSON.stringify(data)
     });
 
-    console.log(action.status);
+    console.log(action);
 
     return {
         body: {

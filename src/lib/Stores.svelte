@@ -12,15 +12,15 @@
       description: "On-demand delivery",
       logo: "/images/stores/instacart.png",
     },
+    // {
+    //   url: "https://app.libdib.com/brand/tanduay",
+    //   description: "On-demand delivery",
+    //   logo: "/images/stores/libdib.png",
+    // },
     {
-      url: "https://app.libdib.com/brand/tanduay",
+      url: "https://www.reservebar.com/collections/tanduay",
       description: "On-demand delivery",
-      logo: "/images/stores/libdib.png",
-    },
-    {
-      url: "https://tanduay.thirstie.com",
-      description: "On-demand delivery",
-      logo: "/images/stores/thirstie.png",
+      logo: "/images/stores/reservebar.png",
     },
   ];
 
@@ -39,7 +39,7 @@
             <img src={store.logo} alt="Store" />
           </div>
           <div>
-            <p>{store.description}</p>
+            <!-- <p>{store.description}</p> -->
             <Button on:click={() => visitShop(store)}>Visit Shop</Button>
           </div>
         </div>

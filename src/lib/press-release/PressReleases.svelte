@@ -7,7 +7,7 @@
   const articles = [
     {
       id: 1,
-      photo: "/images/press/press.png",
+      photo: "/images/press/press-default.png",
       category: "Corporate Partnerships",
       title:
         "Tanduay Seen to Drive Rum Growth in Arizona as it Partners with Hensley Beverage Company",
@@ -43,6 +43,10 @@
     },
   ];
 
+  const generateQuery = (queryString) => {
+    return queryString.replaceAll(' ', '+');
+  }
+
   onMount(() => {
     let swiper = new Swiper(".articles", {
       slidesPerView: "auto",
@@ -77,7 +81,7 @@
     <div class="articles swiper">
       <div class="swiper-wrapper">
         {#each articles as article}
-          <div class="article swiper-slide"><PressRelease {article} /></div>
+          <div class="article swiper-slide"><PressRelease {article} query={generateQuery(article.title)}/></div>
         {/each}
       </div>
     </div>
@@ -114,7 +118,7 @@
   }
 
   .articles.swiper {
-    overflow: visible;
+    overflow: hidden;
   }
   @media (max-width: 1200px) {
     /* .article {
