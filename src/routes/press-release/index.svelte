@@ -174,9 +174,33 @@
       excerpt:
         "Once again it’s that time of the year when love is in the air. Whether you’re celebrating the day of romance with your significant other or with your besties, these delightful cocktails are sure to make the occasion more special.",
     },
+    {
+      id: 13,
+      category: "Corporate Partnerships",
+      title: "Tanduay City View Lounge Opens at the Timberwolves' Target Center",
+      date: "Feb 2022",
+      author: "finance.yahoo.com",
+      url: "https://finance.yahoo.com/news/tanduay-city-view-lounge-opens-022200845.html",
+      tags: ["USA"],
+      image: "/images/press/press-13.jpg",
+      excerpt:
+        "Leading Philippine rum maker Tanduay recently opened a bar at the Minnesota Timberwolves' Target Center. Called the Tanduay City View Lounge, the bar is a result of the partnership that the World's Number 1 Rum brand inked with the team in 2021.",
+    },
+    {
+      id: 14,
+      category: "Corporate Partnerships",
+      title: "Tanduay Reveals Global Expansion Plans",
+      date: "Mar 2022",
+      author: "thespiritsbusiness.com",
+      url: "https://www.thespiritsbusiness.com/2022/03/tanduay-reveals-global-expansion-plans/",
+      tags: ["UK"],
+      image: "/images/press/press-14.jpg",
+      excerpt:
+        "Philippine rum brand Tanduay doubled its export business last year and has revealed plans for further international expansion.",
+    },
   ];
 
-  let articles = featured;
+  let articles = featured.reverse();
 
   var featured_articles = featured.filter(function(item) {
     return item.id < 6;

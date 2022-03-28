@@ -6,28 +6,26 @@
 
   const articles = [
     {
-      id: 1,
-      photo: "/images/press/press-default.png",
+      id: 13,
+      photo: "/images/press/press-13.jpg",
       category: "Corporate Partnerships",
-      title:
-        "Tanduay Seen to Drive Rum Growth in Arizona as it Partners with Hensley Beverage Company",
-      date: "Mar 2021",
-      author: "markets.businessinsider.com",
-      link: "https://markets.businessinsider.com/news/stocks/tanduay-seen-to-drive-rum-growth-in-arizona-as-it-partners-with-hensley-beverage-company-1030242050",
+      title: "Tanduay City View Lounge Opens at the Timberwolves' Target Center",
+      date: "Feb 2022",
+      author: "finance.yahoo.com",
+      link: "https://finance.yahoo.com/news/tanduay-city-view-lounge-opens-022200845.html",
       description:
-        "Tanduay furthers its expansion in the U.S. by signing a partnership with Hensley Beverage Company, a top Arizona beverage wholesaler known for distributing a diverse range of alcoholic and non-alcoholic beverages.",
+        "Leading Philippine rum maker Tanduay recently opened a bar at the Minnesota Timberwolves' Target Center. Called the Tanduay City View Lounge, the bar is a result of the partnership that the World's Number 1 Rum brand inked with the team in 2021.",
     },
     {
-      id: 2,
-      photo: "/images/press/press2.jpg",
+      id: 14,
+      photo: "/images/press/press-14.jpg",
       category: "Corporate Partnerships",
-      title:
-        "Tanduay inks deal with Phoenix Suns, first PH company to sponsor five NBA teams",
-      date: "Apr 2021",
-      author: "espn.com",
-      link: "https://www.espn.com/basketball/story/_/id/31293568/tanduay-now-sponsor-five-nba-teams-deal-phoenix-suns",
+      title: "Tanduay Reveals Global Expansion Plans",
+      date: "Mar 2022",
+      author: "thespiritsbusiness.com",
+      link: "https://www.thespiritsbusiness.com/2022/03/tanduay-reveals-global-expansion-plans/",
       description:
-        "Just weeks after it sealed agreements with two other teams from the National Basketball Association (NBA), Tanduay has entered into a partnership with the Phoenix Suns. This makes it the first Philippine company to simultaneously sponsor five NBA teams, making an even more aggressive international marketing push.",
+        "Philippine rum brand Tanduay doubled its export business last year and has revealed plans for further international expansion.",
     },
     {
       id: 3,
