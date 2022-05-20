@@ -109,7 +109,7 @@
       align-items: flex-start;
       border-top: none;
     }
-    a {
+    a, a:last-child {
       padding: 10px 0;
       color: #fcfcfc;
     }
