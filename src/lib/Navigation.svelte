@@ -98,6 +98,10 @@
   a:hover {
     border-top: 3px solid #d18b3f;
   }
+  a:last-child {
+    font-weight: bolder;
+    color: #d18b3f;
+  }
 
   @media (max-width: 930px) {
     div {
