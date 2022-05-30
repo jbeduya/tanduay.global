@@ -6,38 +6,40 @@
 
   const articles = [
     {
-      id: 13,
-      photo: "/images/press/press-13.jpg",
+      id: 18,
       category: "Corporate Partnerships",
-      title: "Tanduay City View Lounge Opens at the Timberwolves' Target Center",
-      date: "Feb 2022",
+      title: "Tanduay's Specialty Cocktails at the Milwaukee Bucks' Fiserv Forum",
+      date: "May 2022",
       author: "finance.yahoo.com",
-      link: "https://finance.yahoo.com/news/tanduay-city-view-lounge-opens-022200845.html",
+      link: "https://finance.yahoo.com/news/tanduays-specialty-cocktails-fans-milwaukee-023600256.html",
+      tags: ["USA"],
+      photo: "/images/press/press-15.jpg",
       description:
-        "Leading Philippine rum maker Tanduay recently opened a bar at the Minnesota Timberwolves' Target Center. Called the Tanduay City View Lounge, the bar is a result of the partnership that the World's Number 1 Rum brand inked with the team in 2021.",
+        "Tanduay, the World’s Number 1 Rum, recently opened a bar in the home arena of the National Basketball Association (NBA) champions, Milwaukee Bucks. The Tanduay bar at the Fiserv Forum provides an exciting, refreshing cocktail experience with a tropical twist.",
     },
     {
-      id: 14,
-      photo: "/images/press/press-14.jpg",
+      id: 19,
       category: "Corporate Partnerships",
-      title: "Tanduay Reveals Global Expansion Plans",
-      date: "Mar 2022",
-      author: "thespiritsbusiness.com",
-      link: "https://www.thespiritsbusiness.com/2022/03/tanduay-reveals-global-expansion-plans/",
+      title: "The Beer Garden in Deer District",
+      date: "May 2022",
+      author: "jsonline.com",
+      link: "https://www.jsonline.com/story/sports/nba/bucks/2022/05/02/milwaukee-bucks-deer-district-tap-room-changes-into-tanduay-tiki-hut/9569673002/",
+      tags: ["USA"],
+      photo: "/images/press/press-17.jpg",
       description:
-        "Philippine rum brand Tanduay doubled its export business last year and has revealed plans for further international expansion.",
+        "The Tap Room has been transformed into The Tanduay Tiki Hut, according to a news release from the Bucks.",
     },
     {
-      id: 3,
-      photo: "/images/press/press3.jpg",
-      category: "Awards from Spirits Competition",
-      title:
-        "The Top Rums According To New York International Spirits Competition",
-      date: "May 2021",
-      author: "forbes.com",
-      link: "https://www.forbes.com/sites/joemicallef/2021/05/16/the-top-rums-according-to-new-york-international-spirits-competition/?sh=3e9446957f47",
+      id: 20,
+      category: "awards",
+      title: "Tanduay Wins Platinum, Innovation Honors in Consumer-Judged SIP Awards",
+      date: "May 2022",
+      author: "finance.yahoo.com",
+      link: "https://finance.yahoo.com/news/tanduay-wins-platinum-innovation-honors-054300585.html",
+      tags: ["USA"],
+      photo: "/images/press/press-20.jpg",
       description:
-        "The New York International Spirits Competition (NYISC) is an annual judging of spirits that takes place in New York City each spring. It’s unusual in that it is one of the few that rely entirely on judges drawn exclusively from the beverage trade.",
+        "Four Tanduay Rum products received top honors at the 2022 SIP Awards, the only wines and spirits competition where the judging panel is comprised of consumers.",
     },
   ];
 

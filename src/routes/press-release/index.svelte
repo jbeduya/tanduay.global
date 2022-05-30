@@ -198,6 +198,78 @@
       excerpt:
         "Philippine rum brand Tanduay doubled its export business last year and has revealed plans for further international expansion.",
     },
+    {
+      id: 15,
+      category: "Corporate Partnerships",
+      title: "Tanduay Brings Tropical Filipino Flavors to the Phoenix Suns' Footprint Center",
+      date: "Mar 2022",
+      author: "jsonline.com",
+      url: "https://finance.yahoo.com/news/tanduay-brings-tropical-filipino-flavors-222200106.html",
+      tags: ["USA"],
+      image: "/images/press/press-19.jpg",
+      excerpt:
+        "Filipino brand Tanduay, the World's Number 1 Rum, recently opened its own bar at the home of the Phoenix Suns.",
+    },
+    {
+      id: 16,
+      category: "Corporate Partnerships",
+      title: "The World's No.1 Selling Rum Tanduay Signs U.K. Distribution Deal",
+      date: "Apr 2022",
+      author: "barmagazine.co.uk",
+      url: "https://barmagazine.co.uk/the-worlds-no-1-selling-rum-tanduay-signs-u-k-distribution-deal-with-emporia-brands/",
+      tags: ["UK"],
+      image: "/images/press/press-16.jpg",
+      excerpt:
+        "Tanduay Rum, made in the heart of the Philippines, is a multiple award-winning spirit that carries with it the true heritage and culture of East Asia.",
+    },
+    {
+      id: 17,
+      category: "awards",
+      title: "Especia, Tanduay's New Spiced Rum, Wins Double Gold in San Diego Spirits Festival",
+      date: "Apr 2022",
+      author: "markets.businessinsider.com",
+      url: "https://markets.businessinsider.com/news/stocks/especia-tanduay-s-new-spiced-rum-wins-double-gold-in-san-diego-spirits-festival-1031368341",
+      tags: ["USA"],
+      image: "/images/press/press-18.jpg",
+      excerpt:
+        "Especia Rum, the latest product from the Philippines' Tanduay Distillers, Inc., has won a Double Gold at the San Diego Spirits Festival.",
+    },
+    {
+      id: 18,
+      category: "Corporate Partnerships",
+      title: "Tanduay's Specialty Cocktails at the Milwaukee Bucks' Fiserv Forum",
+      date: "May 2022",
+      author: "finance.yahoo.com",
+      url: "https://finance.yahoo.com/news/tanduays-specialty-cocktails-fans-milwaukee-023600256.html",
+      tags: ["USA"],
+      image: "/images/press/press-15.jpg",
+      excerpt:
+        "Tanduay, the World’s Number 1 Rum, recently opened a bar in the home arena of the National Basketball Association (NBA) champions, Milwaukee Bucks. The Tanduay bar at the Fiserv Forum provides an exciting, refreshing cocktail experience with a tropical twist.",
+    },
+    {
+      id: 19,
+      category: "Corporate Partnerships",
+      title: "The Beer Garden in Deer District",
+      date: "May 2022",
+      author: "jsonline.com",
+      url: "https://www.jsonline.com/story/sports/nba/bucks/2022/05/02/milwaukee-bucks-deer-district-tap-room-changes-into-tanduay-tiki-hut/9569673002/",
+      tags: ["USA"],
+      image: "/images/press/press-17.jpg",
+      excerpt:
+        "The Tap Room has been transformed into The Tanduay Tiki Hut, according to a news release from the Bucks.",
+    },
+    {
+      id: 20,
+      category: "awards",
+      title: "Tanduay Wins Platinum, Innovation Honors in Consumer-Judged SIP Awards",
+      date: "May 2022",
+      author: "finance.yahoo.com",
+      url: "https://finance.yahoo.com/news/tanduay-wins-platinum-innovation-honors-054300585.html",
+      tags: ["USA"],
+      image: "/images/press/press-20.jpg",
+      excerpt:
+        "Four Tanduay Rum products received top honors at the 2022 SIP Awards, the only wines and spirits competition where the judging panel is comprised of consumers.",
+    },
   ];
 
   let articles = featured.reverse();
