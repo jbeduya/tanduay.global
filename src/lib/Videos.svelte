@@ -9,6 +9,9 @@
   import { onMount } from "svelte";
 
   let videos = [
+    "https://www.youtube.com/embed/EGk3j4KN5Bc?controls=0",
+    "https://www.youtube.com/embed/kAsy8kwgYX8?controls=0",
+    "https://www.youtube.com/embed/pzUY4NIFqt0?controls=0",
     "https://www.youtube.com/embed/110Lvv5RDZ0?controls=0",
     "https://www.youtube.com/embed/abwCbd9ZfWA?controls=0",
     "https://www.youtube.com/embed/XI_dVj0dq6Q?controls=0",

@@ -270,6 +270,30 @@
       excerpt:
         "Four Tanduay Rum products received top honors at the 2022 SIP Awards, the only wines and spirits competition where the judging panel is comprised of consumers.",
     },
+    {
+      id: 21,
+      category: "lifestyle",
+      title: "The 25 Best Rum Brands You Need on Your Bar Cart Like, Yesterday",
+      date: "May 2022",
+      author: "cosmopolitan.com",
+      url: "https://www.cosmopolitan.com/food-cocktails/g28509902/rum-brands/",
+      tags: ["USA"],
+      image: "/images/press/press-default.png",
+      excerpt:
+        "Mixing piña coladas, don't text.",
+    },
+    {
+      id: 22,
+      category: "lifestyle",
+      title: "168 Years Of Tanduay Rum",
+      date: "July 2022",
+      author: "thetastingalliance.com",
+      url: "https://thetastingalliance.com/168-years-of-tanduay-rum/",
+      tags: ["USA"],
+      image: "/images/press/press-22.jpg",
+      excerpt:
+        "Rum is a spirit with rich history, but only a handful of rum producers are over 150 years old.",
+    },
   ];
 
   let articles = featured.reverse();
