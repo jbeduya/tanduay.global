@@ -23,7 +23,7 @@ export async function get() {
             {
                 id: 2,
                 category: "Asian Rum",
-                product: "Tanduay Asia Rum",
+                product: "Tanduay Asian Rum",
                 name: "Victoria's Negroni",
                 photo: "negrense-negroni.png",
                 glass_icon: "icon-negrense-negroni.png",
@@ -122,7 +122,7 @@ export async function get() {
             {
                 id: 7,
                 category: "Asian Rum",
-                product: "Tanduay Aian Rum",
+                product: "Tanduay Asian Rum",
                 name: "Asian Persuasion",
                 photo: "asian-persuasion.png",
                 glass_icon: "icon-asian-persuasion.png",
@@ -140,7 +140,7 @@ export async function get() {
             {
                 id: 8,
                 category: "Asian Rum",
-                product: "Tanduay Asia Rum",
+                product: "Tanduay Asian Rum",
                 name: "Cherry Blossom Mule",
                 photo: "cherry-blossom-mule.png",
                 glass_icon: "icon-cherry-blossom-mule.png",

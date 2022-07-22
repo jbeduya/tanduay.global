@@ -10,6 +10,8 @@
   import "swiper/css/scrollbar";
   import CocktailInfo from "./CocktailInfo.svelte";
   import LinkButton from "$lib/LinkButton.svelte";
+  import AboutUs from "$lib/AboutUs.svelte";
+  import Accordion from "$lib/Accordion.svelte";
 
   export let cocktails = [];
 
@@ -109,7 +111,6 @@
   <div class="container">
     <div class="navigation">
       <h1 class="garamond">Cocktail Culture</h1>
-
       <ul>
         <li
           on:click={() => changeCategory("all")}
@@ -126,6 +127,13 @@
           </li>
         {/each}
       </ul>
+      <div class="downloads">
+        <span>Downloadables</span>
+        <div class="download-links">
+          <a href="https://drive.google.com/file/d/1Mzaoag8YIloiCVtuIg9Fb09MxW5PcR-Q/view?usp=sharing" target="_blank">Cocktail Book</a>
+          <a href="https://drive.google.com/file/d/1MB93RAbRgneEhUpVNhsT39R6b_SRO2oM/view?usp=sharing" target="_blank">Cocktail Book Summer</a>
+        </div>
+      </div>
     </div>
     <div id="cocktail-items" class="items swiper">
       <div class="swiper-wrapper">
@@ -337,6 +345,59 @@
     display: grid;
     place-items: center;
     margin-top: 4rem;
+  }
+
+  .download-links{
+    padding-top: 20px;
+    /* margin-top: auto; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 0.7em;
+  }
+
+  .downloads span {
+    font-family: adobe-garamond-pro, sans-serif;
+    font-style: italic;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #50330d;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .download-links a{
+    font-family: acumin-pro, sans-serif;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    background-color: transparent;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 2px solid #d18b3f;
+    color: #d18b3f;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+    transition-duration: 0.25s;
+    width: 90%;
+    text-align: center;
+  }
+
+  .download-links a:hover {
+    background-color: #f2a049;
+    border-color: #f2a049;
+    color: #fff;
+  }
+
+  .downloads{
+    margin-top: auto;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+    /* content: "\2014";
+    color: transparent;
+    margin-right: 24px; */
   }
 
   @media (max-width: 930px) {
