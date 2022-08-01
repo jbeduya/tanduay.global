@@ -27,8 +27,8 @@
     },
     {
       category: "Germany",
-      name: "Kreyenhop & Kluge GmbH & Co. KG Industriestraße 40, 28876 Oyten, Germany",
-      address: "172 London Rd, Guildford GU1 1XR, United Kingdom",
+      name: "Kreyenhop & Kluge GmbH & Co. KG",
+      address: "Industriestraße 40, 28876 Oyten, Germany",
       phone: "+49 4207 6040",
       url: "https://kreyenhop-kluge.com/",
     },
