@@ -19,6 +19,20 @@
       url: "https://www.alcobrands.be/",
     },
     {
+      category: "United Kingdom",
+      name: "Emporia Brands Ltd.",
+      address: "172 London Rd, Guildford GU1 1XR, United Kingdom",
+      phone: "+44 1483 458700",
+      url: "https://www.emporiabrands.com/",
+    },
+    {
+      category: "Germany",
+      name: "Kreyenhop & Kluge GmbH & Co. KG Industriestraße 40, 28876 Oyten, Germany",
+      address: "172 London Rd, Guildford GU1 1XR, United Kingdom",
+      phone: "+49 4207 6040",
+      url: "https://kreyenhop-kluge.com/",
+    },
+    {
       category: "Singapore",
       name: "Octopus Group",
       address: "361 Ubi Rd 3, Singapore 408664",
@@ -32,6 +46,13 @@
         "Industrial AreaIndustrial Area 13, Sharjah - United Arab Emirates",
       phone: "+971 6 534 2111",
       url: "https://www.truebell.org/",
+    },
+    {
+      category: "Qatar",
+      name: "Qatar Distribution Company",
+      address: "Mackeen Holding Bldg Doha, Salwa Road Street, Doha, Qatar",
+      phone: "+974 4408 2273",
+      url: "https://www.qdc.com.qa/",
     },
     {
       category: "United States",
@@ -98,15 +119,29 @@
     },
     {
       category: "United States",
-      name: "Empire MErchants North",
+      name: "Empire Merchants North",
       address: "16 Houghtaling Rd, Coxsackie, NY 12051",
       phone: "+1 800-724-3960",
       url: "https://empirenorth.com/",
     },
+    {
+      category: "United States",
+      name: "Johnson Brothers",
+      address: "5337 W 78th St, Indianapolis, IN 46268",
+      phone: "+1 317-667-0230",
+      url: "https://www.johnsonbrothers.com/",
+    },
+    {
+      category: "United States",
+      name: "ANW",
+      address: "6733 E Marginal Way St Seattle, WA 98108",
+      phone: "877-665-1521",
+      url: "https://www.anwdistributors.com/",
+    },
   ];
 
   $: categories = contacts.map((contact) => contact.category);
-  $: sideCategories = categories.slice(0, 4);
+  $: sideCategories = categories.slice(0, 7);
 </script>
 
 <section id="contact-us">

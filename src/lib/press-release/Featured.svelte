@@ -51,7 +51,7 @@
           </div>
           <p class="excerpt">{featuredArticle.excerpt}</p>
           <div class="more">
-            <a href={featuredArticle.url}>Read More</a>
+            <a href={featuredArticle.url} target="_blank">Read More</a>
           </div>
         </div>
         <div class="other-featured swiper">
@@ -65,7 +65,7 @@
                 <div class="details">
                   <div class="category">{article.category}</div>
                   <h4>
-                    <a href={article.url}>{article.title}</a>
+                    <a href={article.url} target="_blank">{article.title}</a>
                   </h4>
                   <div class="credit">
                     <div class="date">{article.date}</div>

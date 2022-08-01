@@ -4,7 +4,9 @@
   import { fade } from "svelte/transition";
 
   export let articles = [];
+  const selected = [18,19,20]
   export let worldwide = articles.filter(function (item) {
+    // return selected.includes(item.id);
     return item.id > 6 && item.id < 10;
   });
   let itemCount = 6;
@@ -30,7 +32,7 @@
             <div class="image" style="background-image: url({article.image})" />
             <div class="details">
               <div class="category">{article.category}</div>
-              <a href={article.url}><h4>{article.title}</h4></a>
+              <a href={article.url} target="_blank"><h4>{article.title}</h4></a>
               <div class="credit">
                 <div class="date">{article.date}</div>
                 <div class="divider" />
@@ -40,7 +42,7 @@
               </div>
               <p>{article.excerpt}</p>
               <div class="actions">
-                <a href={article.url}>Read More</a>
+                <a href={article.url} target="_blank">Read More</a>
                 <span class="external" />
               </div>
             </div>
@@ -57,7 +59,7 @@
         {#each worldwide as article}
           <div class="explore-article">
             <div class="category">{article.category}</div>
-            <a href={article.url}><h4>{article.title}</h4></a>
+            <a href={article.url} target="_blank"><h4>{article.title}</h4></a>
             <div class="credit">
               <div class="date">{article.date}</div>
               <div class="divider" />

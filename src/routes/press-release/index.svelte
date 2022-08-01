@@ -294,6 +294,30 @@
       excerpt:
         "Rum is a spirit with rich history, but only a handful of rum producers are over 150 years old.",
     },
+    {
+      id: 23,
+      category: "lifestyle",
+      title: "Tanduay Releases \"Cocktail Culture\" Book of Recipes",
+      date: "July 2022",
+      author: "finance.yahoo.com",
+      url: "https://finance.yahoo.com/news/tanduay-releases-cocktail-culture-book-023200698.html",
+      tags: ["USA"],
+      image: "/images/press/press-23.jpg",
+      excerpt:
+        "Iconic Philippine rum brand Tanduay recently released a collection of cocktail recipes featuring its different rums.",
+    },
+    {
+      id: 24,
+      category: "lifestyle",
+      title: "Tanduay Sells More Than 23.7M 9-Case Liters in 2021, Is Declared World\'s Number 1 Rum for 5th Consecutive Year",
+      date: "July 2022",
+      author: "markets.businessinsider.com",
+      url: "https://markets.businessinsider.com/news/stocks/tanduay-sells-more-than-23-7m-9-case-liters-in-2021-is-declared-world-s-number-1-rum-for-5th-consecutive-year-1031602693",
+      tags: ["USA"],
+      image: "/images/press/press-24.jpg",
+      excerpt:
+        "Tanduay continued to outsell other global rum brands last year, according to Drinks International Magazine which collected annual data on 154 million-case brands from public company reports and directly requested results.",
+    },
   ];
 
   let articles = featured.reverse();

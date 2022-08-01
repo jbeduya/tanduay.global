@@ -16,7 +16,7 @@
     <div class="text">
       <h2>Distinctly Filipino</h2>
       <h3>
-        Tanduay is unique since it is the only Rum from the Topical Islands of the Philippines.
+        Tanduay is unique since it is the only Rum from the Tropical Islands of the Philippines.
       </h3>
       <p>
         <!-- The Philippines is an archipelago rich with stories and experiences. We
