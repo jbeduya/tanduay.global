@@ -6,30 +6,6 @@
 
   const articles = [
     {
-      id: 22,
-      category: "lifestyle",
-      title: "168 Years Of Tanduay Rum",
-      date: "July 2022",
-      author: "thetastingalliance.com",
-      link: "https://thetastingalliance.com/168-years-of-tanduay-rum/",
-      tags: ["USA"],
-      photo: "/images/press/press-22.jpg",
-      description:
-        "Rum is a spirit with rich history, but only a handful of rum producers are over 150 years old.",
-    },
-    {
-      id: 23,
-      category: "lifestyle",
-      title: "Tanduay Releases \"Cocktail Culture\" Book of Recipes",
-      date: "July 2022",
-      author: "finance.yahoo.com",
-      link: "https://finance.yahoo.com/news/tanduay-releases-cocktail-culture-book-023200698.html",
-      tags: ["USA"],
-      photo: "/images/press/press-23.jpg",
-      description:
-        "Iconic Philippine rum brand Tanduay recently released a collection of cocktail recipes featuring its different rums.",
-    },
-    {
       id: 24,
       category: "lifestyle",
       title: "Tanduay Sells More Than 23.7M 9-Case Liters in 2021, Is Declared World\'s Number 1 Rum for 5th Consecutive Year",
@@ -40,6 +16,30 @@
       photo: "/images/press/press-24.jpg",
       description:
         "Tanduay continued to outsell other global rum brands last year, according to Drinks International Magazine which collected annual data on 154 million-case brands from public company reports and directly requested results.",
+    },
+    {
+      id: 25,
+      category: "Corporate Partnerships",
+      title: "Tanduay el ron más vendido del mundo incursiona en Costa Rica",
+      date: "Sep 2022",
+      author: "larepublica.net",
+      link: "https://www.larepublica.net/noticia/tanduay-el-ron-mas-vendido-del-mundo-incursiona-en-costa-rica",
+      tags: ["Costa Rica"],
+      photo: "/images/press/press-25.jpg",
+      description:
+        "Tanduay, ron originario de Filipinas y posicionado como el más vendido del mundo, llega a Costa Rica como tercer país en América y primero en Latinoamérica, tras incursionar en Estados Unidos y Canadá.",
+    },
+    {
+      id: 26,
+      category: "Corporate Partnerships",
+      title: "Philippine Brand Tanduay Partners with Kreyenhop & Kluge, Brings Its Most-Awarded Rums to Germany",
+      date: "Oct 2022",
+      author: "bloomberg.com",
+      link: "https://www.bloomberg.com/press-releases/2022-10-07/philippine-brand-tanduay-partners-with-kreyenhop-kluge-brings-its-most-awarded-rums-to-germany",
+      tags: ["Germany"],
+      photo: "/images/press/press-default.png",
+      description:
+        "Top Philippine rum producer Tanduay has now entered the German market after signing a partnership with Kreyenhop \& Kluge, a leading distributor of international products in Germany.",
     },
   ];
 

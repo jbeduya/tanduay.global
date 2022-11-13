@@ -9,6 +9,7 @@ export async function get() {
                 image: "/images/products/DoubleRum750ml_EL_F3.png",
                 thumbnail: "/images/products/DoubleRum750ml_EL_F3.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-double-rum",
+                video_url: "https://www.youtube.com/embed/whQmfTEDyDU",
                 details: {
                     alcohol: "40.0%",
                     color: "red",
@@ -28,6 +29,7 @@ export async function get() {
                 image: "/images/products/RumWhite750ml-Export_EL_F1.png",
                 thumbnail: "/images/products/RumWhite750ml-Export_EL_F1.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-white-rum",
+                video_url: "https://www.youtube.com/embed/18a0jl1dzb0",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Clear,colorless",
@@ -46,6 +48,7 @@ export async function get() {
                 image: "/images/products/RhumDark750ml-Export_EL_F1.png",
                 thumbnail: "/images/products/RhumDark750ml-Export_EL_F1.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-dark-rum",
+                video_url: "https://www.youtube.com/embed/AxkLSTy8R64",
                 details: {
                     alcohol: "80 Proof 40% alc. / vol.",
                     color: "dark amber",
@@ -64,6 +67,7 @@ export async function get() {
                 image: "/images/products/AsianRumGold_750ML_E_F2-opt.png",
                 thumbnail: "/images/products/AsianRumGold_750ML_E_F2-opt.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-asian-rum-gold",
+                video_url: "https://www.youtube.com/embed/rRnCUzp9BVI",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Bright Golden Amber",
@@ -82,6 +86,7 @@ export async function get() {
                 image: "/images/products/AsianRumSilver750ML_E_F2-opt.png",
                 thumbnail: "/images/products/AsianRumSilver750ML_E_F2-opt.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-asian-rum-silver",
+                video_url: "https://www.youtube.com/embed/0uDVlD2PFy4",
                 details: {
                     alcohol: "80 Proof, 40% alc. / vol.",
                     color: "Clear, transparent, pale straw yellow",
@@ -100,6 +105,7 @@ export async function get() {
                 image: "/images/products/BoracayRumCoconut750ml_EL_F3.png",
                 thumbnail: "/images/products/BoracayRumCoconut750ml_EL_F3.png",
                 buy_url:"https://tanduay.thirstie.com/products/boracay-coconut",
+                video_url: "https://www.youtube.com/embed/cI9d8JTgOuc",
                 details: {
                     alcohol: "25% alc. / vol.",
                     color: "Clear, Colorless",
@@ -118,6 +124,7 @@ export async function get() {
                 image: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
                 thumbnail: "/images/products/BoracayRumCappuccino750ml_EL_F3.png",
                 buy_url:"https://tanduay.thirstie.com/products/boracay-cappuccino",
+                video_url: "https://www.youtube.com/embed/p6_HWIs7sE8",
                 details: {
                     alcohol: "25% alc. / vol.",
                     color: "Clear, Colorless",
@@ -136,6 +143,7 @@ export async function get() {
                 image: "/images/products/EspeciaRum.png",
                 thumbnail: "/images/products/EspeciaRum.png",
                 buy_url:"https://tanduay.thirstie.com/products/tanduay-especia-spiced-rum",
+                video_url: "https://www.youtube.com/embed/_bhfhzmPLOQ",
                 details: {
                     alcohol: "40% alc. / vol.",
                     color: "Bright golden amber",

@@ -318,6 +318,30 @@
       excerpt:
         "Tanduay continued to outsell other global rum brands last year, according to Drinks International Magazine which collected annual data on 154 million-case brands from public company reports and directly requested results.",
     },
+    {
+      id: 25,
+      category: "Corporate Partnerships",
+      title: "Tanduay el ron más vendido del mundo incursiona en Costa Rica",
+      date: "Sep 2022",
+      author: "larepublica.net",
+      url: "https://www.larepublica.net/noticia/tanduay-el-ron-mas-vendido-del-mundo-incursiona-en-costa-rica",
+      tags: ["Costa Rica"],
+      image: "/images/press/press-25.jpg",
+      excerpt:
+        "Tanduay, ron originario de Filipinas y posicionado como el más vendido del mundo, llega a Costa Rica como tercer país en América y primero en Latinoamérica, tras incursionar en Estados Unidos y Canadá.",
+    },
+    {
+      id: 26,
+      category: "Corporate Partnerships",
+      title: "Philippine Brand Tanduay Partners with Kreyenhop & Kluge, Brings Its Most-Awarded Rums to Germany",
+      date: "Oct 2022",
+      author: "bloomberg.com",
+      url: "https://www.bloomberg.com/press-releases/2022-10-07/philippine-brand-tanduay-partners-with-kreyenhop-kluge-brings-its-most-awarded-rums-to-germany",
+      tags: ["Germany"],
+      image: "/images/press/press-default.png",
+      excerpt:
+        "Top Philippine rum producer Tanduay has now entered the German market after signing a partnership with Kreyenhop \& Kluge, a leading distributor of international products in Germany.",
+    },
   ];
 
   let articles = featured.reverse();

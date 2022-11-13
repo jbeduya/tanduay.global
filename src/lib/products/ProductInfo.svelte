@@ -1,4 +1,6 @@
 <script>
+  import { browser } from "$app/env";
+  import { onMount } from "svelte";
   import Accordion from "$lib/Accordion.svelte";
   import Button from "$lib/Button.svelte";
   import LinkButton from "$lib/LinkButton.svelte";
@@ -20,12 +22,72 @@
     open = isOpen;
     document.body.classList.toggle("no-scroll", open);
   };
+
+  let show = false;
+  let videoSource = "";
+  let dialog;
+
+  let showVideo = (url) => {
+    videoSource = url;
+    show = true;
+  };
+
+  $: if (show === false) {
+    videoSource = "";
+    if (browser) {
+      document.body.classList.remove("no-scroll");
+    }
+  } else {
+    if (browser) {
+      document.body.classList.add("no-scroll");
+    }
+  }
+
+  onMount(() => {
+    let handler = (e) => {
+      if (e.key === "Escape" && show === true) {
+        show = false;
+      }
+    };
+    document.addEventListener("keyup", handler);
+
+    return () => {
+      document.removeEventListener("keyup", handler);
+    };
+  });
 </script>
+
+<div
+  bind:this={dialog}
+  class="video-dialog"
+  class:show
+  on:click={() => (show = false)}
+>
+  <div class="container">
+    <i
+      class="fas fa-times close"
+      role="button"
+      on:click={() => (show = false)}
+    />
+    <!-- svelte-ignore a11y-missing-attribute -->
+    <iframe
+      src={videoSource}
+      frameborder="0"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen
+    />
+  </div>
+</div>
 
 <section class="main">
   <h1 class="garamond">Our Products</h1>
   <h2 class="garamond">{product.name}</h2>
-  <p>{product.description}</p>
+  <p>{product.description} <br />
+    <a class="acumin" href="#" on:click={(e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      showVideo(product.video_url)
+      }}> Play {product.name} Video</a></p>
 
   <div
     class="product-details-link"
@@ -234,6 +296,51 @@
 </section>
 
 <style>
+  .video-dialog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(201, 158, 82, 0.9);
+    visibility: hidden;
+    transition: all 0.2s;
+
+    z-index: 999999;
+  }
+
+  .video-dialog .container {
+    position: relative;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    padding: 0 24px;
+    margin: 0 auto;
+  }
+
+  .video-dialog.show {
+    visibility: visible;
+  }
+
+  .video-dialog .close {
+    position: absolute;
+    font-size: 3rem;
+    top: 24px;
+    right: 64px;
+    color: #333;
+    cursor: pointer;
+  }
+
+  .video-dialog .close:hover {
+    color: white;
+  }
+
+  .video-dialog .container iframe {
+    width: 100%;
+    aspect-ratio: 16/9;
+  }
+
   section.detail {
     position: fixed;
     width: 100%;
