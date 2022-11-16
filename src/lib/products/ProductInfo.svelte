@@ -82,13 +82,13 @@
 <section class="main">
   <h1 class="garamond">Our Products</h1>
   <h2 class="garamond">{product.name}</h2>
-  <p>{product.description} <br />
+  <p>{product.description}</p>
+  <p>
     <a class="acumin" href="#" on:click={(e) => {
       e.preventDefault();
       e.stopPropagation();
       showVideo(product.video_url)
       }}> Play {product.name} Video</a></p>
-
   <div
     class="product-details-link"
     on:click={(e) => {
