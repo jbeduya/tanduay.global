@@ -97,7 +97,7 @@
     <div class="content content2">
       <div class="picture">
         <!-- <img class="img" src="/images/about-us-2.png" alt="About Us" /> -->
-        <video id="abt-video2" class="abt-us-video" autoplay loop muted poster="/images/about-us-2.png">
+        <video id="abt-video2" class="abt-us-video" playsinline autoplay loop muted poster="/images/about-us-2.png">
           <source src="/videos/about-us-2.mp4" type="video/mp4">
         </video>
         <img class="sugarcane" src="/images/sugarcane.png" alt="Sugarcane" />
