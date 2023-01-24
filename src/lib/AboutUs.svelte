@@ -72,9 +72,12 @@
 
     <div class="content content1">
       <div class="picture">
-        <img class="img" src="/images/about-us-1.png" alt="About Us" />
-        <img class="sugar-big" src="/images/sugar-big.png" alt="Sugar" />
-        <img class="sugar-small" src="/images/sugar-small.png" alt="Sugar" />
+        <!-- <img class="img" src="/images/about-us-1.png" alt="About Us" /> -->
+        <video id="abt-video1" class="abt-us-video" autoplay loop muted poster="/images/about-us-1.png">
+          <source src="/videos/about-us-1.mp4" type="video/mp4">
+        </video>
+        <!-- <img class="sugar-big" src="/images/sugar-big.png" alt="Sugar" />
+        <img class="sugar-small" src="/images/sugar-small.png" alt="Sugar" /> -->
       </div>
       <div class="text">
         <h2 class="garamond">Our Story</h2>
@@ -93,7 +96,10 @@
 
     <div class="content content2">
       <div class="picture">
-        <img class="img" src="/images/about-us-2.png" alt="About Us" />
+        <!-- <img class="img" src="/images/about-us-2.png" alt="About Us" /> -->
+        <video id="abt-video2" class="abt-us-video" autoplay loop muted poster="/images/about-us-2.png">
+          <source src="/videos/about-us-2.mp4" type="video/mp4">
+        </video>
         <img class="sugarcane" src="/images/sugarcane.png" alt="Sugarcane" />
       </div>
       <div class="text">
@@ -212,7 +218,7 @@
     padding: 0 32px;
   }
 
-  .picture .img {
+  .picture .img, .picture .abt-us-video {
     width: 80%;
     min-height: 400px;
     min-width: 300px;
