@@ -21,6 +21,7 @@
 </script>
 
 <script>
+  import Ga from "$lib/ga.svelte";
   import AboutUs from "$lib/AboutUs.svelte";
   import ContactUs from "$lib/ContactUs.svelte";
   import Footer from "$lib/Footer.svelte";
@@ -44,6 +45,8 @@
   export let products = [];
   export let cocktails = [];
 </script>
+
+<Ga />
 
 <Hero />
 
