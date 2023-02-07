@@ -6,40 +6,40 @@
 
   const articles = [
     {
-      id: 24,
+      id: 27,
+      category: "Corporate Partnerships",
+      title: "World’s Number 1 Rum Enters Australian Market",
+      date: "Nov 2022",
+      author: "theshout.com.au",
+      link: "https://theshout.com.au/worlds-number-1-rum-enters-australian-market",
+      tags: ["Australia"],
+      photo: "/images/press/press-27.webp",
+      description:
+        "Award-winning Philippine rum brand, Tanduay, will soon be available in Australia as it recently signed a partnership with leading spirits distributor Jonathan Paige International Group (JPI).",
+    },
+    {
+      id: 28,
+      category: "Corporate Partnerships",
+      title: "Tanduay's Award-Winning Rum Impressing Connoisseurs in Austria",
+      date: "Jan 2023",
+      author: "eprfoodbeveragenews.com",
+      link: "https://eprfoodbeveragenews.com/2023/01/10/tanduays-award-winning-rum-impressing-connoisseurs-in-austria",
+      tags: ["Austria"],
+      photo: "/images/press/press-28.jpg",
+      description:
+        "Philippine brand Tanduay has partnered with Weisshaus, a leading distributor of international spirits, to bring the brand to Austria, making it the first Asian rum brand to enter the country.",
+    },
+    {
+      id: 29,
       category: "lifestyle",
-      title: "Tanduay Sells More Than 23.7M 9-Case Liters in 2021, Is Declared World\'s Number 1 Rum for 5th Consecutive Year",
-      date: "July 2022",
-      author: "markets.businessinsider.com",
-      link: "https://markets.businessinsider.com/news/stocks/tanduay-sells-more-than-23-7m-9-case-liters-in-2021-is-declared-world-s-number-1-rum-for-5th-consecutive-year-1031602693",
-      tags: ["USA"],
-      photo: "/images/press/press-24.jpg",
-      description:
-        "Tanduay continued to outsell other global rum brands last year, according to Drinks International Magazine which collected annual data on 154 million-case brands from public company reports and directly requested results.",
-    },
-    {
-      id: 25,
-      category: "Corporate Partnerships",
-      title: "Tanduay el ron más vendido del mundo incursiona en Costa Rica",
-      date: "Sep 2022",
-      author: "larepublica.net",
-      link: "https://www.larepublica.net/noticia/tanduay-el-ron-mas-vendido-del-mundo-incursiona-en-costa-rica",
-      tags: ["Costa Rica"],
-      photo: "/images/press/press-25.jpg",
-      description:
-        "Tanduay, ron originario de Filipinas y posicionado como el más vendido del mundo, llega a Costa Rica como tercer país en América y primero en Latinoamérica, tras incursionar en Estados Unidos y Canadá.",
-    },
-    {
-      id: 26,
-      category: "Corporate Partnerships",
-      title: "Philippine Brand Tanduay Partners with Kreyenhop & Kluge, Brings Its Most-Awarded Rums to Germany",
-      date: "Oct 2022",
-      author: "bloomberg.com",
-      link: "https://www.bloomberg.com/press-releases/2022-10-07/philippine-brand-tanduay-partners-with-kreyenhop-kluge-brings-its-most-awarded-rums-to-germany",
-      tags: ["Germany"],
+      title: "Forget Cuba, Filipino rum is set to explode in 2023",
+      date: "Jan 2023",
+      author: "amp-scmp-com",
+      link: "https://amp-scmp-com.cdn.ampproject.org/c/s/amp.scmp.com/magazines/style/news-trends/article/3207556/forget-cuba-filipino-rum-set-explode-2023-don-papa-and-tanduay-craft-brands-palawan-blanco-and-kasam",
+      tags: ["Hong Kong"],
       photo: "/images/press/press-default.png",
       description:
-        "Top Philippine rum producer Tanduay has now entered the German market after signing a partnership with Kreyenhop \& Kluge, a leading distributor of international products in Germany.",
+        "Forget Cuba, Filipino rum is set to explode in 2023, from Don Papa and Tanduay, to craft brands Palawan Blanco and Kasama, the Southeast Asian country is fermenting a spirit-ual revolution",
     },
   ];
 

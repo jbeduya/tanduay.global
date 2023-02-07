@@ -54,7 +54,12 @@
     </div>
     <div class="preview">
       <div class="scroll-navigations">
-        <span id="products-swiper-button-prev" on:click={swipeLeft}>
+        <span id="products-swiper-button-prev" on:click={swipeLeft} on:click={() => {
+          gtag('event', 'click_product-scroll', {
+            'event_category': 'scroll',
+            'event_label': currentProduct.name
+          });
+        }}>
           <ArrowLeft />
         </span>
         <span id="products-swiper-button-next" on:click={swipeRight}

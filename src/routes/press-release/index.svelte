@@ -342,6 +342,42 @@
       excerpt:
         "Top Philippine rum producer Tanduay has now entered the German market after signing a partnership with Kreyenhop \& Kluge, a leading distributor of international products in Germany.",
     },
+    {
+      id: 27,
+      category: "Corporate Partnerships",
+      title: "World’s Number 1 Rum Enters Australian Market",
+      date: "Nov 2022",
+      author: "theshout.com.au",
+      url: "https://theshout.com.au/worlds-number-1-rum-enters-australian-market",
+      tags: ["Australia"],
+      image: "/images/press/press-27.webp",
+      excerpt:
+        "Award-winning Philippine rum brand, Tanduay, will soon be available in Australia as it recently signed a partnership with leading spirits distributor Jonathan Paige International Group (JPI).",
+    },
+    {
+      id: 28,
+      category: "Corporate Partnerships",
+      title: "Tanduay's Award-Winning Rum Impressing Connoisseurs in Austria",
+      date: "Jan 2023",
+      author: "eprfoodbeveragenews.com",
+      url: "https://eprfoodbeveragenews.com/2023/01/10/tanduays-award-winning-rum-impressing-connoisseurs-in-austria",
+      tags: ["Austria"],
+      image: "/images/press/press-28.jpg",
+      excerpt:
+        "Philippine brand Tanduay has partnered with Weisshaus, a leading distributor of international spirits, to bring the brand to Austria, making it the first Asian rum brand to enter the country.",
+    },
+    {
+      id: 29,
+      category: "lifestyle",
+      title: "Forget Cuba, Filipino rum is set to explode in 2023",
+      date: "Jan 2023",
+      author: "amp-scmp-com.cdn",
+      url: "https://amp-scmp-com.cdn.ampproject.org/c/s/amp.scmp.com/magazines/style/news-trends/article/3207556/forget-cuba-filipino-rum-set-explode-2023-don-papa-and-tanduay-craft-brands-palawan-blanco-and-kasam",
+      tags: ["Hong Kong"],
+      image: "/images/press/press-default.png",
+      excerpt:
+        "Forget Cuba, Filipino rum is set to explode in 2023, from Don Papa and Tanduay, to craft brands Palawan Blanco and Kasama, the Southeast Asian country is fermenting a spirit-ual revolution",
+    },
   ];
 
   let articles = featured.reverse();
