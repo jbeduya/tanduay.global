@@ -130,8 +130,8 @@
       <div class="downloads">
         <span>Downloadables</span>
         <div class="download-links">
-          <a href="https://drive.google.com/file/d/1Mzaoag8YIloiCVtuIg9Fb09MxW5PcR-Q/view?usp=sharing" target="_blank">Cocktail Book</a>
-          <a href="https://drive.google.com/file/d/1MB93RAbRgneEhUpVNhsT39R6b_SRO2oM/view?usp=sharing" target="_blank">Cocktail Book Summer</a>
+          <a href="https://drive.google.com/file/d/1Mzaoag8YIloiCVtuIg9Fb09MxW5PcR-Q/view?usp=share_link" target="_blank">Cocktail Book</a>
+          <a href="https://drive.google.com/file/d/1zlJn4Fjfvd2XOppwLcxhZSIxP_DI-1Qu/view?usp=share_link" target="_blank">Cocktail Book Summer</a>
         </div>
       </div>
     </div>
